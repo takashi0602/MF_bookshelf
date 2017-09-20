@@ -16,7 +16,7 @@
             <div class="form-group">
                 <div class="col-sm-offset-3 col-sm-6">
                     <button type="submit" class="btn btn-default">
-                        <i class="fa fa-plus"></i> Save
+                        <i class="glyphicon glyphicon-plus"></i> Save
                     </button>
                 </div>
             </div>
@@ -44,7 +44,7 @@
                                             {{ method_field('DELETE') }}
 
                                             <button type="submit" class="btn btn-danger">
-                                                <i class="fa fa-trash"></i> 削除
+                                                <i class="glyphicon glyphicon-trash"></i> 削除
                                             </button>
                                         </form>
                                     </td>
