@@ -7,7 +7,10 @@ use Illuminate\Http\Request;
  * 本のダッシュボード表示
  */
 Route::get('/', function () {
-    return view('books');
+    $books = Book::orderBy('created_at', 'asc')->get();
+    return view('books', [
+        'books' => $books
+    ]);
 });
 
 /**

@@ -21,5 +21,32 @@
                 </div>
             </div>
         </form>
+        @if (count($books) > 0)
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    現在の本
+                </div>
+                <div class="panel-body">
+                    <table class="table table-striped task-table">
+                        <thead>
+                            <th>本一覧</th>
+                            <th>&nbsp;</th>
+                        </thead>
+                        <tbody>
+                            @foreach ($books as $book)
+                                <tr>
+                                    <td class="table-text">
+                                        <div>{{ $book->item_name }}</div>
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        @endif
     </div>
 @endsection
