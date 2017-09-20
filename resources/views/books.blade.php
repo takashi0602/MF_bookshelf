@@ -7,9 +7,25 @@
             {{ csrf_field() }}
 
             <div class="form-group">
-                <label for="book" class="col-sm-3 control-label">Book</label>
                 <div class="col-sm-6">
+                    <label for="name" class="col-sm-3 control-label">Name</label>
                     <input type="text" name="item_name" id="book-name" class="form-control">
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="amount" class="col-sm-3 control-label">Amount</label>
+                    <input type="text" name="item_amount" id="book-amount" class="form-control">
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="number" class="col-sm-3 control-label">Number</label>
+                    <input type="text" name="item_number" id="book-number" class="form-control">
+                </div>
+
+
+                <div class="col-sm-6">
+                    <label for="published" class="col-sm-3 control-label">Published</label>
+                    <input type="date" name="published" id="book-published" class="form-control">
                 </div>
             </div>
 
@@ -31,12 +47,21 @@
                         <thead>
                             <th>本一覧</th>
                             <th>&nbsp;</th>
+                            <th>&nbsp;</th>
                         </thead>
                         <tbody>
                             @foreach ($books as $book)
                                 <tr>
                                     <td class="table-text">
                                         <div>{{ $book->item_name }}</div>
+                                    </td>
+                                    <td>
+                                        <form action="{{ url('booksedit/' . $book->id) }}" method="POST">
+                                            {{ csrf_field() }}
+                                            <button type="submit" class="btn btn-primary">
+                                                <i class="glyphicon glyphicon-pencil"></i> 更新
+                                            </button>
+                                        </form>
                                     </td>
                                     <td>
                                         <form action="{{ url('book/' . $book->id) }}" method="POST">
