@@ -17,3 +17,7 @@ Route::post('/books/update', 'BooksController@update');
 
 // destroy
 Route::delete('/book/{book}', 'BooksController@destroy');
+
+// auth
+Route::auth();
+Route::get('/home', 'BooksController@index');

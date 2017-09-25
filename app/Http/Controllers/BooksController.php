@@ -78,4 +78,14 @@ class BooksController extends Controller
         $book->delete();
         return redirect('/');
     }
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 }
