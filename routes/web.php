@@ -21,3 +21,5 @@ Route::delete('/book/{book}', 'BooksController@destroy');
 // auth
 Route::auth();
 Route::get('/home', 'BooksController@index');
+
+Route::resource('tasks', 'TaskController');

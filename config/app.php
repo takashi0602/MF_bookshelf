@@ -167,6 +167,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Laralib\L5scaffold\GeneratorsServiceProvider::class,
 
         /*
          * Application Service Providers...
