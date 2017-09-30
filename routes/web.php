@@ -22,4 +22,12 @@ Route::delete('/book/{book}', 'BooksController@destroy');
 Route::auth();
 Route::get('/home', 'BooksController@index');
 
+// Scaffold
 Route::resource('tasks', 'TaskController');
+
+// Socialite
+Route::get('auth/{provider}', 'Auth\AuthController@redirectToProvider');
+Route::get('auth/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
