@@ -3,6 +3,12 @@
 use App\Book;
 use Illuminate\Http\Request;
 
+// public page
+Route::get('/public', 'PublicbooksController@index');
+
+// public page detail
+Route::post('/public_description/{books}', 'PublicbooksController@description');
+
 // top page
 Route::get('/', 'BooksController@index');
 
@@ -28,7 +34,3 @@ Route::get('auth/{provider}/callback', 'Auth\AuthController@handleProviderCallba
 // user status
 Auth::routes();
 Route::get('/home', 'HomeController@index');
-
-Route::get('/demo', function() {
-    return view('demo');
-});

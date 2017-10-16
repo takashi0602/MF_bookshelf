@@ -69,6 +69,8 @@
                                                 {{ csrf_field() }}
                                             </form>
                                         </li>
+                                        <li><a href="{{ url('/public') }}">本一覧(公開ページ)</a></li>
+                                        <li><a href="{{ url('/') }}">本一覧(非公開ページ)</a></li>
                                     </ul>
                                 </li>
                                 @endguest

@@ -36,6 +36,7 @@ class BooksController extends Controller
         $books = new Book;
         $books->user_id = Auth::user()->id;
         $books->item_name = $request->item_name;
+        $books->item_description = $request->ce;
         $books->item_number = $request->item_number;
         $books->item_amount = $request->item_amount;
         $books->published = $request->published;
@@ -70,6 +71,7 @@ class BooksController extends Controller
         // Eloquent Model
         $books = Book::where('user_id', Auth::user()->id)->find($request->id);
         $books->item_name = $request->item_name;
+        $books->item_description = $request->ce;
         $books->item_number = $request->item_number;
         $books->item_amount = $request->item_amount;
         $books->published = $request->published;
