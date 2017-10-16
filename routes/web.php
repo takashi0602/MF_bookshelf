@@ -28,3 +28,7 @@ Route::get('auth/{provider}/callback', 'Auth\AuthController@handleProviderCallba
 // user status
 Auth::routes();
 Route::get('/home', 'HomeController@index');
+
+Route::get('/demo', function() {
+    return view('demo');
+});
