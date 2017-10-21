@@ -19,6 +19,14 @@ class BooksController extends Controller
 
     // create
     public function store(Request $request) {
+        $file = $request->file('item_img');
+        if (!empty($file)) {
+            $filename = $file->getClientOriginalName();
+            $move = $file->move('./upload', $filename);
+        } else {
+            $filename = "";
+        }
+
         // Validation
         $validator = Validator::make($request->all(), [
             'item_name' => 'required | min: 3 | max: 255',
@@ -39,6 +47,7 @@ class BooksController extends Controller
         $books->item_description = $request->ce;
         $books->item_number = $request->item_number;
         $books->item_amount = $request->item_amount;
+        $books->item_img = $filename;
         $books->published = $request->published;
         $books->save();
         return redirect('/');

@@ -3,7 +3,7 @@
 @section('content')
     <div class="panel-body">
         @include('common.errors')
-        <form action="{{ url('books') }}" method="POST" class="form-horizontal">
+        <form enctype="multipart/form-data" action="{{ url('books') }}" method="POST" class="form-horizontal">
             {{ csrf_field() }}
 
             <div class="form-group">
@@ -29,35 +29,9 @@
                 </div>
             </div>
 
-            <div class="col-sm-12">
-                <label for="item_name">Description</label>
-                <textarea name="ce" id="" class="form-control"></textarea>
-                <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-                <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-                <script>
-                    var route_prefix = "{{ url(config('lfm.url_prefix')) }}";
-                </script>
-
-                <!-- CKEditor init -->
-                <script src="//cdnjs.cloudflare.com/ajax/libs/ckeditor/4.5.11/ckeditor.js"></script>
-                <script src="//cdnjs.cloudflare.com/ajax/libs/ckeditor/4.5.11/adapters/jquery.js"></script>
-                <script>
-                    $('textarea[name=ce]').ckeditor({
-                        height: 100,
-                        filebrowserImageBrowseUrl: route_prefix + '?type=Images',
-                        filebrowserImageUploadUrl: route_prefix + '/upload?type=Images&_token={{csrf_token()}}',
-                        filebrowserBrowseUrl: route_prefix + '?type=Files',
-                        filebrowserUploadUrl: route_prefix + '/upload?type=Files&_token={{csrf_token()}}'
-                    });
-                </script>
-
-                <script>
-                    {!! \File::get(base_path('vendor/unisharp/laravel-filemanager/public/js/lfm.js')) !!}
-                </script>
-                <script>
-                    $('#lfm').filemanager('image', {prefix: route_prefix});
-                    $('#lfm2').filemanager('file', {prefix: route_prefix});
-                </script>
+            <div class="col-sm-6">
+                <label>Image</label>
+                <input type="file" name="item_img">
             </div>
 
             <div class="form-group">
@@ -85,6 +59,7 @@
                                 <tr>
                                     <td class="table-text">
                                         <div>{{ $book->item_name }}</div>
+                                        <div><img src="upload/{{ $book->item_img }}" alt="" width="100"></div>
                                     </td>
                                     <td>
                                         <form action="{{ url('booksedit/' . $book->id) }}" method="POST">
