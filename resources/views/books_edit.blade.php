@@ -6,15 +6,19 @@
             @include('common.errors')
             <form action="{{ url('private/books/update') }}" method="POST">
                 <div class="form-group">
-                    <label for="item_name">書籍名</label>
-                    <input type="text" id="item_name" name="item_name" class="form-control" value="{{ $book->item_name }}">
+                    <label for="book_name">書籍名</label>
+                    <input type="text" name="book_name" id="book-name" class="form-control" value="{{ $book->book_name }}">
                 </div>
 
                 <div class="form-group">
-                    <label for="item_amount">金額</label>
-                    <input type="text" id="item_amount" name="item_amount" class="form-control" value="{{ $book->item_amount }}">
+                    <label for="book_price">金額</label>
+                    <input type="number" name="book_price" id="book-price" class="form-control" value="{{ $book->book_price }}">
                 </div>
 
+                <div class="form-group">
+                    <label for="page">ページ数</label>
+                    <input type="number" name="book_page" id="book-page" class="form-control" value="{{ $book->book_page }}">
+                </div>
 
                 <div class="form-group">
                     <label for="published">出版日</label>

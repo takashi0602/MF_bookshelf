@@ -19,7 +19,7 @@ class BooksController extends Controller
 
     // create
     public function store(Request $request) {
-        $file = $request->file('item_img');
+        $file = $request->file('book_img');
         if (!empty($file)) {
             $filename = $file->getClientOriginalName();
             $move = $file->move('./upload', $filename);
@@ -29,9 +29,9 @@ class BooksController extends Controller
 
         // Validation
         $validator = Validator::make($request->all(), [
-            'item_name' => 'required | min: 3 | max: 255',
-            'item_amount' => 'required | max: 6',
-            'published' => 'required'
+            'book_name' => 'required | min: 3 | max: 255',
+            'book_price' => 'digits_between: 0, 6',
+            'book_page' => 'digits_between: 0, 4'
         ]);
 
         // Validation Error
@@ -42,10 +42,10 @@ class BooksController extends Controller
         // Eloquent Model
         $books = new Book;
         $books->user_id = Auth::user()->id;
-        $books->item_name = $request->item_name;
-        $books->item_description = $request->ce;
-        $books->item_amount = $request->item_amount;
-        $books->item_img = $filename;
+        $books->book_name = $request->book_name;
+        $books->book_price = $request->book_price;
+        $books->book_page = $request->book_page;
+        $books->book_img = $filename;
         $books->published = $request->published;
         $books->save();
         return redirect('/private');
@@ -64,9 +64,9 @@ class BooksController extends Controller
         // Validation
         $validator = Validator::make($request->all(), [
             'id' => 'required',
-            'item_name' => 'required | min: 3 | max: 255',
-            'item_amount' => 'required | max: 6',
-            'published' => 'required'
+            'book_name' => 'required | min: 3 | max: 255',
+            'book_price' => 'digits_between: 0, 6',
+            'book_page' => 'digits_between: 0, 4'
         ]);
 
         // Validation Error
@@ -76,9 +76,9 @@ class BooksController extends Controller
 
         // Eloquent Model
         $books = Book::where('user_id', Auth::user()->id)->find($request->id);
-        $books->item_name = $request->item_name;
-        $books->item_description = $request->ce;
-        $books->item_amount = $request->item_amount;
+        $books->book_name = $request->book_name;
+        $books->book_price = $request->book_price;
+        $books->book_page = $request->book_page;
         $books->published = $request->published;
         $books->save();
         return redirect('/private');

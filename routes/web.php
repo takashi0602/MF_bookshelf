@@ -11,7 +11,7 @@ Route::get('/', function() {
 Route::get('/public', 'PublicbooksController@index');
 
 // public page detail
-Route::post('/public/detail/{books}', 'PublicbooksController@description');
+Route::post('/public/detail/{books}', 'PublicbooksController@detail');
 
 // private page
 Route::get('/private', 'BooksController@index');

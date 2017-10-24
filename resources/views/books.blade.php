@@ -9,14 +9,18 @@
             <div class="form-group">
                 <div class="col-sm-6">
                     <label for="name" class="col-sm-3 control-label">書籍名</label>
-                    <input type="text" name="item_name" id="book-name" class="form-control">
+                    <input type="text" name="book_name" id="book-name" class="form-control">
                 </div>
 
                 <div class="col-sm-6">
-                    <label for="amount" class="col-sm-3 control-label">価格</label>
-                    <input type="text" name="item_amount" id="book-amount" class="form-control">
+                    <label for="price" class="col-sm-3 control-label">価格</label>
+                    <input type="number" name="book_price" id="book-price" class="form-control">
                 </div>
 
+                <div class="col-sm-6">
+                    <label for="price" class="col-sm-3 control-label">ページ数</label>
+                    <input type="number" name="book_price" id="book-price" class="form-control">
+                </div>
 
                 <div class="col-sm-6">
                     <label for="published" class="col-sm-3 control-label">出版日</label>
@@ -26,7 +30,7 @@
 
             <div class="col-sm-6">
                 <label>画像</label>
-                <input type="file" name="item_img">
+                <input type="file" name="book_img">
             </div>
 
             <div class="form-group">
@@ -53,8 +57,8 @@
                             @foreach ($books as $book)
                                 <tr>
                                     <td class="table-text">
-                                        <div>{{ $book->item_name }}</div>
-                                        <div><img src="upload/{{ $book->item_img }}" alt="" width="100"></div>
+                                        <div>{{ $book->book_name }}</div>
+                                        <div><img src="upload/{{ $book->book_img }}" alt="" width="100"></div>
                                     </td>
                                     <td>
                                         <form action="{{ url('private/books/edit/' . $book->id) }}" method="POST">
