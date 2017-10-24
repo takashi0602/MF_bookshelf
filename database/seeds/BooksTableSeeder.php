@@ -16,7 +16,6 @@ class BooksTableSeeder extends Seeder
             App\Book::create([
                 'user_id' => $faker->numberBetween(1, 3),
                 'item_name' => $faker->word(),
-                'item_number' => $faker->numberBetween(1, 999),
                 'item_amount' => $faker->numberBetween(100, 5000),
                 'published' => $faker->dateTime('now'),
                 'created_at' => $faker->dateTime('now'),
