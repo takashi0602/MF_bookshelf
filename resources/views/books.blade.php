@@ -23,7 +23,7 @@
                 </div>
 
                 <div class="col-sm-6">
-                    <label for="published" class="col-sm-3 control-label">出版社</label>
+                    <label for="published" class="col-sm-3 control-label">出版日</label>
                     <input type="date" name="published" id="book-published" class="form-control">
                 </div>
             </div>
