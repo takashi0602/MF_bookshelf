@@ -6,31 +6,31 @@
             @include('common.errors')
             <form action="{{ url('books/update') }}" method="POST">
                 <div class="form-group">
-                    <label for="item_name">Title</label>
+                    <label for="item_name">書籍名</label>
                     <input type="text" id="item_name" name="item_name" class="form-control" value="{{ $book->item_name }}">
                 </div>
 
                 <div class="form-group">
-                    <label for="item_number">Number</label>
-                    <input type="text" id="item_number" name="item_number" class="form-control" value="{{ $book->item_number }}">
-                </div>
-
-                <!-- TODO: 画像選択処理 -->
-
-                <div class="form-group">
-                    <label for="item_amount">Amount</label>
+                    <label for="item_amount">金額</label>
                     <input type="text" id="item_amount" name="item_amount" class="form-control" value="{{ $book->item_amount }}">
                 </div>
 
                 <div class="form-group">
-                    <label for="published">Published</label>
+                    <label for="item_number">数量</label>
+                    <input type="text" id="item_number" name="item_number" class="form-control" value="{{ $book->item_number }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="published">出版社</label>
                     <input type="datetime" id="published" name="published" class="form-control" value="{{ $book->published }}">
                 </div>
 
+                <!-- TODO: 画像選択処理 -->
+
                 <div class="well well-sm">
-                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="submit" class="btn btn-primary">更新</button>
                     <a class="btn btn-link pull-right" href="{{ url('/') }}">
-                        <i class="glyphicon glyphicon-backward"></i> Back
+                        <i class="glyphicon glyphicon-backward"></i> 戻る
                     </a>
                 </div>
 
