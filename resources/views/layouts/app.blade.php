@@ -62,15 +62,15 @@
                                             <a href="{{ route('logout') }}"
                                                onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">
-                                                Logout
+                                                サインアウト
                                             </a>
 
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                                 {{ csrf_field() }}
                                             </form>
                                         </li>
-                                        <li><a href="{{ url('/public') }}">本一覧(公開ページ)</a></li>
-                                        <li><a href="{{ url('/') }}">本一覧(非公開ページ)</a></li>
+                                        <li><a href="{{ url('/public') }}">みんなの本棚</a></li>
+                                        <li><a href="{{ url('/') }}">じぶんの本棚</a></li>
                                     </ul>
                                 </li>
                                 @endguest
