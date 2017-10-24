@@ -4,7 +4,7 @@ use App\Book;
 use Illuminate\Http\Request;
 
 Route::get('/', function() {
-    return 'top page';
+    return view('index');
 });
 
 // public page
@@ -22,16 +22,14 @@ Route::post('/private/books', 'BooksController@store');
 // private edit page
 Route::post('/private/books/edit/{books}', 'BooksController@edit');
 
-// update
+// private page update
 Route::post('/private/books/update', 'BooksController@update');
 
-// destroy
+// private page destroy
 Route::delete('private/book/{book}', 'BooksController@destroy');
 
-// Socialite
+// auth
 Route::get('auth/{provider}', 'Auth\AuthController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
 
-// user status
 Auth::routes();
-Route::get('/home', 'HomeController@index');
