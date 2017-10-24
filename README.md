@@ -30,6 +30,7 @@ php artisan key:generate
 cd database
 
 touch database.sqlite
+
 cd ..
 ```
 
