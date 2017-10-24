@@ -6,33 +6,28 @@
             @include('common.errors')
             <form action="{{ url('books/update') }}" method="POST">
                 <div class="form-group">
-                    <label for="item_name">Title</label>
+                    <label for="item_name">書籍名</label>
                     {{ $book->item_name }}
                 </div>
 
                 <div class="form-group">
-                    <label for="item_name">Description</label>
-                    {{!! $book->item_description !!}}
-                </div>
-
-                <div class="form-group">
-                    <label for="item_number">Number</label>
-                    {{ $book->item_number }}
-                </div>
-
-                <div class="form-group">
-                    <label for="item_amount">Amount</label>
+                    <label for="item_amount">価格</label>
                     {{ $book->item_amount }}
                 </div>
 
                 <div class="form-group">
-                    <label for="published">Published</label>
+                    <label for="item_number">数量</label>
+                    {{ $book->item_number }}
+                </div>
+
+                <div class="form-group">
+                    <label for="published">出版社</label>
                     {{ $book->published }}
                 </div>
 
                 <div class="well well-sm">
                     <a class="btn btn-link pull-right" href="{{ url('/') }}">
-                        <i class="glyphicon glyphicon-backward"></i> Back
+                        <i class="glyphicon glyphicon-backward"></i> 戻る
                     </a>
                 </div>
 
@@ -41,6 +36,5 @@
                 {{ csrf_field() }}
             </form>
         </div>
-        <div class="col-md-2"></div>
     </div>
 @endsection
