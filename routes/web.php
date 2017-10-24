@@ -24,13 +24,8 @@ Route::post('/books/update', 'BooksController@update');
 // destroy
 Route::delete('/book/{book}', 'BooksController@destroy');
 
-// Scaffold
-Route::resource('tasks', 'TaskController');
-
 // Socialite
 Route::get('auth/{provider}', 'Auth\AuthController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
 
-// user status
 Auth::routes();
-Route::get('/home', 'HomeController@index');
