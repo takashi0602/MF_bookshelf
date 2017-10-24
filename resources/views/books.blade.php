@@ -8,36 +8,35 @@
 
             <div class="form-group">
                 <div class="col-sm-6">
-                    <label for="name" class="col-sm-3 control-label">Name</label>
+                    <label for="name" class="col-sm-3 control-label">書籍名</label>
                     <input type="text" name="item_name" id="book-name" class="form-control">
                 </div>
 
                 <div class="col-sm-6">
-                    <label for="amount" class="col-sm-3 control-label">Amount</label>
+                    <label for="amount" class="col-sm-3 control-label">価格</label>
                     <input type="text" name="item_amount" id="book-amount" class="form-control">
                 </div>
 
                 <div class="col-sm-6">
-                    <label for="number" class="col-sm-3 control-label">Number</label>
+                    <label for="number" class="col-sm-3 control-label">数量</label>
                     <input type="text" name="item_number" id="book-number" class="form-control">
                 </div>
 
-
                 <div class="col-sm-6">
-                    <label for="published" class="col-sm-3 control-label">Published</label>
+                    <label for="published" class="col-sm-3 control-label">出版社</label>
                     <input type="date" name="published" id="book-published" class="form-control">
                 </div>
             </div>
 
             <div class="col-sm-6">
-                <label>Image</label>
+                <label>画像</label>
                 <input type="file" name="item_img">
             </div>
 
             <div class="form-group">
                 <div class="col-sm-offset-3 col-sm-6">
                     <button type="submit" class="btn btn-default">
-                        <i class="glyphicon glyphicon-plus"></i> Save
+                        <i class="glyphicon glyphicon-plus"></i> 保存
                     </button>
                 </div>
             </div>
