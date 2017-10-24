@@ -3,7 +3,7 @@
 @section('content')
     <div class="panel-body">
         @include('common.errors')
-        <form enctype="multipart/form-data" action="{{ url('books') }}" method="POST" class="form-horizontal">
+        <form enctype="multipart/form-data" action="{{ url('private/books') }}" method="POST" class="form-horizontal">
             {{ csrf_field() }}
 
             <div class="form-group">
@@ -61,7 +61,7 @@
                                         <div><img src="upload/{{ $book->item_img }}" alt="" width="100"></div>
                                     </td>
                                     <td>
-                                        <form action="{{ url('booksedit/' . $book->id) }}" method="POST">
+                                        <form action="{{ url('private/books/edit/' . $book->id) }}" method="POST">
                                             {{ csrf_field() }}
                                             <button type="submit" class="btn btn-primary">
                                                 <i class="glyphicon glyphicon-pencil"></i> 更新
@@ -69,7 +69,7 @@
                                         </form>
                                     </td>
                                     <td>
-                                        <form action="{{ url('book/' . $book->id) }}" method="POST">
+                                        <form action="{{ url('private/book/' . $book->id) }}" method="POST">
                                             {{ csrf_field() }}
                                             {{ method_field('DELETE') }}
 

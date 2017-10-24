@@ -70,7 +70,7 @@
                                             </form>
                                         </li>
                                         <li><a href="{{ url('/public') }}">みんなの本棚</a></li>
-                                        <li><a href="{{ url('/') }}">じぶんの本棚</a></li>
+                                        <li><a href="{{ url('/private') }}">じぶんの本棚</a></li>
                                     </ul>
                                 </li>
                                 @endguest

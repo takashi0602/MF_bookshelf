@@ -24,7 +24,7 @@ class BooksController extends Controller
             $filename = $file->getClientOriginalName();
             $move = $file->move('./upload', $filename);
         } else {
-            $filename = "";
+            $filename = '';
         }
 
         // Validation
@@ -37,7 +37,7 @@ class BooksController extends Controller
 
         // Validation Error
         if ($validator->fails()) {
-            return redirect('/')->withInput()->withErrors($validator);
+            return redirect('/private')->withInput()->withErrors($validator);
         }
 
         // Eloquent Model
@@ -50,7 +50,7 @@ class BooksController extends Controller
         $books->item_img = $filename;
         $books->published = $request->published;
         $books->save();
-        return redirect('/');
+        return redirect('/private');
     }
 
     // edit screen
@@ -74,7 +74,7 @@ class BooksController extends Controller
 
         // Validation Error
         if ($validator->fails()) {
-            return redirect('/')->withInput()->withErrors($validator);
+            return redirect('/private')->withInput()->withErrors($validator);
         }
 
         // Eloquent Model
@@ -85,12 +85,12 @@ class BooksController extends Controller
         $books->item_amount = $request->item_amount;
         $books->published = $request->published;
         $books->save();
-        return redirect('/');
+        return redirect('/private');
     }
 
     public function destroy(Book $book) {
         $book->delete();
-        return redirect('/');
+        return redirect('/private');
     }
 
     /**

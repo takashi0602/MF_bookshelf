@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-12">
             @include('common.errors')
-            <form action="{{ url('books/update') }}" method="POST">
+            <form action="{{ url('private/books/update') }}" method="POST">
                 <div class="form-group">
                     <label for="item_name">書籍名</label>
                     <input type="text" id="item_name" name="item_name" class="form-control" value="{{ $book->item_name }}">
@@ -29,7 +29,7 @@
 
                 <div class="well well-sm">
                     <button type="submit" class="btn btn-primary">更新</button>
-                    <a class="btn btn-link pull-right" href="{{ url('/') }}">
+                    <a class="btn btn-link pull-right" href="{{ url('/private') }}">
                         <i class="glyphicon glyphicon-backward"></i> 戻る
                     </a>
                 </div>

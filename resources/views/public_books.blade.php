@@ -37,7 +37,7 @@
                                         <div>{{ $book->item_number }}</div>
                                     </td>
                                     <td>
-                                        <form action="{{ url('public_description/' . $book->id) }}" method="POST">
+                                        <form action="{{ url('public/detail/' . $book->id) }}" method="POST">
                                             {{ csrf_field() }}
                                             <button type="submit" class="btn btn-default">
                                                 <i class="glyphicon glyphicon-search"></i> 詳細

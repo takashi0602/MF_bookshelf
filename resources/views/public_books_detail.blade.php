@@ -26,7 +26,7 @@
                 </div>
 
                 <div class="well well-sm">
-                    <a class="btn btn-link pull-right" href="{{ url('/') }}">
+                    <a class="btn btn-link pull-right" href="{{ url('/public') }}">
                         <i class="glyphicon glyphicon-backward"></i> 戻る
                     </a>
                 </div>

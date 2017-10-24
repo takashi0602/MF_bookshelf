@@ -3,29 +3,35 @@
 use App\Book;
 use Illuminate\Http\Request;
 
+Route::get('/', function() {
+    return 'top page';
+});
+
 // public page
 Route::get('/public', 'PublicbooksController@index');
 
 // public page detail
-Route::post('/public_description/{books}', 'PublicbooksController@description');
+Route::post('/public/detail/{books}', 'PublicbooksController@description');
 
-// top page
-Route::get('/', 'BooksController@index');
+// private page
+Route::get('/private', 'BooksController@index');
 
 // create
-Route::post('/books', 'BooksController@store');
+Route::post('/private/books', 'BooksController@store');
 
-// edit screen
-Route::post('/booksedit/{books}', 'BooksController@edit');
+// private edit page
+Route::post('/private/books/edit/{books}', 'BooksController@edit');
 
 // update
-Route::post('/books/update', 'BooksController@update');
+Route::post('/private/books/update', 'BooksController@update');
 
 // destroy
-Route::delete('/book/{book}', 'BooksController@destroy');
+Route::delete('private/book/{book}', 'BooksController@destroy');
 
 // Socialite
 Route::get('auth/{provider}', 'Auth\AuthController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
 
+// user status
 Auth::routes();
+Route::get('/home', 'HomeController@index');
