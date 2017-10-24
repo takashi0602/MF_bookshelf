@@ -15,7 +15,6 @@
                             <th>公開日</th>
                             <th>タイトル</th>
                             <th>金額</th>
-                            <th>数</th>
                             <th>詳細ページ</th>
                         </thead>
                         <tbody>
@@ -32,9 +31,6 @@
                                     </td>
                                     <td class="table-text">
                                         <div>{{ $book->item_amount }}</div>
-                                    </td>
-                                    <td class="table-text">
-                                        <div>{{ $book->item_number }}</div>
                                     </td>
                                     <td>
                                         <form action="{{ url('public_description/' . $book->id) }}" method="POST">
