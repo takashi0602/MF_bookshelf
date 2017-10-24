@@ -15,10 +15,6 @@
                     <input type="text" id="item_amount" name="item_amount" class="form-control" value="{{ $book->item_amount }}">
                 </div>
 
-                <div class="form-group">
-                    <label for="item_number">数量</label>
-                    <input type="text" id="item_number" name="item_number" class="form-control" value="{{ $book->item_number }}">
-                </div>
 
                 <div class="form-group">
                     <label for="published">出版社</label>

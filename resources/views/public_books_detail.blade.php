@@ -16,11 +16,6 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="item_number">数量</label>
-                    {{ $book->item_number }}
-                </div>
-
-                <div class="form-group">
                     <label for="published">出版社</label>
                     {{ $book->published }}
                 </div>
