@@ -12,7 +12,7 @@
                 <div class="panel-body">
                     <table class="table table-striped task-table">
                         <thead>
-                            <th>公開日</th>
+                            <th>出版日</th>
                             <th>タイトル</th>
                             <th>金額</th>
                             <th>詳細ページ</th>

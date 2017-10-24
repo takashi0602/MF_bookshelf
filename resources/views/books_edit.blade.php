@@ -17,8 +17,8 @@
 
 
                 <div class="form-group">
-                    <label for="published">出版社</label>
-                    <input type="datetime" id="published" name="published" class="form-control" value="{{ $book->published }}">
+                    <label for="published">出版日</label>
+                    <input type="date" id="published" name="published" class="form-control" value="{{ $book->published }}">
                 </div>
 
                 <!-- TODO: 画像選択処理 -->

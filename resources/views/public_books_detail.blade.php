@@ -16,7 +16,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="published">出版社</label>
+                    <label for="published">出版日</label>
                     {{ $book->published }}
                 </div>
 
