@@ -56,7 +56,7 @@ class BooksController extends Controller
     // edit screen
     public function edit($book_id) {
         $books = Book::where('user_id', Auth::user()->id)->find($book_id);
-        return view('booksedit', [
+        return view('books_edit', [
             'book' => $books
         ]);
     }

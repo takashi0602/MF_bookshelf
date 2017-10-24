@@ -15,7 +15,7 @@ class PublicbooksController extends Controller
     }
 
     public function description(Book $books) {
-        return view('public_booksedit', [
+        return view('public_books_detail', [
             'book' => $books
         ]);
     }
