@@ -13,13 +13,13 @@
                 </div>
 
                 <div class="col-sm-6">
-                    <label for="amount" class="col-sm-3 control-label">価格</label>
-                    <input type="number" name="book_amount" id="book-amount" class="form-control">
+                    <label for="price" class="col-sm-3 control-label">価格</label>
+                    <input type="number" name="book_price" id="book-price" class="form-control">
                 </div>
 
                 <div class="col-sm-6">
-                    <label for="amount" class="col-sm-3 control-label">ページ数</label>
-                    <input type="number" name="book_amount" id="book-amount" class="form-control">
+                    <label for="price" class="col-sm-3 control-label">ページ数</label>
+                    <input type="number" name="book_price" id="book-price" class="form-control">
                 </div>
 
                 <div class="col-sm-6">

@@ -11,8 +11,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="book_amount">金額</label>
-                    <input type="number" name="book_amount" id="book-amount" class="form-control" value="{{ $book->book_amount }}">
+                    <label for="book_price">金額</label>
+                    <input type="number" name="book_price" id="book-price" class="form-control" value="{{ $book->book_price }}">
                 </div>
 
                 <div class="form-group">

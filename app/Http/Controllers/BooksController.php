@@ -30,7 +30,7 @@ class BooksController extends Controller
         // Validation
         $validator = Validator::make($request->all(), [
             'book_name' => 'required | min: 3 | max: 255',
-            'book_amount' => 'max: 6',
+            'book_price' => 'max: 6',
             'book_page' => 'max: 4'
         ]);
 
@@ -43,7 +43,7 @@ class BooksController extends Controller
         $books = new Book;
         $books->user_id = Auth::user()->id;
         $books->book_name = $request->book_name;
-        $books->book_amount = $request->book_amount;
+        $books->book_price = $request->book_price;
         $books->book_page = $request->book_page;
         $books->book_img = $filename;
         $books->published = $request->published;
@@ -65,7 +65,7 @@ class BooksController extends Controller
         $validator = Validator::make($request->all(), [
             'id' => 'required',
             'book_name' => 'required | min: 3 | max: 255',
-            'book_amount' => 'max: 6',
+            'book_price' => 'max: 6',
             'book_page' => 'max: 4'
         ]);
 
@@ -77,7 +77,7 @@ class BooksController extends Controller
         // Eloquent Model
         $books = Book::where('user_id', Auth::user()->id)->find($request->id);
         $books->book_name = $request->book_name;
-        $books->book_amount = $request->book_amount;
+        $books->book_price = $request->book_price;
         $books->book_page = $request->book_page;
         $books->published = $request->published;
         $books->save();
