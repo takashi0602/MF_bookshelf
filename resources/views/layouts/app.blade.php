@@ -49,8 +49,8 @@
                         <ul class="nav navbar-nav navbar-right">
                             <!-- Authentication Links -->
                             @guest
-                            <li><a href="{{ route('login') }}">ログイン</a></li>
-                            <li><a href="{{ route('register') }}">登録</a></li>
+                            <li><a href="{{ route('login') }}">サインイン</a></li>
+                            <li><a href="{{ route('register') }}">サインアップ</a></li>
                             @else
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
