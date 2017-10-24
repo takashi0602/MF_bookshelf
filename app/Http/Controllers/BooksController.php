@@ -19,7 +19,7 @@ class BooksController extends Controller
 
     // create
     public function store(Request $request) {
-        $file = $request->file('item_img');
+        $file = $request->file('book_img');
         if (!empty($file)) {
             $filename = $file->getClientOriginalName();
             $move = $file->move('./upload', $filename);
@@ -29,9 +29,9 @@ class BooksController extends Controller
 
         // Validation
         $validator = Validator::make($request->all(), [
-            'item_name' => 'required | min: 3 | max: 255',
-            'item_amount' => 'max: 6',
-            'item_page' => 'max: 4'
+            'book_name' => 'required | min: 3 | max: 255',
+            'book_amount' => 'max: 6',
+            'book_page' => 'max: 4'
         ]);
 
         // Validation Error
@@ -42,10 +42,10 @@ class BooksController extends Controller
         // Eloquent Model
         $books = new Book;
         $books->user_id = Auth::user()->id;
-        $books->item_name = $request->item_name;
-        $books->item_amount = $request->item_amount;
-        $books->item_page = $request->item_page;
-        $books->item_img = $filename;
+        $books->book_name = $request->book_name;
+        $books->book_amount = $request->book_amount;
+        $books->book_page = $request->book_page;
+        $books->book_img = $filename;
         $books->published = $request->published;
         $books->save();
         return redirect('/private');
@@ -64,9 +64,9 @@ class BooksController extends Controller
         // Validation
         $validator = Validator::make($request->all(), [
             'id' => 'required',
-            'item_name' => 'required | min: 3 | max: 255',
-            'item_amount' => 'max: 6',
-            'item_page' => 'max: 4'
+            'book_name' => 'required | min: 3 | max: 255',
+            'book_amount' => 'max: 6',
+            'book_page' => 'max: 4'
         ]);
 
         // Validation Error
@@ -76,9 +76,9 @@ class BooksController extends Controller
 
         // Eloquent Model
         $books = Book::where('user_id', Auth::user()->id)->find($request->id);
-        $books->item_name = $request->item_name;
-        $books->item_amount = $request->item_amount;
-        $books->item_page = $request->item_page;
+        $books->book_name = $request->book_name;
+        $books->book_amount = $request->book_amount;
+        $books->book_page = $request->book_page;
         $books->published = $request->published;
         $books->save();
         return redirect('/private');

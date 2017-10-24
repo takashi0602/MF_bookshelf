@@ -6,23 +6,23 @@
             @include('common.errors')
             <form action="{{ url('private/books/update') }}" method="POST">
                 <div class="form-group">
-                    <label for="item_name">書籍名</label>
-                    <input type="text" id="item_name" name="item_name" class="form-control" value="{{ $book->item_name }}">
+                    <label for="book_name">書籍名</label>
+                    <input type="text" name="book_name" id="book-name" class="form-control" value="{{ $book->book_name }}">
                 </div>
 
                 <div class="form-group">
-                    <label for="item_amount">金額</label>
-                    <input type="number" id="item_amount" name="item_amount" class="form-control" value="{{ $book->item_amount }}">
+                    <label for="book_amount">金額</label>
+                    <input type="number" name="book_amount" id="book-amount" class="form-control" value="{{ $book->book_amount }}">
                 </div>
 
                 <div class="form-group">
                     <label for="page">ページ数</label>
-                    <input type="number" name="item_page" id="book-page" class="form-control" value="{{ $book->item_page }}">
+                    <input type="number" name="book_page" id="book-page" class="form-control" value="{{ $book->book_page }}">
                 </div>
 
                 <div class="form-group">
                     <label for="published">出版社</label>
-                    <input type="datetime" id="published" name="published" class="form-control" value="{{ $book->published }}">
+                    <input type="datetime" name="published" id="published" class="form-control" value="{{ $book->published }}">
                 </div>
 
                 <!-- TODO: 画像選択処理 -->
