@@ -12,9 +12,13 @@
 
                 <div class="form-group">
                     <label for="item_amount">金額</label>
-                    <input type="text" id="item_amount" name="item_amount" class="form-control" value="{{ $book->item_amount }}">
+                    <input type="number" id="item_amount" name="item_amount" class="form-control" value="{{ $book->item_amount }}">
                 </div>
 
+                <div class="form-group">
+                    <label for="page">ページ数</label>
+                    <input type="number" name="item_page" id="book-page" class="form-control" value="{{ $book->item_page }}">
+                </div>
 
                 <div class="form-group">
                     <label for="published">出版社</label>

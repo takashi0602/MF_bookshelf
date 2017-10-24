@@ -30,8 +30,8 @@ class BooksController extends Controller
         // Validation
         $validator = Validator::make($request->all(), [
             'item_name' => 'required | min: 3 | max: 255',
-            'item_amount' => 'required | max: 6',
-            'published' => 'required'
+            'item_amount' => 'max: 6',
+            'item_page' => 'max: 4'
         ]);
 
         // Validation Error
@@ -43,8 +43,8 @@ class BooksController extends Controller
         $books = new Book;
         $books->user_id = Auth::user()->id;
         $books->item_name = $request->item_name;
-        $books->item_description = $request->ce;
         $books->item_amount = $request->item_amount;
+        $books->item_page = $request->item_page;
         $books->item_img = $filename;
         $books->published = $request->published;
         $books->save();
@@ -65,8 +65,8 @@ class BooksController extends Controller
         $validator = Validator::make($request->all(), [
             'id' => 'required',
             'item_name' => 'required | min: 3 | max: 255',
-            'item_amount' => 'required | max: 6',
-            'published' => 'required'
+            'item_amount' => 'max: 6',
+            'item_page' => 'max: 4'
         ]);
 
         // Validation Error
@@ -77,8 +77,8 @@ class BooksController extends Controller
         // Eloquent Model
         $books = Book::where('user_id', Auth::user()->id)->find($request->id);
         $books->item_name = $request->item_name;
-        $books->item_description = $request->ce;
         $books->item_amount = $request->item_amount;
+        $books->item_page = $request->item_page;
         $books->published = $request->published;
         $books->save();
         return redirect('/private');

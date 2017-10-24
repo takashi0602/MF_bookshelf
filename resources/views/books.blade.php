@@ -14,9 +14,13 @@
 
                 <div class="col-sm-6">
                     <label for="amount" class="col-sm-3 control-label">価格</label>
-                    <input type="text" name="item_amount" id="book-amount" class="form-control">
+                    <input type="number" name="item_amount" id="book-amount" class="form-control">
                 </div>
 
+                <div class="col-sm-6">
+                    <label for="amount" class="col-sm-3 control-label">ページ数</label>
+                    <input type="number" name="item_amount" id="book-amount" class="form-control">
+                </div>
 
                 <div class="col-sm-6">
                     <label for="published" class="col-sm-3 control-label">出版社</label>
