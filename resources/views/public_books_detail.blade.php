@@ -7,17 +7,29 @@
             <form action="{{ url('books/update') }}" method="POST">
                 <div class="form-group">
                     <label for="item_name">書籍名</label>
-                    {{ $book->item_name }}
+                    {{ $book->book_name }}
+                </div>
+
+                <div class="form-group">
+                    <label for="item_name">ページ数</label>
+                    @if($book->book_page === null)  -
+                    @else   {{ $book->book_page }} ページ
+                    @endif
                 </div>
 
                 <div class="form-group">
                     <label for="item_amount">価格</label>
-                    {{ $book->item_amount }}
+                    ￥ {{ $book->book_price }}
                 </div>
 
                 <div class="form-group">
                     <label for="published">出版日</label>
                     {{ $book->published }}
+                </div>
+
+                <div class="form-group">
+                    <label for="book_description">説明</label>
+                    {{ $book->book_description }}
                 </div>
 
                 <div>

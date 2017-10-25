@@ -13,7 +13,7 @@
                             <th>&nbsp;</th>
                             <th>書籍名</th>
                             <th>ページ数</th>
-                            <th>値段</th>
+                            <th>価格</th>
                             <th>詳細ページ</th>
                         </thead>
                         <tbody>
