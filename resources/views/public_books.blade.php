@@ -6,9 +6,7 @@
 
         @if (count($books) > 0)
             <div class="panel panel-default">
-                <div class="panel-heading">
-                    現在の本
-                </div>
+                <div class="panel-heading">本一覧</div>
                 <div class="panel-body">
                     <table class="table table-striped task-table">
                         <thead>
@@ -28,10 +26,18 @@
                                         <div>{{ $book->book_name }}</div>
                                     </td>
                                     <td class="table-text">
-                                        <div>{{ $book->book_page }}</div>
+                                        @if($book->book_page === null)
+                                            <div>-</div>
+                                        @else
+                                            <div>{{ $book->book_page }} ページ</div>
+                                        @endif
                                     </td>
                                     <td class="table-text">
-                                        <div>{{ $book->book_price }}</div>
+                                        @if($book->book_price === null)
+                                            <div>-</div>
+                                        @else
+                                            <div>￥ {{ $book->book_price }}</div>
+                                        @endif
                                     </td>
                                     <td>
                                         <form action="{{ url('public/detail/' . $book->id) }}" method="POST">
