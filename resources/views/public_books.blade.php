@@ -11,9 +11,9 @@
                     <table class="table table-striped task-table">
                         <thead>
                             <th>&nbsp;</th>
-                            <th>タイトル</th>
+                            <th>書籍名</th>
                             <th>ページ数</th>
-                            <th>金額</th>
+                            <th>値段</th>
                             <th>詳細ページ</th>
                         </thead>
                         <tbody>

@@ -48,22 +48,37 @@
         </form>
         @if (count($books) > 0)
             <div class="panel panel-default">
-                <div class="panel-heading">
-                    現在の本
-                </div>
+                <div class="panel-heading">本一覧</div>
                 <div class="panel-body">
                     <table class="table table-striped task-table">
                         <thead>
-                            <th>本一覧</th>
                             <th>&nbsp;</th>
-                            <th>&nbsp;</th>
+                            <th>書籍名</th>
+                            <th>ページ数</th>
+                            <th>値段</th>
                         </thead>
                         <tbody>
                             @foreach ($books as $book)
                                 <tr>
                                     <td class="table-text">
-                                        <div>{{ $book->book_name }}</div>
                                         <div><img src="upload/{{ $book->book_img }}" alt="" width="100"></div>
+                                    </td>
+                                    <td class="table-text">
+                                        <div>{{ $book->book_name }}</div>
+                                    </td>
+                                    <td class="table-text">
+                                        @if($book->book_page === null)
+                                            <div>-</div>
+                                        @else
+                                            <div>{{ $book->book_page }} ページ</div>
+                                        @endif
+                                    </td>
+                                    <td class="table-text">
+                                        @if($book->book_price === null)
+                                            <div>-</div>
+                                        @else
+                                            <div>￥ {{ $book->book_price }}</div>
+                                        @endif
                                     </td>
                                     <td>
                                         <form action="{{ url('private/books/edit/' . $book->id) }}" method="POST">
