@@ -12,8 +12,9 @@
                 <div class="panel-body">
                     <table class="table table-striped task-table">
                         <thead>
-                            <th>出版日</th>
+                            <th>&nbsp;</th>
                             <th>タイトル</th>
+                            <th>ページ数</th>
                             <th>金額</th>
                             <th>詳細ページ</th>
                         </thead>
@@ -21,16 +22,16 @@
                             @foreach ($books as $book)
                                 <tr>
                                     <td class="table-text">
-                                        <div>{{ $book->published }}</div>
+                                        <div><img src="upload/{{ $book->book_img }}" alt="" width="100"></div>
                                     </td>
                                     <td class="table-text">
-                                        <div>{{ $book->item_name }}</div>
+                                        <div>{{ $book->book_name }}</div>
                                     </td>
                                     <td class="table-text">
-                                        <div>{{ $book->item_name }}</div>
+                                        <div>{{ $book->book_page }}</div>
                                     </td>
                                     <td class="table-text">
-                                        <div>{{ $book->item_amount }}</div>
+                                        <div>{{ $book->book_price }}</div>
                                     </td>
                                     <td>
                                         <form action="{{ url('public/detail/' . $book->id) }}" method="POST">
