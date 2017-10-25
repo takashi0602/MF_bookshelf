@@ -31,7 +31,8 @@ class BooksController extends Controller
         $validator = Validator::make($request->all(), [
             'book_name' => 'required | min: 3 | max: 255',
             'book_price' => 'digits_between: 0, 6',
-            'book_page' => 'digits_between: 0, 4'
+            'book_page' => 'digits_between: 0, 4',
+            'book_description' => 'min: 0 | max: 1000'
         ]);
 
         // Validation Error
@@ -45,6 +46,7 @@ class BooksController extends Controller
         $books->book_name = $request->book_name;
         $books->book_price = $request->book_price;
         $books->book_page = $request->book_page;
+        $books->book_description = $request->book_description;
         $books->book_img = $filename;
         $books->published = $request->published;
         $books->save();
@@ -66,7 +68,8 @@ class BooksController extends Controller
             'id' => 'required',
             'book_name' => 'required | min: 3 | max: 255',
             'book_price' => 'digits_between: 0, 6',
-            'book_page' => 'digits_between: 0, 4'
+            'book_page' => 'digits_between: 0, 4',
+            'book_description' => 'min: 0 | max: 1000'
         ]);
 
         // Validation Error
@@ -79,6 +82,7 @@ class BooksController extends Controller
         $books->book_name = $request->book_name;
         $books->book_price = $request->book_price;
         $books->book_page = $request->book_page;
+        $books->book_description = $request->book_description;
         $books->published = $request->published;
         $books->save();
         return redirect('/private');

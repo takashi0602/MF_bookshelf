@@ -26,6 +26,11 @@
                     <label for="published" class="col-sm-3 control-label">出版日</label>
                     <input type="date" name="published" id="book-published" class="form-control">
                 </div>
+
+                <div class="col-sm-6">
+                    <label for="book_description" class="col-sm-3 control-label">説明</label>
+                    <textarea name="book_description" id="book-description" class="form-control"></textarea>
+                </div>
             </div>
 
             <div class="col-sm-6">

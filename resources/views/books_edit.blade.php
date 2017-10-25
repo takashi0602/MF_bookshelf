@@ -16,13 +16,18 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="page">ページ数</label>
+                    <label for="book_page">ページ数</label>
                     <input type="number" name="book_page" id="book-page" class="form-control" value="{{ $book->book_page }}">
                 </div>
 
                 <div class="form-group">
                     <label for="published">出版日</label>
                     <input type="date" id="published" name="published" class="form-control" value="{{ $book->published }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="book_description">説明</label>
+                    <textarea name="book_description" id="book-description" class="form-control">{{ $book->book_description }}</textarea>
                 </div>
 
                 <!-- TODO: 画像選択処理 -->

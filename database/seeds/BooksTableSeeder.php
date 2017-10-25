@@ -18,6 +18,7 @@ class BooksTableSeeder extends Seeder
                 'book_name' => $faker->word(),
                 'book_price' => $faker->numberBetween(100, 5000),
                 'book_page' => $faker->numberBetween(0, 999999),
+                'book_description' => $faker->word(),
                 'published' => $faker->dateTime('now'),
                 'created_at' => $faker->dateTime('now'),
                 'updated_at' => $faker->dateTime('now'),
