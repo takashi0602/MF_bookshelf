@@ -5,6 +5,8 @@
         <div class="col-md-12">
             @include('common.errors')
             <form action="{{ url('books/update') }}" method="POST">
+                <img src="../../../upload/{{ $book->book_img }}" alt="" width="300">
+
                 <div class="form-group">
                     <label for="item_name">書籍名</label>
                     {{ $book->book_name }}
