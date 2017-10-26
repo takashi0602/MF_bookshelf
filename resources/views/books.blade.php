@@ -17,8 +17,8 @@
                 </div>
 
                 <div>
-                    <label for="price">ページ数</label>
-                    <input type="number" name="book_price" id="book-price">
+                    <label for="page">ページ数</label>
+                    <input type="number" name="book_page" id="book-page">
                 </div>
 
                 <div>
