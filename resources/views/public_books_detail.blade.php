@@ -21,17 +21,23 @@
 
                 <div class="form-group">
                     <label for="item_amount">価格</label>
-                    ￥ {{ $book->book_price }}
+                    @if($book->book_price === null)  -
+                    @else   ￥ {{ $book->book_price }}
+                    @endif
                 </div>
 
                 <div class="form-group">
                     <label for="published">出版日</label>
-                    {{ $book->published }}
+                    @if($book->published === null)  -
+                    @else   {{ $book->published }}
+                    @endif
                 </div>
 
                 <div class="form-group">
                     <label for="book_description">説明</label>
-                    {{ $book->book_description }}
+                    @if($book->book_description === null)  -
+                    @else   {{ $book->book_description }}
+                    @endif
                 </div>
 
                 <div>
