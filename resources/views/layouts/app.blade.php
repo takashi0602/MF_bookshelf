@@ -49,8 +49,8 @@
                         <ul class="nav navbar-nav navbar-right">
                             <!-- Authentication Links -->
                             @guest
-                            <li><a href="{{ route('login') }}">サインイン</a></li>
-                            <li><a href="{{ route('register') }}">サインアップ</a></li>
+                            <li><a href="{{ route('login') }}"><i class="fa fa-sign-in" aria-hidden="true"></i> サインイン</a></li>
+                            <li><a href="{{ route('register') }}"><i class="fa fa-user-plus" aria-hidden="true"></i> サインアップ</a></li>
                             @else
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -61,7 +61,7 @@
                                         <li><a href="{{ url('/public') }}"><i class="fa fa-users" aria-hidden="true"></i> みんなの本棚</a></li>
                                         <li><a href="{{ url('/private') }}"><i class="fa fa-user" aria-hidden="true"></i> じぶんの本棚</a></li>
                                         <li>
-                                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-in" aria-hidden="true"></i> サインアウト</a>
+                                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out" aria-hidden="true"></i> サインアウト</a>
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                                 {{ csrf_field() }}
                                             </form>

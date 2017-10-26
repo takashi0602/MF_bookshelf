@@ -33,9 +33,11 @@
                 <!-- TODO: 画像選択処理 -->
 
                 <div class="well well-sm">
-                    <button type="submit" class="btn btn-primary">更新</button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-pencil" aria-hidden="true"></i> 更新
+                    </button>
                     <a class="btn btn-link pull-right" href="{{ url('/private') }}">
-                        <i class="glyphicon glyphicon-backward"></i> 戻る
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i> 戻る
                     </a>
                 </div>
 

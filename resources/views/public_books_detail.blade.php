@@ -42,7 +42,7 @@
 
                 <div>
                     <a class="btn btn-link pull-right" href="{{ url('/public') }}">
-                        <i class="glyphicon glyphicon-backward"></i> 戻る
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i> 戻る
                     </a>
                 </div>
 

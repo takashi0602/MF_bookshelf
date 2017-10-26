@@ -43,7 +43,7 @@
                                         <form action="{{ url('public/detail/' . $book->id) }}" method="POST">
                                             {{ csrf_field() }}
                                             <button type="submit" class="btn btn-default">
-                                                <i class="glyphicon glyphicon-search"></i> 詳細
+                                                <i class="fa fa-search" aria-hidden="true"></i> 詳細
                                             </button>
                                         </form>
                                     </td>

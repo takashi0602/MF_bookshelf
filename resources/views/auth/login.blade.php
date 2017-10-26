@@ -51,16 +51,16 @@
 
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">サインイン</button>
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-sign-in" aria-hidden="true"></i> サインイン</button>
                                 <a class="btn btn-link" href="{{ route('password.request') }}">パスワードを忘れましたか？</a>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <div class="cpl-md-6 col-md-offset-4">
-                                <a href="{{ url('/auth/github') }}" class="btn btn-github"><i class="fa fa-github"></i> Github</a>
-                                <a href="{{ url('/auth/twitter') }}" class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>
-                                <a href="{{ url('/auth/facebook') }}" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</a>
+                                <a href="{{ url('/auth/github') }}" class="btn btn-github"><i class="fa fa-github" aria-hidden="true"></i> Github</a>
+                                <a href="{{ url('/auth/twitter') }}" class="btn btn-twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a>
+                                <a href="{{ url('/auth/facebook') }}" class="btn btn-facebook"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a>
                             </div>
                         </div>
                     </form>

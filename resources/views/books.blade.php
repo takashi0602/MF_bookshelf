@@ -41,7 +41,7 @@
             <div class="form-group">
                 <div class="col-sm-offset-3 col-sm-6">
                     <button type="submit" class="btn btn-default">
-                        <i class="glyphicon glyphicon-plus"></i> 保存
+                        <i class="fa fa-plus" aria-hidden="true"></i> 本棚に入れる
                     </button>
                 </div>
             </div>
@@ -84,7 +84,7 @@
                                         <form action="{{ url('private/books/edit/' . $book->id) }}" method="POST">
                                             {{ csrf_field() }}
                                             <button type="submit" class="btn btn-primary">
-                                                <i class="glyphicon glyphicon-pencil"></i> 更新
+                                                <i class="fa fa-pencil" aria-hidden="true"></i> 更新
                                             </button>
                                         </form>
                                     </td>
@@ -94,7 +94,7 @@
                                             {{ method_field('DELETE') }}
 
                                             <button type="submit" class="btn btn-danger">
-                                                <i class="glyphicon glyphicon-trash"></i> 削除
+                                                <i class="fa fa-trash" aria-hidden="true"></i> 削除
                                             </button>
                                         </form>
                                     </td>
