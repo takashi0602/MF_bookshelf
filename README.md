@@ -55,3 +55,17 @@ php artisan migrate
 ```
 php artisan serve
 ```
+
+
+
+Sassのコンパイル
+
+```
+npm run dev
+```
+
+Sassの自動コンパイル
+
+```
+npm run watch
+```
