@@ -1,14 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="panel-body">
+    <div>
         @include('common.errors')
-
         @if (count($books) > 0)
-            <div class="panel panel-default">
-                <div class="panel-heading">本一覧</div>
-                <div class="panel-body">
-                    <table class="table table-striped task-table">
+            <div>
+                <div>本一覧</div>
+                <div>
+                    <table>
                         <thead>
                             <th>&nbsp;</th>
                             <th>書籍名</th>
@@ -19,20 +18,20 @@
                         <tbody>
                             @foreach ($books as $book)
                                 <tr>
-                                    <td class="table-text">
+                                    <td>
                                         <div><img src="upload/{{ $book->book_img }}" alt="" width="100"></div>
                                     </td>
-                                    <td class="table-text">
+                                    <td>
                                         <div>{{ $book->book_name }}</div>
                                     </td>
-                                    <td class="table-text">
+                                    <td>
                                         @if($book->book_page === null)
                                             <div>-</div>
                                         @else
                                             <div>{{ $book->book_page }} ページ</div>
                                         @endif
                                     </td>
-                                    <td class="table-text">
+                                    <td>
                                         @if($book->book_price === null)
                                             <div>-</div>
                                         @else
@@ -42,7 +41,7 @@
                                     <td>
                                         <form action="{{ url('public/detail/' . $book->id) }}" method="POST">
                                             {{ csrf_field() }}
-                                            <button type="submit" class="btn btn-default">
+                                            <button type="submit">
                                                 <i class="fa fa-search" aria-hidden="true"></i> 詳細
                                             </button>
                                         </form>
@@ -54,7 +53,7 @@
                 </div>
             </div>
         @endif
-        <div class="col-md-4 col-md-offset-4">
+        <div>
             {{ $books->links()}}
         </div>
     </div>
