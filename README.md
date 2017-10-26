@@ -4,6 +4,12 @@ Composerのインストール
 composer install
 ```
 
+npmのインストール
+
+```
+npm i
+```
+
 
 
 .envの作成
