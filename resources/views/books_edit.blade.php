@@ -30,6 +30,8 @@
                     <textarea name="book_description" id="book-description" class="form-control">{{ $book->book_description }}</textarea>
                 </div>
 
+                <img src="../../../upload/{{ $book->book_img }}" alt="" width="300">
+
                 <!-- TODO: 画像選択処理 -->
 
                 <div class="well well-sm">
