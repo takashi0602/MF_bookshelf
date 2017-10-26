@@ -58,10 +58,10 @@
                                     </a>
 
                                     <ul class="dropdown-menu" role="menu">
-                                        <li><a href="{{ url('/public') }}">みんなの本棚</a></li>
-                                        <li><a href="{{ url('/private') }}">じぶんの本棚</a></li>
+                                        <li><a href="{{ url('/public') }}"><i class="fa fa-users" aria-hidden="true"></i> みんなの本棚</a></li>
+                                        <li><a href="{{ url('/private') }}"><i class="fa fa-user" aria-hidden="true"></i> じぶんの本棚</a></li>
                                         <li>
-                                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">サインアウト</a>
+                                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-in" aria-hidden="true"></i> サインアウト</a>
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                                 {{ csrf_field() }}
                                             </form>
