@@ -15,6 +15,9 @@ class PublicbooksController extends Controller
     }
 
     public function detail(Book $books) {
+        $books->published = explode('-', $books->published);
+        $books->published = implode('/', $books->published);
+
         return view('public_books_detail', [
             'book' => $books
         ]);
