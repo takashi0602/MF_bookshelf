@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="panel-body">
+    <div>
         @include('common.errors')
         TOPページだYO！
     </div>
