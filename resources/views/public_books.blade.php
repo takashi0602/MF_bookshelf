@@ -19,7 +19,7 @@
                             @foreach ($books as $book)
                                 <tr>
                                     <td>
-                                        <div><img src="upload/{{ $book->book_img }}" alt="" width="100"></div>
+                                        <div><img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="100"></div>
                                     </td>
                                     <td>
                                         <div>{{ $book->book_name }}</div>

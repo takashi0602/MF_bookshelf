@@ -5,7 +5,7 @@
         <div>
             @include('common.errors')
             <form action="{{ url('books/update') }}" method="POST">
-                <img src="../../../upload/{{ $book->book_img }}" alt="" width="300">
+                <img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="300">
                 <div>
                     <label for="item_name">書籍名</label>
                     {{ $book->book_name }}

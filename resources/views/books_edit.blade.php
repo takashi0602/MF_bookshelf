@@ -25,7 +25,7 @@
                     <label for="book_description">説明</label>
                     <textarea name="book_description" id="book-description">{{ $book->book_description }}</textarea>
                 </div>
-                <img src="../../../upload/{{ $book->book_img }}" alt="" width="300">
+                <img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="300">
                 <div>
                     <button type="submit">
                         <i class="fa fa-pencil" aria-hidden="true"></i> 更新

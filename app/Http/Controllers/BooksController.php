@@ -19,12 +19,10 @@ class BooksController extends Controller
 
     // create
     public function store(Request $request) {
-        $file = $request->file('book_img');
-        if (!empty($file)) {
-            $filename = $file->getClientOriginalName();
-            $move = $file->move('./upload', $filename);
+        if (!empty($request->book_img)) {
+            $request->book_img = base64_encode(file_get_contents($request->book_img));
         } else {
-            $filename = '';
+            $request->book_img = null;
         }
 
         // Validation
@@ -47,7 +45,7 @@ class BooksController extends Controller
         $books->book_price = $request->book_price;
         $books->book_page = $request->book_page;
         $books->book_description = $request->book_description;
-        $books->book_img = $filename;
+        $books->book_img = $request->book_img;
         $books->published = $request->published;
         $books->save();
         return redirect('/private');
