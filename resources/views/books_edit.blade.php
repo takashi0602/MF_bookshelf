@@ -10,7 +10,7 @@
                     <input type="text" name="book_name" id="book-name" value="{{ $book->book_name }}">
                 </div>
                 <div>
-                    <label for="book_price">金額</label>
+                    <label for="book_price">価格</label>
                     <input type="number" name="book_price" id="book-price" value="{{ $book->book_price }}">
                 </div>
                 <div>
