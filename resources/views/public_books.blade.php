@@ -54,7 +54,7 @@
             </div>
         @endif
         <div>
-            {{ $books->links()}}
+            {{ $books->links() }}
         </div>
     </div>
 @endsection
