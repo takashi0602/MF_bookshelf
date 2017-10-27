@@ -15,12 +15,6 @@
             <nav>
                 <div class="container">
                     <div>
-                        <button type="button" data-toggle="collapse" data-target="#app-navbar-collapse">
-                            <span>Toggle Navigation</span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
                         <a href="{{ url('/') }}">
                             {{ config('app.name', 'Laravel') }}
                         </a>
