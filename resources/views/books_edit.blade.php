@@ -28,11 +28,11 @@
                 <div>
                     <label for="flag">公開設定</label>
                     @if ($book->flag === 'public')
-                        <input type="radio" name="flag" value="public" checked> 公開
-                        <input type="radio" name="flag" value="private"> 非公開
+                        <input type="radio" name="flag" id="flag" value="public" checked> 公開
+                        <input type="radio" name="flag" id="flag" value="private"> 非公開
                     @else
-                        <input type="radio" name="flag" value="public"> 公開
-                        <input type="radio" name="flag" value="private" checked> 非公開
+                        <input type="radio" name="flag" id="flag" value="public"> 公開
+                        <input type="radio" name="flag" id="flag" value="private" checked> 非公開
                     @endif
                 </div>
                 <div>

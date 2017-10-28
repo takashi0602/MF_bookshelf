@@ -36,8 +36,8 @@
                 </div>
                 <div>
                     <label for="flag">公開設定</label>
-                    <input type="radio" name="flag" value="public" checked> 公開
-                    <input type="radio" name="flag" value="private"> 非公開
+                    <input type="radio" name="flag" id="flag" value="public" checked> 公開
+                    <input type="radio" name="flag" id="flag" value="private"> 非公開
                 </div>
             </div>
             <div>
@@ -63,7 +63,6 @@
                             @foreach ($books as $book)
                                 <tr>
                                     <td>
-                                        {{--<div><img src="upload/{{ $book->book_img }}" alt="" width="100"></div>--}}
                                         <div><img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="100"></div>
                                     </td>
                                     <td>
