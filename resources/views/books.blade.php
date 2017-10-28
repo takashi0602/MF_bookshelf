@@ -7,29 +7,29 @@
             {{ csrf_field() }}
             <div>
                 <div>
-                    <label for="name">書籍名</label>
+                    <label for="book-name">書籍名</label>
                     <input type="text" name="book_name" id="book-name">
                 </div>
                 <div>
-                    <label for="price">価格</label>
+                    <label for="book-price">価格</label>
                     <input type="number" name="book_price" id="book-price">
                 </div>
                 <div>
-                    <label for="page">ページ数</label>
+                    <label for="book-page">ページ数</label>
                     <input type="number" name="book_page" id="book-page">
                 </div>
                 <div>
                     <label for="published">出版日</label>
-                    <input type="date" name="published" id="book-published">
+                    <input type="date" name="published" id="published">
                 </div>
                 <div>
-                    <label for="book_description">説明</label>
+                    <label for="book-description">説明</label>
                     <textarea name="book_description" id="book-description"></textarea>
                 </div>
             </div>
             <div>
-                <label>画像</label>
-                <input type="file" name="book_img">
+                <label for="book-img">画像</label>
+                <input type="file" name="book_img" id="book-img">
             </div>
             <div>
                 <div>
@@ -54,6 +54,7 @@
                             @foreach ($books as $book)
                                 <tr>
                                     <td>
+                                        {{--<div><img src="upload/{{ $book->book_img }}" alt="" width="100"></div>--}}
                                         <div><img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="100"></div>
                                     </td>
                                     <td>
