@@ -19,10 +19,13 @@ class BooksController extends Controller
 
     // create
     public function store(Request $request) {
+        $default_books = [ 'black', 'blue', 'green', 'orange', 'purple', 'red', 'white', 'yellow' ];
+        $default_book = mt_rand(0, 7);
+
         if (!empty($request->book_img)) {
-            $request->book_img = base64_encode(file_get_contents($request->book_img));
+            $img = base64_encode(file_get_contents($request->book_img));
         } else {
-            $request->book_img = null;
+            $img = base64_encode(file_get_contents('./img/book_' . $default_books[$default_book] . '.png'));
         }
 
         // Validation
@@ -45,7 +48,7 @@ class BooksController extends Controller
         $books->book_price = $request->book_price;
         $books->book_page = $request->book_page;
         $books->book_description = $request->book_description;
-        $books->book_img = $request->book_img;
+        $books->book_img = $img;
         $books->author = $request->author;
         $books->published = $request->published;
         $books->save();
