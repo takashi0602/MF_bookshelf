@@ -22,6 +22,10 @@
                     <input type="date" name="published" id="published" value="{{ $book->published }}">
                 </div>
                 <div>
+                    <label for="author">著者</label>
+                    <input type="text" name="author" id="author" value="{{ $book->author }}">
+                </div>
+                <div>
                     <label for="book-description">説明</label>
                     <textarea name="book_description" id="book-description">{{ $book->book_description }}</textarea>
                 </div>

@@ -29,6 +29,12 @@
                     @endif
                 </div>
                 <div>
+                    <label for="author">著者</label>
+                    @if($book->author === null)  -
+                    @else   {{ $book->author }}
+                    @endif
+                </div>
+                <div>
                     <label for="book_description">説明</label>
                     @if($book->book_description === null)  -
                     @else   {{ $book->book_description }}
