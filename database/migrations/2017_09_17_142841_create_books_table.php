@@ -23,6 +23,7 @@ class CreateBooksTable extends Migration
             $table->string('book_img')->nullable();
             $table->string('author')->nullable();
             $table->dateTime('published')->nullable();
+            $table->string('flag');
             $table->timestamps();
         });
     }

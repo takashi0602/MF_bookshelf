@@ -51,6 +51,7 @@ class BooksController extends Controller
         $books->book_img = $img;
         $books->author = $request->author;
         $books->published = $request->published;
+        $books->flag = $request->flag;
         $books->save();
         return redirect('/private');
     }
@@ -87,6 +88,7 @@ class BooksController extends Controller
         $books->book_description = $request->book_description;
         $books->author = $request->author;
         $books->published = $request->published;
+        $books->flag = $request->flag;
         $books->save();
         return redirect('/private');
     }

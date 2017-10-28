@@ -26,6 +26,16 @@
                     <input type="text" name="author" id="author" value="{{ $book->author }}">
                 </div>
                 <div>
+                    <label for="flag">公開設定</label>
+                    @if ($book->flag === 'public')
+                        <input type="radio" name="flag" value="public" checked> 公開
+                        <input type="radio" name="flag" value="private"> 非公開
+                    @else
+                        <input type="radio" name="flag" value="public"> 公開
+                        <input type="radio" name="flag" value="private" checked> 非公開
+                    @endif
+                </div>
+                <div>
                     <label for="book-description">説明</label>
                     <textarea name="book_description" id="book-description">{{ $book->book_description }}</textarea>
                 </div>
