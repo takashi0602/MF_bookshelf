@@ -1,63 +1,47 @@
 @extends('layouts.app')
 
 @section('nav')
-<div id="main">
-    <div class="container">
-        <div class="c-mainTitle">サインアップ</div>
+<div class="p-signUp">
+    <div class="c-container">
+        <h1 class="c-signUp_title">サインアップ</h1>
         <form method="POST" action="{{ route('register') }}">
             {{ csrf_field() }}
-            <ul>
-                <li>
-                    <div class="c-registerTitle">Bookshelfにサインアップ</div>
-                </li>
-                <li class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                    <label class="c-registerItem" for="name">ユーザネーム</label>
-                    <div class="c-inputField">
-                        <input class="c-registerBox" id="name" type="text" name="name" value="{{ old('name') }}" required autofocus>
-                        @if ($errors->has('name'))
-                            <span>
-                                <strong>{{ $errors->first('name') }}</strong>
-                            </span>
-                        @endif
-                    </div>
-                </li>
-                <li class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                    <label class="c-registerItem" for="email">メールアドレス</label>
-                    <div class="c-inputField">
-                        <input class="c-registerBox" id="email" type="email" name="email" value="{{ old('email') }}" required>
-                        @if ($errors->has('email'))
-                            <span>
-                                <strong>{{ $errors->first('email') }}</strong>
-                            </span>
-                        @endif
-                    </div>
-                </li>
-                <li class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                    <label class="c-registerItem" for="password">パスワード</label>
-                    <div class="c-inputField">
-                        <input class="c-registerBox" id="password" type="password" name="password" required>
-                        @if ($errors->has('password'))
-                            <span>
-                                <strong>{{ $errors->first('password') }}</strong>
-                            </span>
-                        @endif
-                    </div>
-                </li>
-                <li>
-                    <label class="c-registerItem" for="password-confirm">パスワード(再入力)</label>
-                    <div class="c-inputField">
-                        <input class="c-registerBox" id="password-confirm" type="password" name="password_confirmation" required>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li><div class="c-registerTitle">外部サービスでサインアップ</div></li>
-                <li><a href="{{ url('/auth/github') }}"><i class="fa fa-github"></i> Github</a></li>
-                <li><a href="{{ url('/auth/twitter') }}"><i class="fa fa-twitter"></i> Twitter</a></li>
-                <li><a href="{{ url('/auth/facebook') }}"><i class="fa fa-facebook"></i> Facebook</a></li>
-            </ul>
-            <div class="c-button">
-                <button class="c-button_register" type="submit">サインアップ</button>
+            <div class="c-signUpInternal">
+                <h2 class="c-signUpInternal_title">Bookshelfにサインアップ</h2>
+                <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }} c-signUp_email">
+                    <label class="c-signUpLabel_name" for="name">ユーザネーム</label>
+                    <input class="c-signUpForm_name" id="name" type="text" name="name" value="{{ old('name') }}" required autofocus>
+                    @if ($errors->has('name'))
+                        <strong>{{ $errors->first('name') }}</strong>
+                    @endif
+                </div>
+                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }} c-signUp_name">
+                    <label class="c-signUpLabel_mail" for="email">メールアドレス</label>
+                    <input class="c-signUpForm_mail" id="email" type="email" name="email" value="{{ old('email') }}" required>
+                    @if ($errors->has('email'))
+                        <strong>{{ $errors->first('email') }}</strong>
+                    @endif
+                </div>
+                <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }} c-signUp_pwd">
+                    <label class="c-signUpLabel_pwd" for="password">パスワード</label>
+                    <input class="c-signUpForm_pwd" id="password" type="password" name="password" required>
+                    @if ($errors->has('password'))
+                        <strong>{{ $errors->first('password') }}</strong>
+                    @endif
+                </div>
+                <div>
+                    <label class="c-signUpLabel_pwdConfirm" for="password-confirm">パスワード(再入力)</label>
+                    <input class="c-signUpForm_pwdConfirm" id="password-confirm" type="password" name="password_confirmation" required>
+                </div>
+                <button class="c-signUpBtn" type="submit">サインアップ</button>
+            </div>
+            <div class="c-signUpExternal">
+                <h2 class="c-signUpExternal_title">外部サービスでサインアップ</h2>
+                <ul>
+                    <li><a href="{{ url('/auth/github') }}"><i class="fa fa-github"></i> Github</a></li>
+                    <li><a href="{{ url('/auth/twitter') }}"><i class="fa fa-twitter"></i> Twitter</a></li>
+                    <li><a href="{{ url('/auth/facebook') }}"><i class="fa fa-facebook"></i> Facebook</a></li>
+                </ul>
             </div>
         </form>
     </div>
