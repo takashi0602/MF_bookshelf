@@ -3,9 +3,8 @@
 use App\Book;
 use Illuminate\Http\Request;
 
-Route::get('/', function() {
-    return view('index');
-});
+// top page
+Route::get('/', 'TopPageController');
 
 // public page
 Route::get('/public', 'PublicbooksController@index');
