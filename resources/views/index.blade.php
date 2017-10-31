@@ -9,14 +9,14 @@
                 <div class="c-publicBooks_title">みんなの本棚</div>
                 @foreach ($books as $book)
                     @if ($book->flag === 'public')
-                        <ul>
-                            <li class="c-book_img">
+                        <ul class="c-publicBooks_field">
+                            <li class="c-publicBooks_img">
                                 <div><img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="100"></div>
                             </li>
-                            <li class="c-book_name">
+                            <li class="c-publicBooks_name">
                                 <div>{{ $book->book_name }}</div>
                             </li>
-                            <li class="c-book_detail">
+                            <li class="c-publicBooks_detail">
                                 <form action="{{ url('public/detail/' . $book->id) }}" method="POST">
                                     {{ csrf_field() }}
                                     <button type="submit">
