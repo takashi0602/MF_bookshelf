@@ -13,7 +13,7 @@
         <div id="header">
             <div class="c-container">
                 <div class="c-headerTitle">
-                    <img src="#" alt="" class="c-headerTitle_logo">
+                    <img src="{{ asset('img/logo.png') }}" alt="" class="c-headerTitle_logo" width="100">
                     <a href="{{ url('/') }}" class="c-headerTitle_link">{{ config('app.name', 'Laravel') }}</a>
                 </div>
                 @guest
