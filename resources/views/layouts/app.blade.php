@@ -10,24 +10,24 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     </head>
     <body>
-        <div id="header">
+        <div class="l-header">
             <div class="c-container">
-                <div class="c-headerTitle">
-                    <img src="{{ asset('img/logo.png') }}" alt="" class="c-headerTitle_logo" width="100">
-                    <a href="{{ url('/') }}" class="c-headerTitle_link">{{ config('app.name', 'Laravel') }}</a>
-                </div>
-                @guest
-                    <li><a href="{{ route('login') }}" class="c-headerMenu_signIn"><i class="fa fa-sign-in" aria-hidden="true"></i> サインイン</a></li>
-                    <li><a href="{{ route('register') }}" class="c-headerMenu_signUp"><i class="fa fa-user-plus" aria-hidden="true"></i> サインアップ</a></li>
-                @else
-                    <li><a href="{{ url('/private') }}" class="c-headerMenu_private"><i class="fa fa-user" aria-hidden="true"></i> じぶんの本棚</a></li>
-                    <li><a href="{{ url('/public') }}" class="c-headerMenu_public"><i class="fa fa-users" aria-hidden="true"></i> みんなの本棚</a></li>
-                    <li>
-                        <a href="#" class="c-headerMenu_myPage">{{ Auth::user()->name }}</a>
-                        <a href="{{ route('logout') }}" class="c-headerMenu_signOut" onclick="event.preventDefault(); document.getElementById('headerMenu_form').submit();"><i class="fa fa-sign-out" aria-hidden="true"></i> サインアウト</a>
-                        <form id="headerMenu_form" class="c-headerMenu_form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
-                    </li>
-                @endguest
+                <nav class="l-headerNav">
+                    <ul class="l-headerMenu">
+                        <li class="l-headerMenu_list"><img src="{{ asset('img/logo.png') }}" alt="" class="l-headerTitle_img" width="100"></li>
+                        <li class="l-headerMenu_list"><a href="{{ url('/') }}" class="l-headerTitle_link">{{ config('app.name', 'Laravel') }}</a></li>
+                    @guest
+                        <li class="l-headerMenu_list"><a href="{{ route('login') }}" class="l-headerMenu_link"><i class="fa fa-sign-in" aria-hidden="true"></i> サインイン</a></li>
+                        <li class="l-headerMenu_list"><a href="{{ route('register') }}" class="l-headerMenu_link"><i class="fa fa-user-plus" aria-hidden="true"></i> サインアップ</a></li>
+                    @else
+                        <li class="l-headerMenu_list"><a href="{{ url('/private') }}" class="l-headerMenu_link"><i class="fa fa-user" aria-hidden="true"></i> じぶんの本棚</a></li>
+                        <li class="l-headerMenu_list"><a href="{{ url('/public') }}" class="l-headerMenu_link"><i class="fa fa-users" aria-hidden="true"></i> みんなの本棚</a></li>
+                        <li class="l-headerMenu_list"><a href="#" class="l-headerMenu_link">{{ Auth::user()->name }}</a></li>
+                        <li><a href="{{ route('logout') }}" class="l-headerMenu_link" onclick="event.preventDefault(); document.getElementById('headerMenu_form').submit();"><i class="fa fa-sign-out" aria-hidden="true"></i> サインアウト</a></li>
+                        <form id="headerMenu_form" class="l-headerMenu_form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
+                    @endguest
+                    </ul>
+                </nav>
             </div>
         </div>
         @yield('nav')
