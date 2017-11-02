@@ -1,18 +1,10 @@
 .l-header {
   background: $white;
+  border-bottom: 1px solid #ccc;
   &Menu {
     display: flex;
     position: relative;
-    justify-content: center;
     list-style: none;
-  }
-  &Title_list {
-    display: flex;
-    text-align: center;
-  }
-  &Title_link {
-    text-decoration: none;
-    color: $cobaltBlue;
   }
   &Menu_link {
     text-decoration: none;

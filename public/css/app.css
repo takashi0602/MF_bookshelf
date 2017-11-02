@@ -1,5 +1,6 @@
 .l-header {
   background: #fff;
+  border-bottom: 1px solid #ccc;
 }
 
 .l-headerMenu {
@@ -7,22 +8,7 @@
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   list-style: none;
-}
-
-.l-headerTitle_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-}
-
-.l-headerTitle_link {
-  text-decoration: none;
-  color: #0068b7;
 }
 
 .l-headerMenu_link {
