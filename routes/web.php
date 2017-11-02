@@ -12,6 +12,9 @@ Route::get('/public', 'PublicbooksController@index');
 // public page detail
 Route::post('/public/detail/{books}', 'PublicbooksController@detail');
 
+// private page detail
+Route::post('/private/detail/{books}', 'PublicbooksController@detail');
+
 // private page
 Route::get('/private', 'BooksController@index');
 
@@ -32,3 +35,4 @@ Route::get('auth/{provider}', 'Auth\AuthController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
 
 Auth::routes();
+

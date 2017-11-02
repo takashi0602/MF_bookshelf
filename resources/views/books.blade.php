@@ -48,17 +48,17 @@
                 </button>
             </form>
             @if (count($books) > 0)
-                <div class="c-myBooks">自分の本棚</div>
+                <div class="c-privateBooks">自分の本棚</div>
                 @foreach ($books as $book)
-                    <ul class="c-myBooksList">
-                        <li class="c-myBooksList_img">
+                    <ul class="c-privateBooksList">
+                        <li class="c-privateBooksList_img">
                             <div><img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="100"></div>
                         </li>
-                        <li class="c-myBooksList_name">
+                        <li class="c-c-privateBooksList_name">
                             <div>{{ $book->book_name }}</div>
                         </li>
-                        <li class="c-myBooksList_detail">
-                            <form action="{{ url('public/detail/' . $book->id) }}" method="POST">
+                        <li class="c-c-privateBooksList_detail">
+                            <form action="{{ url('private/detail/' . $book->id) }}" method="POST">
                                 {{ csrf_field() }}
                                 <button type="submit" class="c-publicBooks_btn">
                                     <i class="fa fa-search" aria-hidden="true"></i> 詳細
