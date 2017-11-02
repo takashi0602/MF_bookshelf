@@ -1,5 +1,4 @@
 @import '_normalize.scss';
-@import '_variables.scss';
+@import 'foundation/variables';
 
-// Fonts
-//@import url('https://...');
+@import 'layout/_header.scss';

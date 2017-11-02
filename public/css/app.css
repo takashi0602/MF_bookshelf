@@ -1,0 +1,19 @@
+.l-header {
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.l-headerMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  list-style: none;
+}
+
+.l-headerMenu_link {
+  text-decoration: none;
+  padding: 0 20px;
+  color: #00a1e9;
+}
+

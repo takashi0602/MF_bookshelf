@@ -1,0 +1,14 @@
+.l-header {
+  background: $white;
+  border-bottom: 1px solid #ccc;
+  &Menu {
+    display: flex;
+    position: relative;
+    list-style: none;
+  }
+  &Menu_link {
+    text-decoration: none;
+    padding: 0 20px;
+    color: $cyan;
+  }
+}
