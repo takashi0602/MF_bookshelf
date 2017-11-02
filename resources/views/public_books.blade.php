@@ -5,16 +5,12 @@
         <div class="c-container">
             @include('common.errors')
             @if (count($books) > 0)
-                <div class="c-publicBooks">みんなの本棚</div>
+                <h1 class="c-publicBooks_title">みんなの本棚</h1>
                 @foreach ($books as $book)
-                    <ul class="c-publicBooksList">
-                        <li class="c-publicBooksList_img">
-                            <div><img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="100"></div>
-                        </li>
-                        <li class="c-publicBooksList_name">
-                            <div>{{ $book->book_name }}</div>
-                        </li>
-                        <li class="c-publicBooksList_detail">
+                    <ul class="publicBooks_lists">
+                        <li class="c-publicBooks_list"><img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="100"></li>
+                        <li class="c-publicBooks_list">{{ $book->book_name }}</li>
+                        <li class="c-publicBooks_list">
                             <form action="{{ url('public/detail/' . $book->id) }}" method="POST">
                                 {{ csrf_field() }}
                                 <button type="submit" class="c-publicBooks_btn">
