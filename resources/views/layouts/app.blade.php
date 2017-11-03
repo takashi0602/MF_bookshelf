@@ -30,6 +30,9 @@
         </div>
         @yield('nav')
         @yield('content')
+        <div class="l-footer">
+            <p class="l-footerText">Copyright 2017 ASS All Rights Reserved</p>
+        </div>
         <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>
