@@ -61,6 +61,14 @@
                                 </button>
                             </form>
                         </li>
+                        <li class="c-privateBooks_list">
+                            <form action="{{ url('private/books/edit/' . $book->id) }}" method="POST">
+                                {{ csrf_field() }}
+                                <button type="submit" class="c-publicBooks_btn">
+                                    <i class="fa fa-pencil" aria-hidden="true"></i> 更新
+                                </button>
+                            </form>
+                        </li>
                     </ul>
                 @endforeach
             @endif
