@@ -1,0 +1,13 @@
+.c-catchphrase {
+  height: 400px;
+  background-color: $cobaltBlue;
+  &_text {
+    margin: 0;
+    width: 100%;
+    line-height: 370px;
+    letter-spacing: 10px;
+    font-size: 80px;
+    text-align: center;
+    color: $white;
+  }
+}

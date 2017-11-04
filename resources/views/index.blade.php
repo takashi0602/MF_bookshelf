@@ -4,7 +4,9 @@
     <div id="p-topPage">
         <div class="c-container">
             @include('common.errors')
-            <div class="c-catchphrase">知識の海を泳げ。</div>
+            <div class="c-catchphrase">
+                <h1 class="c-catchphrase_text">知識の海を泳げ。</h1>
+            </div>
             @if (count($books) > 0)
                 <div class="c-publicBooks_title">みんなの本棚</div>
                 <div class="c-publicBooks_field">
