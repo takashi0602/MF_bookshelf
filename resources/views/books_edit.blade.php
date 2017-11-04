@@ -38,7 +38,7 @@
                         @endif
                     </li>
                     <li class="c-editBook_list">
-                        <label for="book-description">説明</label>
+                        <label class="c-editBook_label" for="book-description">説明</label>
                         <textarea name="book_description" id="book-description">{{ $book->book_description }}</textarea>
                     </li>
                     <li class="c-editBook_list">
