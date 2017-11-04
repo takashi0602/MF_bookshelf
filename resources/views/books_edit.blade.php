@@ -5,7 +5,7 @@
         <div class="c-container">
             @include('common.errors')
             <form action="{{ url('private/books/update') }}" method="POST">
-                <div class="c-editBook_title">本の編集</div>
+                <h1 class="c-editBook_title">編集</h1>
                 <ul class="c-editBool_lists">
                     <li class="c-editBook_list">
                         <label class="c-editBook_label" for="book-name">書籍名</label>

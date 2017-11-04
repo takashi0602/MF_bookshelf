@@ -6,7 +6,7 @@
             @include('common.errors')
             <form enctype="multipart/form-data" action="{{ url('private/books') }}" method="POST">
                 {{ csrf_field() }}
-                <div class="c-createBook_title">本の追加</div>
+                <h1 class="c-createBook_title">本の追加</h1>
                 <a class="c-isbnSearch_link" href="#">ISBNで検索する</a>
                 <ul class="c-createBook_lists">
                     <li class="c-createBook_list">
@@ -48,7 +48,7 @@
                 </button>
             </form>
             @if (count($books) > 0)
-                <div class="c-privateBooks">自分の本棚</div>
+                <h1 class="c-privateBooks">自分の本棚</h1>
                 @foreach ($books as $book)
                     <ul class="c-privateBooks_lists">
                         <li class="c-privateBooks_list"><img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="100"></li>
@@ -65,7 +65,7 @@
                             <form action="{{ url('private/books/edit/' . $book->id) }}" method="POST">
                                 {{ csrf_field() }}
                                 <button type="submit" class="c-publicBooks_btn">
-                                    <i class="fa fa-pencil" aria-hidden="true"></i> 更新
+                                    <i class="fa fa-pencil" aria-hidden="true"></i> 編集
                                 </button>
                             </form>
                         </li>
