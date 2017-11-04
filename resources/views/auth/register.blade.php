@@ -8,14 +8,14 @@
             {{ csrf_field() }}
             <div class="c-signUpInternal">
                 <h2 class="c-signUpInternal_title">Bookshelfにサインアップ</h2>
-                <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }} c-signUp_email">
+                <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }} c-signUp_name">
                     <label class="c-signUpLabel_name" for="name">ユーザネーム</label>
                     <input class="c-signUpForm_name" id="name" type="text" name="name" value="{{ old('name') }}" required autofocus>
                     @if ($errors->has('name'))
                         <strong>{{ $errors->first('name') }}</strong>
                     @endif
                 </div>
-                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }} c-signUp_name">
+                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }} c-signUp_email">
                     <label class="c-signUpLabel_mail" for="email">メールアドレス</label>
                     <input class="c-signUpForm_mail" id="email" type="email" name="email" value="{{ old('email') }}" required>
                     @if ($errors->has('email'))
