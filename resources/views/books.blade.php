@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="p-myBooks">
+    <div class="p-create">
         <div class="c-container">
             @include('common.errors')
             <form enctype="multipart/form-data" action="{{ url('private/books') }}" method="POST">
