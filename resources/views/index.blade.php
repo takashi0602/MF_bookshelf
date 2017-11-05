@@ -13,7 +13,11 @@
                     @foreach ($books as $book)
                         @if ($book->flag === 'public')
                             <ul>
-                                <li class="c-publicBooks_img"><img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="100"></li>
+                                @if(preg_match("/^http:\/\//", $book->book_img))
+                                    <li class="c-publicBooks_img"><img src="{{ $book->book_img }}" alt="" width="100"></li>
+                                @else
+                                    <li class="c-publicBooks_img"><img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="100"></li>
+                                @endif
                                 <li class="c-publicBooks_name">{{ $book->book_name }}</li>
                                 <li class="c-publicBooks_detail">
                                     <form action="{{ url('public/detail/' . $book->id) }}" method="POST">
