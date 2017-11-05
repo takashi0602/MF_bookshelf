@@ -8,7 +8,11 @@
                 <h1 class="c-publicBooks_title">みんなの本棚</h1>
                 @foreach ($books as $book)
                     <ul class="publicBooks_lists">
-                        <li class="c-publicBook_list"><img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="100"></li>
+                        @if(preg_match("/^http:\/\//", $book->book_img))
+                            <li class="c-publicBook_list"><img src="{{ $book->book_img }}" alt="" width="100"></li>
+                        @else
+                            <li class="c-publicBook_list"><img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="100"></li>
+                        @endif
                         <li class="c-publicBook_list">{{ $book->book_name }}</li>
                         <li class="c-publicBook_list">
                             <form action="{{ url('public/detail/' . $book->id) }}" method="POST">

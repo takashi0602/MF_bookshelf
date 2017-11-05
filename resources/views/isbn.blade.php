@@ -14,8 +14,8 @@
             <input type="number" value="{{ $item->volumeInfo->pageCount }}" name="book_page">
             <input type="date" value="{{ $item->volumeInfo->publishedDate }}" name="published">
             <textarea name="book_description">{{ $item->volumeInfo->description }}</textarea>
-            <img src="{{ $item->volumeInfo->imageLinks->smallThumbnail }}" alt="">
-            <input type="hidden" value="{{ $item->volumeInfo->imageLinks->smallThumbnail }}" name="book_img">
+            <img src="{{ $item->volumeInfo->imageLinks->thumbnail }}" alt="">
+            <input type="hidden" value="{{ $item->volumeInfo->imageLinks->thumbnail }}" name="book_img">
             <input type="radio" name="flag" id="flag" value="public" checked> 公開
             <input type="radio" name="flag" id="flag" value="private"> 非公開
         @endforeach
