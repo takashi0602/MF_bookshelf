@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 // top page
 Route::get('/', 'TopPageController');
 
+// my page
+Route::get('/mypage', 'MyPageController@mypage');
+
 // public page
 Route::get('/public', 'PublicbooksController@index');
 
@@ -35,4 +38,3 @@ Route::get('auth/{provider}', 'Auth\AuthController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
 
 Auth::routes();
-
