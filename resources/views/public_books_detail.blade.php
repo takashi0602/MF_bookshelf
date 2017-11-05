@@ -46,9 +46,9 @@
                 </ul>
                 <div class="c-bockLink">
                     @if(strstr($_SERVER['REQUEST_URI'], 'private') == true)
-                    <a href="{{ url('/private') }}">
-                        <i class="fa fa-chevron-left" aria-hidden="true"></i> 戻る
-                    </a>
+                        <a href="{{ url('/private') }}">
+                            <i class="fa fa-chevron-left" aria-hidden="true"></i> 戻る
+                        </a>
                     @else
                         <a href="{{ url('/public') }}">
                             <i class="fa fa-chevron-left" aria-hidden="true"></i> 戻る
