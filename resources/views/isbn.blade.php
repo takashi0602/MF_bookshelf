@@ -19,7 +19,7 @@
                             </li>
                             <li class="c-createBook_list">
                                 <label for="book-price" class="createBook_label">価格</label>
-                                <input type="number" value="{{ $item->saleInfo->listPrice->amount }}" name="book_price" class="c-createBook_number">
+                                <input type="number" value="{{ floor($item->saleInfo->listPrice->amount) }}" name="book_price" class="c-createBook_number">
                             </li>
                             <li class="c-createBook_list">
                                 <label class="c-editBook_label" for="book-page">ページ数</label>
