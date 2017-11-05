@@ -1,5 +1,7 @@
 .l-header {
-  height: 40px;
+  position: fixed;
+  width: 100%;
+  height: 50px;
   background: $white;
   border-bottom: 1px solid #ccc;
   &Menu {
