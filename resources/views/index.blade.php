@@ -8,7 +8,7 @@
                 <h1 class="c-catchphrase_text">知識の海を泳げ。</h1>
             </div>
             @if (count($books) > 0)
-                <div class="c-publicBooks_title">みんなの本棚</div>
+                <h2 class="c-publicBooks_title">みんなの本棚</h2>
                 <div class="c-publicBooks_field">
                     @foreach ($books as $book)
                         @if ($book->flag === 'public')
