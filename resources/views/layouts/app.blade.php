@@ -10,11 +10,11 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     </head>
     <body>
-        <div class="l-header">
+        <header class="l-header">
+            <img src="{{ asset('img/logo.png') }}" alt="" class="l-headerTitle_img">
+            <h1 class="l-headerTitle_header"><a href="{{ url('/') }}" class="l-headerTitle_link">{{ config('app.name', 'Laravel') }}</a></h1>
             <nav class="l-headerNav">
                 <ul class="l-headerMenu">
-                    <li class="l-headerMenu_list"><img src="{{ asset('img/logo.png') }}" alt="" class="l-headerTitle_img" width="100"></li>
-                    <li class="l-headerMenu_list"><a href="{{ url('/') }}" class="l-headerMenu_link">{{ config('app.name', 'Laravel') }}</a></li>
                 @guest
                     <li class="l-headerMenu_list"><a href="{{ route('login') }}" class="l-headerMenu_link"><i class="fa fa-sign-in" aria-hidden="true"></i> サインイン</a></li>
                     <li class="l-headerMenu_list"><a href="{{ route('register') }}" class="l-headerMenu_link"><i class="fa fa-user-plus" aria-hidden="true"></i> サインアップ</a></li>
@@ -27,7 +27,7 @@
                 @endguest
                 </ul>
             </nav>
-        </div>
+        </header>
         @yield('nav')
         @yield('content')
         <div class="l-footer">
