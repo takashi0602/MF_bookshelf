@@ -4,10 +4,10 @@
     <div class="p-create">
         <div class="c-container">
             @include('common.errors')
+            <h1 class="c-createBook_title">本の追加</h1>
+            <a href="{{ url('/isbn') }}" class="c-isbnSearch_link">ISBN検索</a>
             <form enctype="multipart/form-data" action="{{ url('private/books') }}" method="POST">
                 {{ csrf_field() }}
-                <h1 class="c-createBook_title">本の追加</h1>
-                <a class="c-isbnSearch_link" href="#">ISBNで検索する</a>
                 <ul class="c-createBook_lists">
                     <li class="c-createBook_list">
                         <label for="book-name" class="createBook_label">書籍名</label>
@@ -51,7 +51,11 @@
                 <h1 class="c-privateBooks">自分の本棚</h1>
                 @foreach ($books as $book)
                     <ul class="c-privateBooks_lists">
-                        <li class="c-privateBooks_list"><img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="100"></li>
+                        @if(preg_match("/^http:\/\//", $book->book_img))
+                            <li class="c-privateBooks_list"><img src="{{ $book->book_img }}" alt="" width="100"></li>
+                        @else
+                            <li class="c-privateBooks_list"><img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="100"></li>
+                        @endif
                         <li class="c-privateBooks_list">{{ $book->book_name }}</li>
                         <li class="c-privateBooks_list">
                             <form action="{{ url('private/detail/' . $book->id) }}" method="POST">

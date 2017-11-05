@@ -21,6 +21,15 @@ Route::get('/private', 'BooksController@index');
 // create
 Route::post('/private/books', 'BooksController@store');
 
+// isbn page
+Route::get('/isbn', 'IsbnController@index');
+
+// isbn search
+Route::post('/isbn/search', 'IsbnController@search');
+
+// isbn create
+Route::post('/isbn/books', 'IsbnController@store');
+
 // private edit page
 Route::post('/private/books/edit/{books}', 'BooksController@edit');
 
