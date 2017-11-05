@@ -7,7 +7,11 @@
             <form action="{{ url('books/update') }}" method="POST">
                 <ul class="c-detailBook">
                     <li class="c-detailBook_item">
-                        <img class="c-detailBook_img" src="data:image/png;base64,{{ $book->book_img }}" alt="" width="300">
+                        @if(preg_match("/^http:\/\//", $book->book_img))
+                            <img src="{{ $book->book_img }}" alt="" width="300">
+                        @else
+                            <img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="300">
+                        @endif
                     </li>
                     <li class="c-detailBook_item">
                         <label class="c-detailBook_label" for="item_name">書籍名</label>
@@ -22,7 +26,7 @@
                     <li class="c-detailBook_item">
                         <label class="c-detailBook_label" for="item_amount">価格</label>
                         @if($book->book_price === null)  -
-                        @else   ￥ {{ $book->book_price }}
+                        @else   ￥ {{ number_format($book->book_price) }}
                         @endif
                     </li>
                     <li class="c-detailBook_item">
@@ -46,9 +50,9 @@
                 </ul>
                 <div class="c-bockLink">
                     @if(strstr($_SERVER['REQUEST_URI'], 'private') == true)
-                    <a href="{{ url('/private') }}">
-                        <i class="fa fa-chevron-left" aria-hidden="true"></i> 戻る
-                    </a>
+                        <a href="{{ url('/private') }}">
+                            <i class="fa fa-chevron-left" aria-hidden="true"></i> 戻る
+                        </a>
                     @else
                         <a href="{{ url('/public') }}">
                             <i class="fa fa-chevron-left" aria-hidden="true"></i> 戻る

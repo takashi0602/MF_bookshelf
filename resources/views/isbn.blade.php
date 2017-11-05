@@ -39,8 +39,8 @@
                             </li>
                             <li class="c-createBook_list">
                                 <label for="book-img" class="createBook_label">画像</label>
-                                <img src="{{ $item->volumeInfo->imageLinks->smallThumbnail }}" class="c-createBook_file" alt="">
-                                <input type="hidden" value="{{ $item->volumeInfo->imageLinks->smallThumbnail }}" name="book_img" class="c-createBook_file">
+                                <img src="{{ $item->volumeInfo->imageLinks->thumbnail }}" class="c-createBook_file" alt="">
+                                <input type="hidden" value="{{ $item->volumeInfo->imageLinks->thumbnail }}" name="book_img" class="c-createBook_file">
                             </li>
                             <li class="c-createBook_list">
                                 <label for="flag" class="createBook_label">公開設定</label>
