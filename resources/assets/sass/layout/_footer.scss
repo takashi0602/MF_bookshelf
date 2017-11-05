@@ -1,0 +1,11 @@
+.l-footer {
+  //position: fixed;
+  width: 100%;
+  height: 100px;
+  background-color: $cobaltBlue;
+  &Copyright {
+    text-align: center;
+    line-height: 100px;
+    color: $white;
+  }
+}

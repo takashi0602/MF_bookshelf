@@ -25,6 +25,18 @@ body {
   color: #00a1e9;
 }
 
+.l-footer {
+  width: 100%;
+  height: 100px;
+  background-color: #0068b7;
+}
+
+.l-footerCopyright {
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+}
+
 .c-catchphrase {
   height: 400px;
   background-color: #0068b7;
