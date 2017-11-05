@@ -8,6 +8,9 @@
                 <h1 class="c-editBook_title">編集</h1>
                 <ul class="c-editBool_lists">
                     <li class="c-editBook_list">
+                        <img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="300">
+                    </li>
+                    <li class="c-editBook_list">
                         <label class="c-editBook_label" for="book-name">書籍名</label>
                         <input class="c-editBook_textBox" type="text" name="book_name" id="book-name" value="{{ $book->book_name }}">
                     </li>
@@ -40,9 +43,6 @@
                     <li class="c-editBook_list">
                         <label class="c-editBook_label" for="book-description">説明</label>
                         <textarea name="book_description" id="book-description">{{ $book->book_description }}</textarea>
-                    </li>
-                    <li class="c-editBook_list">
-                        <img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="300">
                     </li>
                 </ul>
                 <div class="c-editBook_Btn">
