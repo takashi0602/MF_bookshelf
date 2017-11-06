@@ -82,3 +82,17 @@ body {
   color: #fff;
 }
 
+.c-mypage_title {
+  color: #00a1e9;
+  border-bottom: 1px solid;
+}
+
+.c-mypage_profiles {
+  list-style: none;
+}
+
+.c-mypage_profiles .c-mypage_profile {
+  font-size: 24px;
+  margin: 5px 0 5px 0;
+}
+
