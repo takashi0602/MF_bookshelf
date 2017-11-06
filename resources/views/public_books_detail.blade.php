@@ -24,12 +24,6 @@
                         @endif
                     </li>
                     <li class="c-detailBook_item">
-                        <label class="c-detailBook_label" for="item_amount">価格</label>
-                        @if($book->book_price === null)  -
-                        @else   ￥ {{ number_format($book->book_price) }}
-                        @endif
-                    </li>
-                    <li class="c-detailBook_item">
                         <label class="c-detailBook_label" for="published">出版日</label>
                         @if($book->published === null)  -
                         @else   {{ $book->published }}

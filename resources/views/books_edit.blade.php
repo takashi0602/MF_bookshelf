@@ -15,10 +15,6 @@
                         <input class="c-editBook_textBox" type="text" name="book_name" id="book-name" value="{{ $book->book_name }}">
                     </li>
                     <li class="c-editBook_list">
-                        <label class="c-editBook_label" for="book-price">価格</label>
-                        <input class="c-editBook_number" type="number" name="book_price" id="book-price" value="{{ $book->book_price }}">
-                    </li>
-                    <li class="c-editBook_list">
                         <label class="c-editBook_label" for="book-page">ページ数</label>
                         <input class="c-editBook_number" type="number" name="book_page" id="book-page" value="{{ $book->book_page }}">
                     </li>

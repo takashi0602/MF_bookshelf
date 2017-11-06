@@ -17,7 +17,6 @@ class CreateBooksTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->string('book_name');
-            $table->integer('book_price')->nullable();
             $table->integer('book_page')->nullable();
             $table->text('book_description')->nullable();
             $table->text('book_img')->nullable();

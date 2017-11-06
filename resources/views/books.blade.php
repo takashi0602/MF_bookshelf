@@ -14,10 +14,6 @@
                         <input type="text" name="book_name" id="book-name" class="c-createBook_textBox">
                     </li>
                     <li class="c-createBook_list">
-                        <label for="book-price" class="createBook_label">価格</label>
-                        <input type="number" name="book_price" id="book-price" class="c-createBook_number">
-                    </li>
-                    <li class="c-createBook_list">
                         <label for="book-page" class="createBook_label">ページ数</label>
                         <input type="number" name="book_page" id="book-page" class="c-createBook_number">
                     </li>
