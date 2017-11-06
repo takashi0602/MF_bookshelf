@@ -12,9 +12,9 @@
                             <li class="c-list">
                                 <div class="c-list_bookImgWrapper">
                                     @if(preg_match("/^http:\/\//", $book->book_img))
-                                        <img src="{{ $book->book_img }}" alt="" width="100" class="c-list_bookImg">
+                                        <img src="{{ $book->book_img }}" alt="" class="c-list_bookImg">
                                     @else
-                                        <img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="100" class="c-list_bookImg">
+                                        <img src="data:image/png;base64,{{ $book->book_img }}" alt="" class="c-list_bookImg">
                                     @endif
                                 </div>
                             </li>
@@ -30,10 +30,10 @@
                         </ul>
                     @endforeach
                 </div>
+                <div class="c-paginate u-paginate">
+                    {{ $books->links() }}
+                </div>
             @endif
-            <div class="c-paginate u-paginate">
-                {{ $books->links() }}
-            </div>
         </div>
     </div>
 @endsection

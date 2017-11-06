@@ -60,13 +60,21 @@ body {
   height: 60px;
 }
 
-.c-btn {
-  border: 0;
+@mixin btn {
+  border: 1px solid $cobaltBlue;
   border-radius: 4px;
-  background-color: $blue;
+  background-color: $white;
   padding: 4px 7px;
-  color: $white;
+  color: $blue;
   cursor: pointer;
+}
+
+.c-btn_detail {
+  @include btn;
+}
+
+.c-btn_edit {
+  @include btn;
 }
 
 .c-paginate {
@@ -88,6 +96,9 @@ body {
         color: $white;
       }
       & > a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
         text-decoration: none;
         color: $blue;
       }

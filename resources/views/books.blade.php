@@ -44,37 +44,43 @@
                 </button>
             </form>
             @if (count($books) > 0)
-                <h1 class="c-title">自分の本棚</h1>
-                @foreach ($books as $book)
-                    <ul class="c-lists">
-                        @if(preg_match("/^http:\/\//", $book->book_img))
-                            <li class="c-privateBooks_list"><img src="{{ $book->book_img }}" alt="" width="100"></li>
-                        @else
-                            <li class="c-privateBooks_list"><img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="100"></li>
-                        @endif
-                        <li class="c-privateBooks_list">{{ $book->book_name }}</li>
-                        <li class="c-privateBooks_list">
-                            <form action="{{ url('private/detail/' . $book->id) }}" method="POST">
-                                {{ csrf_field() }}
-                                <button type="submit" class="c-publicBooks_btn">
-                                    <i class="fa fa-search" aria-hidden="true"></i> 本の詳細
-                                </button>
-                            </form>
-                        </li>
-                        <li class="c-privateBooks_list">
-                            <form action="{{ url('private/books/edit/' . $book->id) }}" method="POST">
-                                {{ csrf_field() }}
-                                <button type="submit" class="c-btn">
-                                    <i class="fa fa-pencil" aria-hidden="true"></i> 本を編集
-                                </button>
-                            </form>
-                        </li>
-                    </ul>
-                @endforeach
+                <div class="c-lists_wrapper">
+                    <h1 class="c-title">じぶんの本棚</h1>
+                    @foreach ($books as $book)
+                        <ul class="c-lists">
+                            <li class="c-list">
+                                <div class="c-list_bookImgWrapper">
+                                    @if(preg_match("/^http:\/\//", $book->book_img))
+                                        <img src="{{ $book->book_img }}" alt="" class="c-list_bookImg">
+                                    @else
+                                        <img src="data:image/png;base64,{{ $book->book_img }}" alt="" class="c-list_bookImg">
+                                    @endif
+                                </div>
+                            </li>
+                            <li class="c-list c-list_bookName">{{ $book->book_name }}</li>
+                            <li class="c-list">
+                                <form action="{{ url('private/detail/' . $book->id) }}" method="POST">
+                                    {{ csrf_field() }}
+                                    <button type="submit" class="c-btn_detail">
+                                        <i class="fa fa-search" aria-hidden="true"></i> 本の詳細
+                                    </button>
+                                </form>
+                            </li>
+                            <li class="c-list">
+                                <form action="{{ url('private/books/edit/' . $book->id) }}" method="POST">
+                                    {{ csrf_field() }}
+                                    <button type="submit" class="c-btn_edit">
+                                        <i class="fa fa-pencil" aria-hidden="true"></i> 本を編集
+                                    </button>
+                                </form>
+                            </li>
+                        </ul>
+                    @endforeach
+                </div>
+                <div class="c-paginate u-paginate">
+                    {{ $books->links()}}
+                </div>
             @endif
-            <div class="c-paginate">
-                {{ $books->links()}}
-            </div>
         </div>
     </div>
 @endsection

@@ -128,12 +128,21 @@ body {
   height: 60px;
 }
 
-.c-btn {
-  border: 0;
+.c-btn_detail {
+  border: 1px solid #0068b7;
   border-radius: 4px;
-  background-color: #0075c2;
+  background-color: #fff;
   padding: 4px 7px;
-  color: #fff;
+  color: #0075c2;
+  cursor: pointer;
+}
+
+.c-btn_edit {
+  border: 1px solid #0068b7;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 4px 7px;
+  color: #0075c2;
   cursor: pointer;
 }
 
@@ -161,6 +170,9 @@ body {
 }
 
 .c-paginate > ul > li > a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
   text-decoration: none;
   color: #0075c2;
 }
