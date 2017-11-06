@@ -31,7 +31,7 @@
                     @endforeach
                 </div>
             @endif
-            <div class="c-paginate">
+            <div class="c-paginate u-paginate">
                 {{ $books->links() }}
             </div>
         </div>

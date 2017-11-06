@@ -137,6 +137,34 @@ body {
   cursor: pointer;
 }
 
+.c-paginate > ul {
+  list-style: none;
+}
+
+.c-paginate > ul > li {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #0068b7;
+  border-radius: 4px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.c-paginate > ul > li.disabled {
+  color: #4e454a;
+}
+
+.c-paginate > ul > li.active {
+  background-color: #0068b7;
+  color: #fff;
+}
+
+.c-paginate > ul > li > a {
+  text-decoration: none;
+  color: #0075c2;
+}
+
 .c-mypage_title {
   color: #00a1e9;
   border-bottom: 1px solid;
@@ -149,5 +177,9 @@ body {
 .c-mypage_profiles .c-mypage_profile {
   font-size: 24px;
   margin: 5px 0 5px 0;
+}
+
+.u-paginate {
+  text-align: center;
 }
 
