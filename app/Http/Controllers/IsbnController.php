@@ -14,12 +14,21 @@ class IsbnController extends Controller
     }
 
     public function search(Request $request) {
+        // Validation
+        $validator = Validator::make($request->all(), [
+            'isbn_code' => 'required | digits: 10'
+        ]);
+
+        // Validation Error
+        if ($validator->fails()) {
+            return redirect('/isbn')->withInput()->withErrors($validator);
+        }
+
         $url = 'https://www.googleapis.com/books/v1/volumes?q=isbn:';
         $isbnCode = $request->isbn_code;
         $json = file_get_contents($url . $isbnCode);
-        $result = $json;
 
-        return redirect('/isbn')->with('result', $result);
+        return redirect('/isbn')->with('result', $json);
     }
 
     public function store(Request $request) {

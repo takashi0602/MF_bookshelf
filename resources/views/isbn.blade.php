@@ -5,7 +5,8 @@
         <div class="c-container">
             <form class="c-isbnSearch" enctype="multipart/form-data" action="{{ url('isbn/search') }}" method="POST">
                 {{ csrf_field() }}
-                <input class="c-isbnSearch_number" type="number" name="isbn_code">
+                <label for="book-name" class="createBook_label">ISBNコード（10桁）</label>
+                <input class="c-isbnSearch_number" type="number"  name="isbn_code">
                 <input class="c-isbnSearch_submit" type="submit" value="検索">
             </form>
             @if(session('result'))
