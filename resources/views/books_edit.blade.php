@@ -43,7 +43,7 @@
                 </ul>
                 <div class="c-editBook_Btn">
                     <button class="c-editBtn" type="submit">
-                        <i class="fa fa-pencil" aria-hidden="true"></i> 更新
+                        <i class="fa fa-pencil" aria-hidden="true"></i> 本を更新
                     </button>
                     <input type="hidden" name="id" value="{{ $book->id }}">
                     {{ csrf_field() }}
@@ -54,7 +54,7 @@
                     {{ csrf_field() }}
                     {{ method_field('DELETE') }}
                     <button type="submit" class="c-deleteBtn">
-                        <i class="fa fa-trash" aria-hidden="true"></i> 削除
+                        <i class="fa fa-trash" aria-hidden="true"></i> 本を捨てる
                     </button>
                 </form>
             </div>

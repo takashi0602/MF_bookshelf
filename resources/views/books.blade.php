@@ -57,7 +57,7 @@
                             <form action="{{ url('private/detail/' . $book->id) }}" method="POST">
                                 {{ csrf_field() }}
                                 <button type="submit" class="c-publicBooks_btn">
-                                    <i class="fa fa-search" aria-hidden="true"></i> 詳細
+                                    <i class="fa fa-search" aria-hidden="true"></i> 本の詳細
                                 </button>
                             </form>
                         </li>
@@ -65,7 +65,7 @@
                             <form action="{{ url('private/books/edit/' . $book->id) }}" method="POST">
                                 {{ csrf_field() }}
                                 <button type="submit" class="c-publicBooks_btn">
-                                    <i class="fa fa-pencil" aria-hidden="true"></i> 編集
+                                    <i class="fa fa-pencil" aria-hidden="true"></i> 本を編集
                                 </button>
                             </form>
                         </li>
