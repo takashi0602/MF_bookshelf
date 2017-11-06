@@ -61,7 +61,7 @@
                             <li class="c-list">
                                 <form action="{{ url('private/detail/' . $book->id) }}" method="POST">
                                     {{ csrf_field() }}
-                                    <button type="submit" class="c-btn_detail">
+                                    <button type="submit" class="c-btn_detail u-btn_detail">
                                         <i class="fa fa-search" aria-hidden="true"></i> 本の詳細
                                     </button>
                                 </form>
