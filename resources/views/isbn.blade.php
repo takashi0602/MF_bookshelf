@@ -3,6 +3,7 @@
 @section('content')
     <div class="p-isbn">
         <div class="c-container">
+            @include('common.errors')
             <form class="c-isbnSearch" enctype="multipart/form-data" action="{{ url('isbn/search') }}" method="POST">
                 {{ csrf_field() }}
                 <label for="book-name" class="createBook_label">ISBNコード（10桁）</label>

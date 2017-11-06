@@ -3,9 +3,9 @@
 @section('content')
     <div class="p-create">
         <div class="c-container">
-            @include('common.errors')
             <h1 class="c-createBook_title">本の追加</h1>
             <a href="{{ url('/isbn') }}" class="c-isbnSearch_link">ISBN検索</a>
+            @include('common.errors')
             <form enctype="multipart/form-data" action="{{ url('private/books') }}" method="POST">
                 {{ csrf_field() }}
                 <ul class="c-createBook_lists">
