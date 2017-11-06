@@ -53,7 +53,6 @@ body {
 }
 
 .l-footer {
-  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -79,6 +78,35 @@ body {
   letter-spacing: 10px;
   font-size: 80px;
   text-align: center;
+  color: #fff;
+}
+
+.c-container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.c-title {
+  text-align: center;
+}
+
+.c-lists_wrapper {
+  max-width: 1024px;
+  width: 100%;
+  border-radius: 4px;
+  background-color: #bbdbf3;
+}
+
+.c-lists {
+  display: inline-block;
+  list-style: none;
+  text-align: center;
+}
+
+.c-btn {
+  border: 0;
+  border-radius: 4px;
   color: #fff;
 }
 

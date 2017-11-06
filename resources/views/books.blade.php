@@ -44,9 +44,9 @@
                 </button>
             </form>
             @if (count($books) > 0)
-                <h1 class="c-privateBooks">自分の本棚</h1>
+                <h1 class="c-title">自分の本棚</h1>
                 @foreach ($books as $book)
-                    <ul class="c-privateBooks_lists">
+                    <ul class="c-lists">
                         @if(preg_match("/^http:\/\//", $book->book_img))
                             <li class="c-privateBooks_list"><img src="{{ $book->book_img }}" alt="" width="100"></li>
                         @else
@@ -64,7 +64,7 @@
                         <li class="c-privateBooks_list">
                             <form action="{{ url('private/books/edit/' . $book->id) }}" method="POST">
                                 {{ csrf_field() }}
-                                <button type="submit" class="c-publicBooks_btn">
+                                <button type="submit" class="c-btn">
                                     <i class="fa fa-pencil" aria-hidden="true"></i> 本を編集
                                 </button>
                             </form>
@@ -78,21 +78,3 @@
         </div>
     </div>
 @endsection
-
-{{--<li>--}}
-{{--<form action="{{ url('private/books/edit/' . $book->id) }}" method="POST">--}}
-{{--{{ csrf_field() }}--}}
-{{--<button type="submit">--}}
-{{--<i class="fa fa-pencil" aria-hidden="true"></i> 更新--}}
-{{--</button>--}}
-{{--</form>--}}
-{{--</li>--}}
-{{--<li>--}}
-{{--<form action="{{ url('private/book/' . $book->id) }}" method="POST">--}}
-{{--{{ csrf_field() }}--}}
-{{--{{ method_field('DELETE') }}--}}
-{{--<button type="submit">--}}
-{{--<i class="fa fa-trash" aria-hidden="true"></i> 削除--}}
-{{--</button>--}}
-{{--</form>--}}
-{{--</li>--}}
