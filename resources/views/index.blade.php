@@ -19,14 +19,6 @@
                                     <li class="c-publicBooks_img"><img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="100"></li>
                                 @endif
                                 <li class="c-publicBooks_name">{{ $book->book_name }}</li>
-                                <li class="c-publicBooks_detail">
-                                    <form action="{{ url('public/detail/' . $book->id) }}" method="POST">
-                                        {{ csrf_field() }}
-                                        <button type="submit" class="c-publicBooks_btn">
-                                            <i class="fa fa-search" aria-hidden="true"></i> 詳細
-                                        </button>
-                                    </form>
-                                </li>
                             </ul>
                         @endif
                     @endforeach

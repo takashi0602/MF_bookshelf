@@ -15,10 +15,6 @@
                         <input class="c-editBook_textBox" type="text" name="book_name" id="book-name" value="{{ $book->book_name }}">
                     </li>
                     <li class="c-editBook_list">
-                        <label class="c-editBook_label" for="book-price">価格</label>
-                        <input class="c-editBook_number" type="number" name="book_price" id="book-price" value="{{ $book->book_price }}">
-                    </li>
-                    <li class="c-editBook_list">
                         <label class="c-editBook_label" for="book-page">ページ数</label>
                         <input class="c-editBook_number" type="number" name="book_page" id="book-page" value="{{ $book->book_page }}">
                     </li>
@@ -47,7 +43,7 @@
                 </ul>
                 <div class="c-editBook_Btn">
                     <button class="c-editBtn" type="submit">
-                        <i class="fa fa-pencil" aria-hidden="true"></i> 更新
+                        <i class="fa fa-pencil" aria-hidden="true"></i> 本を更新
                     </button>
                     <input type="hidden" name="id" value="{{ $book->id }}">
                     {{ csrf_field() }}
@@ -58,7 +54,7 @@
                     {{ csrf_field() }}
                     {{ method_field('DELETE') }}
                     <button type="submit" class="c-deleteBtn">
-                        <i class="fa fa-trash" aria-hidden="true"></i> 削除
+                        <i class="fa fa-trash" aria-hidden="true"></i> 本を捨てる
                     </button>
                 </form>
             </div>
