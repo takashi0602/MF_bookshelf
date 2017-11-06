@@ -5,16 +5,20 @@
         <div class="c-container">
             @include('common.errors')
             @if (count($books) > 0)
-                <h1 class="c-title">みんなの本棚</h1>
                 <div class="c-lists_wrapper">
+                    <h1 class="c-title">みんなの本棚</h1>
                     @foreach ($books as $book)
                         <ul class="c-lists">
-                            @if(preg_match("/^http:\/\//", $book->book_img))
-                                <li class="c-list"><img src="{{ $book->book_img }}" alt="" width="100"></li>
-                            @else
-                                <li class="c-list"><img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="100"></li>
-                            @endif
-                            <li class="c-list">{{ $book->book_name }}</li>
+                            <li class="c-list">
+                                <div class="c-list_bookImgWrapper">
+                                    @if(preg_match("/^http:\/\//", $book->book_img))
+                                        <img src="{{ $book->book_img }}" alt="" width="100" class="c-list_bookImg">
+                                    @else
+                                        <img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="100" class="c-list_bookImg">
+                                    @endif
+                                </div>
+                            </li>
+                            <li class="c-list c-list_bookName">{{ $book->book_name }}</li>
                             <li class="c-list">
                                 <form action="{{ url('public/detail/' . $book->id) }}" method="POST">
                                     {{ csrf_field() }}
