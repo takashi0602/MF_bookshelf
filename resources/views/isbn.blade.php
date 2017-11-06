@@ -16,28 +16,28 @@
                         <ul>
                             <li class="c-createBook_list">
                                 <label for="book-name" class="createBook_label">書籍名</label>
-                                <input type="text" value="{{ $item->volumeInfo->title }}" name="book_name" class="c-createBook_textBox">
+                                <input type="text" value="{{ $item->volumeInfo->title }}" name="book_name" id="book-name" class="c-createBook_textBox">
                             </li>
                             <li class="c-createBook_list">
                                 <label class="c-editBook_label" for="book-page">ページ数</label>
-                                <input type="number" value="{{ $item->volumeInfo->pageCount }}" name="book_page" class="c-createBook_number">
+                                <input type="number" value="{{ $item->volumeInfo->pageCount }}" name="book_page" id="book-page" class="c-createBook_number">
                             </li>
                             <li class="c-createBook_list">
                                 <label for="published" class="createBook_label">出版日</label>
-                                <input type="date" value="{{ $item->volumeInfo->publishedDate }}" name="published" class="c-createBook_date">
+                                <input type="date" value="{{ $item->volumeInfo->publishedDate }}" name="published" id="published" class="c-createBook_date">
                             </li>
                             <li class="c-createBook_list">
                                 <label for="author" class="createBook_label">著者</label>
-                                <input type="text" value="{{ $item->volumeInfo->authors[0] }}" name="author" class="c-createBook_textBox">
+                                <input type="text" value="{{ $item->volumeInfo->authors[0] }}" name="author" id="author" class="c-createBook_textBox">
                             </li>
                             <li class="c-createBook_list">
                                 <label for="book-description" class="createBook_label">説明</label>
-                                <textarea class="c-createBook_textArea" name="book_description">{{ $item->volumeInfo->description }}</textarea>
+                                <textarea name="book_description" id="book-description" class="c-createBook_textArea">{{ $item->volumeInfo->description }}</textarea>
                             </li>
                             <li class="c-createBook_list">
                                 <label for="book-img" class="createBook_label">画像</label>
                                 <img src="{{ $item->volumeInfo->imageLinks->thumbnail }}" class="c-createBook_file" alt="">
-                                <input type="hidden" value="{{ $item->volumeInfo->imageLinks->thumbnail }}" name="book_img" class="c-createBook_file">
+                                <input type="hidden" value="{{ $item->volumeInfo->imageLinks->thumbnail }}" name="book_img" id="book-img" class="c-createBook_file">
                             </li>
                             <li class="c-createBook_list">
                                 <label for="flag" class="createBook_label">公開設定</label>
