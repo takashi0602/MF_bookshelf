@@ -12,7 +12,7 @@
                     <ul class="c-lists">
                         <li class="c-list">
                             <label for="book-name" class="c-label">書籍名</label>
-                            <input type="text" name="book_name" id="book-name" class="c-textBox" autofocus>
+                            <input type="text" name="book_name" id="book-name" class="c-textBox" required autofocus>
                         </li>
                         <li class="c-list">
                             <label for="book-page" class="c-label">ページ数</label>
