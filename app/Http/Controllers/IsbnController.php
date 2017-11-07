@@ -36,7 +36,7 @@ class IsbnController extends Controller
         $validator = Validator::make($request->all(), [
             'book_name' => 'required | min: 3 | max: 255',
             'book_page' => 'digits_between: 0, 4',
-            'book_description' => 'min: 0 | max: 1000'
+            'book_description' => 'min: 0 | max: 3000'
         ]);
 
         // Validation Error
