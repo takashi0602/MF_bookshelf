@@ -42,7 +42,7 @@
                             </div>
                         </li>
                     </ul>
-                    <button type="submit" class="c-btn_create u-btn_create">
+                    <button type="submit" class="c-btn_large u-btn_large">
                         <i class="fa fa-plus" aria-hidden="true"></i> 本棚に入れる
                     </button>
                 </form>

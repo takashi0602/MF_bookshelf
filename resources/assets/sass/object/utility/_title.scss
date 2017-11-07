@@ -2,17 +2,23 @@
   text-align: center;
 }
 
-.u-btn_detail {
-  margin-bottom: 5px;
-}
-
 .u-contents {
   text-align: center;
 }
 
-.u-btn_create {
+.u-btn_small {
+  margin-bottom: 5px;
+}
+
+.u-btn_large {
   display: block;
   margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.u-btn_signin {
+  @extend .u-btn_large;
+  margin-bottom: 10px;
 }
 
 .u-list_bookName {
@@ -27,4 +33,12 @@
   margin-right: 10px;
   margin-bottom: 10px;
   text-align: right;
+}
+
+.u-content_left {
+  float: left;
+}
+
+.u-btn_sns {
+  margin-bottom: 10px;
 }
