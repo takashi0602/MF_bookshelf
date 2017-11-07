@@ -4,7 +4,7 @@
     <div class="p-isbn">
         <div class="c-container">
             @include('common.errors')
-            <form class="c-isbnSearch" enctype="multipart/form-data" action="{{ url('isbn/search') }}" method="POST">
+            <form class="c-isbnSearch" enctype="multipart/form-data" action="{{ url('private/books/isbn/search') }}" method="POST">
                 {{ csrf_field() }}
                 <label for="book-name" class="createBook_label">ISBNコード（10桁）</label>
                 <input class="c-isbnSearch_number" type="text"  name="isbn_code">
@@ -12,7 +12,7 @@
             </form>
             @if(!empty(session('response')))
                 @if(session('response'))
-                    <form enctype="multipart/form-data" action="{{ url('isbn/books') }}" method="POST">
+                    <form enctype="multipart/form-data" action="{{ url('/private/books/isbn/store') }}" method="POST">
                         {{ csrf_field() }}
                         <ul>
                             <li class="c-createBook_list">

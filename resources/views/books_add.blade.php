@@ -5,7 +5,7 @@
         <div class="c-container">
             <div class="c-lists_wrapper u-lists_wrapper">
                 <h1 class="c-title">本の追加</h1>
-                <a href="{{ url('/isbn') }}" class="c-link">ISBN検索はこちら</a>
+                <a href="{{ url('/private/books/isbn') }}" class="c-link">ISBN検索はこちら</a>
                 @include('common.errors')
                 <form enctype="multipart/form-data" action="{{ url('private/books/store') }}" method="POST">
                     {{ csrf_field() }}
