@@ -38,7 +38,7 @@ class BooksController extends Controller
 
         // Validation Error
         if ($validator->fails()) {
-            return redirect('/add')->withInput()->withErrors($validator);
+            return redirect('/private/books/add')->withInput()->withErrors($validator);
         }
 
         // Eloquent Model
