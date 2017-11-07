@@ -9,7 +9,7 @@ class TopPageController extends Controller
 {
     public function __invoke()
     {
-        $books = Book::orderBy('created_at', 'desc')->paginate(21);
+        $books = Book::orderBy('created_at', 'desc')->take(21)->get();
         return view('index', [
             'books' => $books
         ]);
