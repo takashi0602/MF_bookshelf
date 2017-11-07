@@ -32,7 +32,6 @@ body {
 .c-title {
   padding-left: 5px;
   text-align: left;
-  color: $charcoalGray;
   border-bottom: 2px solid $cobaltBlue;
 }
 
@@ -41,7 +40,6 @@ body {
   list-style: none;
   font-size: 12px;
   text-align: center;
-  color: $charcoalGray;
 }
 
 .c-list_bookImgWrapper {
@@ -137,9 +135,6 @@ body {
       border-radius: 4px;
       line-height: 40px;
       text-align: center;
-      &.disabled {
-        color: $charcoalGray;
-      }
       &.active {
         background-color: $cobaltBlue;
         color: $white;
@@ -162,7 +157,6 @@ body {
   border: 1px solid $ashGray;
   border-radius: 4px;
   padding-left: 5px;
-  color: $charcoalGray;
 }
 
 .c-textBox {
