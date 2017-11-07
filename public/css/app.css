@@ -196,6 +196,7 @@ body {
   border: 1px solid #9fa09e;
   border-radius: 4px;
   padding-left: 5px;
+  color: #4e454a;
 }
 
 .c-number {
@@ -205,6 +206,7 @@ body {
   border: 1px solid #9fa09e;
   border-radius: 4px;
   padding-left: 5px;
+  color: #4e454a;
 }
 
 .c-date {
@@ -214,6 +216,7 @@ body {
   border: 1px solid #9fa09e;
   border-radius: 4px;
   padding-left: 5px;
+  color: #4e454a;
 }
 
 .c-textArea {
@@ -223,6 +226,7 @@ body {
   border: 1px solid #9fa09e;
   border-radius: 4px;
   padding-left: 5px;
+  color: #4e454a;
   height: 200px;
   padding-top: 5px;
   resize: none;
@@ -252,6 +256,11 @@ body {
   text-align: right;
   text-decoration: none;
   color: #00a1e9;
+}
+
+.c-required {
+  font-size: 20px;
+  color: #ea5550;
 }
 
 .c-mypage_title {

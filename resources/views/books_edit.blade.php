@@ -15,7 +15,7 @@
                         @endif
                     </li>
                     <li class="c-editBook_list">
-                        <label class="c-editBook_label" for="book-name">書籍名</label>
+                        <label class="c-editBook_label" for="book-name">書籍名 <span class="c-required">*</span></label>
                         <input class="c-editBook_textBox" type="text" name="book_name" id="book-name" value="{{ $book->book_name }}">
                     </li>
                     <li class="c-editBook_list">

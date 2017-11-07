@@ -11,7 +11,7 @@
                     {{ csrf_field() }}
                     <ul class="c-lists">
                         <li class="c-list">
-                            <label for="book-name" class="c-label">書籍名</label>
+                            <label for="book-name" class="c-label">書籍名 <span class="c-required">*</span></label>
                             <input type="text" name="book_name" id="book-name" class="c-textBox" required autofocus>
                         </li>
                         <li class="c-list">
