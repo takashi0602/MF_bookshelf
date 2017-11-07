@@ -316,7 +316,6 @@ body {
 .c-link {
   text-decoration: none;
   display: block;
-  text-align: right;
   color: #00a1e9;
 }
 
@@ -372,5 +371,6 @@ body {
 .u-link {
   margin-right: 10px;
   margin-bottom: 10px;
+  text-align: right;
 }
 
