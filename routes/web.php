@@ -28,13 +28,13 @@ Route::get('/private/books/add', 'BooksController@add');
 Route::post('/private/books/store', 'BooksController@store');
 
 // isbn page
-Route::get('/isbn', 'IsbnController@index');
+Route::get('/private/books/isbn', 'IsbnController@index');
 
 // isbn search
-Route::post('/isbn/search', 'IsbnController@search');
+Route::post('/private/books/isbn/search', 'IsbnController@search');
 
 // isbn create
-Route::post('/isbn/books', 'IsbnController@store');
+Route::post('/private/books/isbn/store', 'IsbnController@store');
 
 // private edit page
 Route::post('/private/books/edit/{books}', 'BooksController@edit');
