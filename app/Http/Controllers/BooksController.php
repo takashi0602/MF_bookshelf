@@ -38,7 +38,7 @@ class BooksController extends Controller
 
         // Validation Error
         if ($validator->fails()) {
-            return redirect('/private')->withInput()->withErrors($validator);
+            return redirect('/add')->withInput()->withErrors($validator);
         }
 
         // Eloquent Model
@@ -103,5 +103,9 @@ class BooksController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+    }
+
+    public function add() {
+        return view('books_add');
     }
 }
