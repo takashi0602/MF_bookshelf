@@ -42,7 +42,7 @@
                             </div>
                         </li>
                     </ul>
-                    <button type="submit" class="c-btn_create u-btn_create">
+                    <button type="submit" class="c-btn_large u-btn_create">
                         <i class="fa fa-plus" aria-hidden="true"></i> 本棚に入れる
                     </button>
                 </form>
@@ -65,7 +65,7 @@
                             <li class="c-list">
                                 <form action="{{ url('private/detail/' . $book->id) }}" method="POST">
                                     {{ csrf_field() }}
-                                    <button type="submit" class="c-btn_detail u-btn_detail">
+                                    <button type="submit" class="c-btn_small u-btn_detail">
                                         <i class="fa fa-search" aria-hidden="true"></i> 本の詳細
                                     </button>
                                 </form>
@@ -73,7 +73,7 @@
                             <li class="c-list">
                                 <form action="{{ url('private/books/edit/' . $book->id) }}" method="POST">
                                     {{ csrf_field() }}
-                                    <button type="submit" class="c-btn_edit">
+                                    <button type="submit" class="c-btn_small">
                                         <i class="fa fa-pencil" aria-hidden="true"></i> 本を編集
                                     </button>
                                 </form>

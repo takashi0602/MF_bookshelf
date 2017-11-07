@@ -22,7 +22,7 @@
                             <li class="c-list">
                                 <form action="{{ url('public/detail/' . $book->id) }}" method="POST">
                                     {{ csrf_field() }}
-                                    <button type="submit" class="c-btn_detail">
+                                    <button type="submit" class="c-btn_small">
                                         <i class="fa fa-search" aria-hidden="true"></i> 本の詳細
                                     </button>
                                 </form>
