@@ -61,7 +61,7 @@
                                     @endif
                                 </div>
                             </li>
-                            <li class="c-list c-list_bookName">{{ $book->book_name }}</li>
+                            <li class="c-list c-list_bookName u-list_bookName">{{ $book->book_name }}</li>
                             <li class="c-list">
                                 <form action="{{ url('private/detail/' . $book->id) }}" method="POST">
                                     {{ csrf_field() }}

@@ -125,7 +125,9 @@ body {
 
 .c-list_bookName {
   width: 100px;
-  height: 60px;
+  height: 55px;
+  overflow: hidden;
+  word-wrap: break-word;
 }
 
 .c-btn_detail {
@@ -292,5 +294,9 @@ body {
 .u-btn_create {
   display: block;
   margin: 0 auto;
+}
+
+.u-list_bookName {
+  margin-bottom: 5px;
 }
 

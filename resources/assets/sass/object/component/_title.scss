@@ -52,12 +52,13 @@ body {
 
 .c-list_bookImg {
   width: 100%;
-
 }
 
 .c-list_bookName {
   width: 100px;
-  height: 60px;
+  height: 55px;
+  overflow: hidden;
+  word-wrap: break-word;
 }
 
 @mixin btn {
