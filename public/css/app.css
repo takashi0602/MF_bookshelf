@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  color: #4e454a;
 }
 
 .l-header {
@@ -101,7 +102,6 @@ body {
 .c-title {
   padding-left: 5px;
   text-align: left;
-  color: #4e454a;
   border-bottom: 2px solid #0068b7;
 }
 
@@ -110,7 +110,6 @@ body {
   list-style: none;
   font-size: 12px;
   text-align: center;
-  color: #4e454a;
 }
 
 .c-list_bookImgWrapper {
@@ -160,6 +159,57 @@ body {
   font-size: 16px;
 }
 
+.c-btn_small {
+  border: 1px solid #0068b7;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 4px 7px;
+  color: #0075c2;
+  cursor: pointer;
+}
+
+.c-btn_large,
+.c-btn_twitter,
+.c-btn_facebook,
+.c-btn_github {
+  border: 1px solid #0068b7;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 4px 7px;
+  color: #0075c2;
+  cursor: pointer;
+  display: block;
+  width: 150px;
+  font-size: 16px;
+}
+
+.c-btn_twitter {
+  width: 120px;
+  border: 0;
+  background-color: #4d9eec;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #fff;
+}
+
+.c-btn_facebook {
+  width: 120px;
+  background-color: #425993;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #fff;
+  border: 0;
+}
+
+.c-btn_github {
+  width: 120px;
+  background-color: #25292e;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #fff;
+  border: 0;
+}
+
 .c-paginate > ul {
   list-style: none;
 }
@@ -172,10 +222,6 @@ body {
   border-radius: 4px;
   line-height: 40px;
   text-align: center;
-}
-
-.c-paginate > ul > li.disabled {
-  color: #4e454a;
 }
 
 .c-paginate > ul > li.active {
@@ -198,7 +244,6 @@ body {
   border: 1px solid #9fa09e;
   border-radius: 4px;
   padding-left: 5px;
-  color: #4e454a;
 }
 
 .c-number {
@@ -208,7 +253,6 @@ body {
   border: 1px solid #9fa09e;
   border-radius: 4px;
   padding-left: 5px;
-  color: #4e454a;
 }
 
 .c-date {
@@ -218,7 +262,6 @@ body {
   border: 1px solid #9fa09e;
   border-radius: 4px;
   padding-left: 5px;
-  color: #4e454a;
 }
 
 .c-textArea {
@@ -228,7 +271,6 @@ body {
   border: 1px solid #9fa09e;
   border-radius: 4px;
   padding-left: 5px;
-  color: #4e454a;
   height: 200px;
   padding-top: 5px;
   resize: none;
@@ -237,6 +279,24 @@ body {
 .c-file {
   width: 300px;
   height: 30px;
+  padding-left: 5px;
+}
+
+.c-email {
+  width: 300px;
+  height: 30px;
+  margin-bottom: 10px;
+  border: 1px solid #9fa09e;
+  border-radius: 4px;
+  padding-left: 5px;
+}
+
+.c-password {
+  width: 300px;
+  height: 30px;
+  margin-bottom: 10px;
+  border: 1px solid #9fa09e;
+  border-radius: 4px;
   padding-left: 5px;
 }
 
@@ -254,10 +314,15 @@ body {
 }
 
 .c-link {
+  text-decoration: none;
   display: block;
   text-align: right;
-  text-decoration: none;
   color: #00a1e9;
+}
+
+.c-link_innerBtn {
+  text-decoration: none;
+  color: #fff;
 }
 
 .c-required {

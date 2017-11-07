@@ -32,7 +32,6 @@ body {
 .c-title {
   padding-left: 5px;
   text-align: left;
-  color: $charcoalGray;
   border-bottom: 2px solid $cobaltBlue;
 }
 
@@ -41,7 +40,6 @@ body {
   list-style: none;
   font-size: 12px;
   text-align: center;
-  color: $charcoalGray;
 }
 
 .c-list_bookImgWrapper {
@@ -85,6 +83,47 @@ body {
   font-size: 16px;
 }
 
+.c-btn_small {
+  @include btn;
+}
+
+.c-btn_large {
+  @include btn;
+  display: block;
+  width: 150px;
+  font-size: 16px;
+}
+
+.c-btn_twitter {
+  @extend .c-btn_large;
+  width: 120px;
+  border: 0;
+  background-color: $twitter;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: $white;
+}
+
+.c-btn_facebook {
+  @extend .c-btn_large;
+  width: 120px;
+  background-color: $facebook;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: $white;
+  border: 0;
+}
+
+.c-btn_github {
+  @extend .c-btn_large;
+  width: 120px;
+  background-color: $github;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: $white;
+  border: 0;
+}
+
 .c-paginate {
   & > ul {
     list-style: none;
@@ -96,9 +135,6 @@ body {
       border-radius: 4px;
       line-height: 40px;
       text-align: center;
-      &.disabled {
-        color: $charcoalGray;
-      }
       &.active {
         background-color: $cobaltBlue;
         color: $white;
@@ -121,7 +157,6 @@ body {
   border: 1px solid $ashGray;
   border-radius: 4px;
   padding-left: 5px;
-  color: $charcoalGray;
 }
 
 .c-textBox {
@@ -149,6 +184,14 @@ body {
   padding-left: 5px;
 }
 
+.c-email {
+  @include inputs;
+}
+
+.c-password {
+  @include inputs;
+}
+
 .c-radioWrapper {
   display: inline-block;
   width: 300px;
@@ -162,11 +205,20 @@ body {
   width: 80px;
 }
 
+@mixin link {
+  text-decoration: none;
+}
+
 .c-link {
+  @include link;
   display: block;
   text-align: right;
-  text-decoration: none;
   color: $cyan;
+}
+
+.c-link_innerBtn {
+  @include link;
+  color: $white;
 }
 
 .c-required {
