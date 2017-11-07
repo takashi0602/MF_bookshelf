@@ -7,7 +7,7 @@
             <form class="c-isbnSearch" enctype="multipart/form-data" action="{{ url('isbn/search') }}" method="POST">
                 {{ csrf_field() }}
                 <label for="book-name" class="createBook_label">ISBNコード（10桁）</label>
-                <input class="c-isbnSearch_number" type="number"  name="isbn_code">
+                <input class="c-isbnSearch_number" type="text"  name="isbn_code">
                 <input class="c-isbnSearch_submit" type="submit" value="検索">
             </form>
             @if(session('result'))
@@ -21,7 +21,7 @@
                             </li>
                             <li class="c-createBook_list">
                                 <label class="c-editBook_label" for="book-page">ページ数</label>
-                                <input type="text" value="{{ $item->volumeInfo->pageCount }}" name="book_page" id="book-page" class="c-createBook_number">
+                                <input type="number" value="{{ $item->volumeInfo->pageCount }}" name="book_page" id="book-page" class="c-createBook_number">
                             </li>
                             <li class="c-createBook_list">
                                 <label for="published" class="createBook_label">出版日</label>

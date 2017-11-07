@@ -41,7 +41,7 @@ class IsbnController extends Controller
 
         // Validation Error
         if ($validator->fails()) {
-            return redirect('/private')->withInput()->withErrors($validator);
+            return redirect('/isbn')->withInput()->withErrors($validator);
         }
 
         // Eloquent Model
