@@ -35,14 +35,6 @@
                 </div>
                 <button class="c-signUpBtn" type="submit">サインアップ</button>
             </div>
-            <div class="c-signUpExternal">
-                <h2 class="c-signUpExternal_title">外部サービスでサインアップ</h2>
-                <ul>
-                    <li><a href="{{ url('/auth/github') }}"><i class="fa fa-github"></i> Github</a></li>
-                    <li><a href="{{ url('/auth/twitter') }}"><i class="fa fa-twitter"></i> Twitter</a></li>
-                    <li><a href="{{ url('/auth/facebook') }}"><i class="fa fa-facebook"></i> Facebook</a></li>
-                </ul>
-            </div>
         </form>
     </div>
 </div>
