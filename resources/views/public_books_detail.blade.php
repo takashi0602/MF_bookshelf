@@ -41,6 +41,10 @@
                         @else   {{ $book->book_description }}
                         @endif
                     </li>
+                    <li class="c-detailBook_item">
+                        <label class="c-detailBook_label" for="book_description">登録ユーザー</label>
+                        {{ $userName }}
+                    </li>
                 </ul>
                 <div class="c-bockLink">
                     @if(strstr($_SERVER['REQUEST_URI'], 'private') == true)
