@@ -11,7 +11,7 @@ class BooksController extends Controller
 {
     // dashboard
     public function index() {
-        $books = Book::where('user_id', Auth::user()->id)->orderBy('created_at', 'desc')->paginate(5);
+        $books = Book::where('user_id', Auth::user()->id)->orderBy('created_at', 'desc')->paginate(21);
 
         return view('books', [
             'books' => $books,
