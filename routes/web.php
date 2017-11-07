@@ -21,8 +21,11 @@ Route::post('/private/detail/{books}', 'PublicbooksController@detail');
 // private page
 Route::get('/private', 'BooksController@index');
 
+// create page
+Route::get('/private/books/add', 'BooksController@add');
+
 // create
-Route::post('/private/books', 'BooksController@store');
+Route::post('/private/books/store', 'BooksController@store');
 
 // isbn page
 Route::get('/isbn', 'IsbnController@index');
