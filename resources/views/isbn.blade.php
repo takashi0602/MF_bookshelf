@@ -21,7 +21,7 @@
                             </li>
                             <li class="c-createBook_list">
                                 <label class="c-editBook_label" for="book-page">ページ数</label>
-                                <input type="number" value="{{ $item->volumeInfo->pageCount }}" name="book_page" id="book-page" class="c-createBook_number">
+                                <input type="text" value="{{ $item->volumeInfo->pageCount }}" name="book_page" id="book-page" class="c-createBook_number">
                             </li>
                             <li class="c-createBook_list">
                                 <label for="published" class="createBook_label">出版日</label>
