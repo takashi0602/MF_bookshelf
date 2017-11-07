@@ -31,25 +31,46 @@ class IsbnController extends Controller
 
         $response = new \ArrayObject();
 
+        $default_books = [ 'black', 'blue', 'green', 'orange', 'purple', 'red', 'white', 'yellow' ];
+        $default_book = mt_rand(0, 7);
+
         if (!empty($results->items)) {
             foreach ($results->items as $item) {
-                if (!empty($item->volumeInfo->title)) $response['title'] = $item->volumeInfo->title;
-                else                                    $response['title'] = '';
+                if (!empty($item->volumeInfo->title)) {
+                    $response['title'] = $item->volumeInfo->title;
+                } else {
+                    $response['title'] = '';
+                }
 
-                if (!empty($item->volumeInfo->pageCount)) $response['pageCount'] = $item->volumeInfo->pageCount;
-                else                                        $response['pageCount'] = '';
+                if (!empty($item->volumeInfo->pageCount)) {
+                    $response['pageCount'] = $item->volumeInfo->pageCount;
+                } else {
+                    $response['pageCount'] = '';
+                }
 
-                if (!empty($item->volumeInfo->description)) $response['description'] = $item->volumeInfo->description;
-                else                                         $response['description'] = '';
+                if (!empty($item->volumeInfo->description)) {
+                    $response['description'] = $item->volumeInfo->description;
+                } else {
+                    $response['description'] = '';
+                }
 
-                if (!empty($item->volumeInfo->publishedDate)) $response['publishedDate'] = $item->volumeInfo->publishedDate;
-                else                                            $response['publishedDate'] = '';
+                if (!empty($item->volumeInfo->publishedDate)) {
+                    $response['publishedDate'] = $item->volumeInfo->publishedDate;
+                } else {
+                    $response['publishedDate'] = '';
+                }
 
-                if (!empty($item->volumeInfo->authors[0])) $response['authors'] = $item->volumeInfo->authors[0];
-                else                                         $response['authors'] = '';
+                if (!empty($item->volumeInfo->authors[0])) {
+                    $response['authors'] = $item->volumeInfo->authors[0];
+                } else {
+                    $response['authors'] = '';
+                }
 
-                if (!empty($item->volumeInfo->imageLinks->thumbnail)) $response['thumbnail'] = $item->volumeInfo->imageLinks->thumbnail;
-                else                                                    $response['thumbnail'] = '';
+                if (!empty($item->volumeInfo->imageLinks->thumbnail)) {
+                    $response['thumbnail'] = $item->volumeInfo->imageLinks->thumbnail;
+                } else {
+                    $response['thumbnail'] = './img/default_books/book_'. $default_books[$default_book] . '.png';
+                }
             }
         } else {
             return redirect('/isbn')->with('message', '該当データが見つかりませんでした。');
