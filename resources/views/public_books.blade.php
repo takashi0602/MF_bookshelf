@@ -18,11 +18,11 @@
                                     @endif
                                 </div>
                             </li>
-                            <li class="c-list c-list_bookName">{{ $book->book_name }}</li>
+                            <li class="c-list c-list_bookName u-list_bookName">{{ $book->book_name }}</li>
                             <li class="c-list">
                                 <form action="{{ url('public/detail/' . $book->id) }}" method="POST">
                                     {{ csrf_field() }}
-                                    <button type="submit" class="c-btn">
+                                    <button type="submit" class="c-btn_detail">
                                         <i class="fa fa-search" aria-hidden="true"></i> 本の詳細
                                     </button>
                                 </form>
