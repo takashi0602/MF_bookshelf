@@ -5,7 +5,7 @@
         <div class="c-container">
             @include('common.errors')
             @if (count($books) > 0)
-                <div class="c-lists_wrapper">
+                <div class="c-contents">
                     <h1 class="c-title">みんなの本棚</h1>
                     @foreach ($books as $book)
                         <ul class="c-lists">

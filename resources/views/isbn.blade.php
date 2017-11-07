@@ -6,9 +6,9 @@
             @include('common.errors')
             <form class="c-isbnSearch" enctype="multipart/form-data" action="{{ url('isbn/search') }}" method="POST">
                 {{ csrf_field() }}
-                <label for="book-name" class="createBook_label">ISBNコード（10桁）</label>
-                <input class="c-isbnSearch_number" type="text"  name="isbn_code">
-                <input class="c-isbnSearch_submit" type="submit" value="検索">
+                <label for="book-name" class="c-label">ISBNコード（10桁）</label>
+                <input class="c-textBox" type="text"  name="isbn_code" id="book-name">
+                <input class="c-btn_large" type="submit" value="検索">
             </form>
             @if(!empty(session('response')))
                 @if(session('response'))
