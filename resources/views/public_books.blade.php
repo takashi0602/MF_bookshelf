@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div id="p-publicBooks">
+    <div class="p-publicBooks">
         <div class="c-container">
             @include('common.errors')
             @if (count($books) > 0)

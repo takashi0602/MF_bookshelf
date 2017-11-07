@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div id="p-topPage">
+    <div class="p-topPage">
         <div class="c-container">
             @include('common.errors')
             <div class="c-catchphrase">
