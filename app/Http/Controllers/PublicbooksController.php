@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Book;
+use App\User;
+use Auth;
+use Illuminate\Support\Facades\DB;
 
 class PublicbooksController extends Controller
 {
@@ -17,9 +20,14 @@ class PublicbooksController extends Controller
     public function detail(Book $books) {
         $books->published = explode('-', $books->published);
         $books->published = implode('/', $books->published);
+        $userName = DB::table('users')
+            ->select('name')
+            ->where('users.id', $books->user_id)
+            ->get();
 
         return view('public_books_detail', [
-            'book' => $books
+            'book' => $books,
+            'userName' => $userName[0]->name
         ]);
     }
 }
