@@ -27,8 +27,35 @@ class IsbnController extends Controller
         $url = 'https://www.googleapis.com/books/v1/volumes?q=isbn:';
         $isbnCode = $request->isbn_code;
         $json = file_get_contents($url . $isbnCode);
+        $results = json_decode($json);
 
-        return redirect('/isbn')->with('result', $json);
+        $response = new \ArrayObject();
+
+        if (!empty($results->items)) {
+            foreach ($results->items as $item) {
+                if (!empty($item->volumeInfo->title)) $response['title'] = $item->volumeInfo->title;
+                else                                    $response['title'] = '';
+
+                if (!empty($item->volumeInfo->pageCount)) $response['pageCount'] = $item->volumeInfo->pageCount;
+                else                                        $response['pageCount'] = '';
+
+                if (!empty($item->volumeInfo->description)) $response['description'] = $item->volumeInfo->description;
+                else                                         $response['description'] = '';
+
+                if (!empty($item->volumeInfo->publishedDate)) $response['publishedDate'] = $item->volumeInfo->publishedDate;
+                else                                            $response['publishedDate'] = '';
+
+                if (!empty($item->volumeInfo->authors[0])) $response['authors'] = $item->volumeInfo->authors[0];
+                else                                         $response['authors'] = '';
+
+                if (!empty($item->volumeInfo->imageLinks->thumbnail)) $response['thumbnail'] = $item->volumeInfo->imageLinks->thumbnail;
+                else                                                    $response['thumbnail'] = '';
+            }
+        } else {
+            return redirect('/isbn')->with('message', '該当データが見つかりませんでした。');
+        }
+
+        return redirect('/isbn')->with('response', json_encode($response));
     }
 
     public function store(Request $request) {
