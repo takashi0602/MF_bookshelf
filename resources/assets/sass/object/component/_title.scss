@@ -77,6 +77,13 @@ body {
   @include btn;
 }
 
+.c-btn_create {
+  @include btn;
+  display: block;
+  width: 150px;
+  font-size: 16px;
+}
+
 .c-paginate {
   & > ul {
     list-style: none;
@@ -104,4 +111,58 @@ body {
       }
     }
   }
+}
+
+@mixin inputs {
+  width: 300px;
+  height: 30px;
+  margin-bottom: 10px;
+  border: 1px solid $ashGray;
+  border-radius: 4px;
+  padding-left: 5px;
+}
+
+.c-textBox {
+  @include inputs;
+}
+
+.c-number {
+  @include inputs;
+}
+
+.c-date {
+  @include inputs;
+}
+
+.c-textArea {
+  @include inputs;
+  height: 200px;
+  padding-top: 5px;
+  resize: none;
+}
+
+.c-file {
+  width: 300px;
+  height: 30px;
+  padding-left: 5px;
+}
+
+.c-radioWrapper {
+  display: inline-block;
+  width: 300px;
+  height: 30px;
+  padding-left: 5px;
+  text-align: left;
+}
+
+.c-label {
+  display: inline-block;
+  width: 80px;
+}
+
+.c-link {
+  display: block;
+  text-align: right;
+  text-decoration: none;
+  color: $cyan;
 }
