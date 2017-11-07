@@ -6,7 +6,7 @@
             @if (count($books) > 0)
                 <div class="c-lists_wrapper">
                     <h1 class="c-title">じぶんの本棚</h1>
-                    <a href="{{ url('/private/books/add') }}" class="c-link">本を追加する</a>
+                    <a href="{{ url('/private/books/add') }}" class="c-link u-link">本を追加する</a>
                     @foreach ($books as $book)
                         <ul class="c-lists">
                             <li class="c-list">
