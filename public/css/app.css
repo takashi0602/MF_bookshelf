@@ -160,6 +160,57 @@ body {
   font-size: 16px;
 }
 
+.c-btn_small {
+  border: 1px solid #0068b7;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 4px 7px;
+  color: #0075c2;
+  cursor: pointer;
+}
+
+.c-btn_large,
+.c-btn_twitter,
+.c-btn_facebook,
+.c-btn_github {
+  border: 1px solid #0068b7;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 4px 7px;
+  color: #0075c2;
+  cursor: pointer;
+  display: block;
+  width: 150px;
+  font-size: 16px;
+}
+
+.c-btn_twitter {
+  width: 120px;
+  border: 0;
+  background-color: #4d9eec;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #fff;
+}
+
+.c-btn_facebook {
+  width: 120px;
+  background-color: #425993;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #fff;
+  border: 0;
+}
+
+.c-btn_github {
+  width: 120px;
+  background-color: #25292e;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #fff;
+  border: 0;
+}
+
 .c-paginate > ul {
   list-style: none;
 }
@@ -240,6 +291,26 @@ body {
   padding-left: 5px;
 }
 
+.c-email {
+  width: 300px;
+  height: 30px;
+  margin-bottom: 10px;
+  border: 1px solid #9fa09e;
+  border-radius: 4px;
+  padding-left: 5px;
+  color: #4e454a;
+}
+
+.c-password {
+  width: 300px;
+  height: 30px;
+  margin-bottom: 10px;
+  border: 1px solid #9fa09e;
+  border-radius: 4px;
+  padding-left: 5px;
+  color: #4e454a;
+}
+
 .c-radioWrapper {
   display: inline-block;
   width: 300px;
@@ -254,10 +325,15 @@ body {
 }
 
 .c-link {
+  text-decoration: none;
   display: block;
   text-align: right;
-  text-decoration: none;
   color: #00a1e9;
+}
+
+.c-link_innerBtn {
+  text-decoration: none;
+  color: #fff;
 }
 
 .c-required {
