@@ -8,7 +8,11 @@
                 <h1 class="c-editBook_title">編集</h1>
                 <ul class="c-editBool_lists">
                     <li class="c-editBook_list">
-                        <img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="300">
+                        @if(preg_match("/^http:\/\//", $book->book_img))
+                            <img src="{{ $book->book_img }}" alt="" width="300">
+                        @else
+                            <img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="300">
+                        @endif
                     </li>
                     <li class="c-editBook_list">
                         <label class="c-editBook_label" for="book-name">書籍名</label>
