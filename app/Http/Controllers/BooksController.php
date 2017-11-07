@@ -33,7 +33,7 @@ class BooksController extends Controller
         $validator = Validator::make($request->all(), [
             'book_name' => 'required | min: 1 | max: 255',
             'book_page' => 'digits_between: 0, 4',
-            'book_description' => 'min: 0 | max: 3000'
+            'book_description' => 'min: 0 | max: 4000'
         ]);
 
         // Validation Error
@@ -70,7 +70,7 @@ class BooksController extends Controller
             'id' => 'required',
             'book_name' => 'required | min: 1 | max: 255',
             'book_page' => 'digits_between: 0, 4',
-            'book_description' => 'min: 0 | max: 3000'
+            'book_description' => 'min: 0 | max: 4000'
         ]);
 
         // Validation Error
