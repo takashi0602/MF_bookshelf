@@ -46,6 +46,11 @@
                         <i class="fa fa-plus" aria-hidden="true"></i> 本棚に入れる
                     </button>
                 </form>
+                <div class="c-backLink">
+                    <a href="{{ url('/private') }}" class="c-link u-link">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i> 戻る
+                    </a>
+                </div>
             </div>
         </div>
     </div>
