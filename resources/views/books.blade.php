@@ -31,7 +31,7 @@
                                 <form action="{{ url('private/books/edit/' . $book->id) }}" method="POST">
                                     {{ csrf_field() }}
                                     <button type="submit" class="c-btn_small">
-                                        <i class="fa fa-pencil" aria-hidden="true"></i> 本を編集
+                                        <i class="fa fa-pencil" aria-hidden="true"></i> 本の編集
                                     </button>
                                 </form>
                             </li>
