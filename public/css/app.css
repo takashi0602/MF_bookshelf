@@ -212,7 +212,8 @@ body {
 
 .c-label {
   display: inline-block;
-  width: 100px;
+  width: 120px;
+  text-align: right;
 }
 
 .c-link {
