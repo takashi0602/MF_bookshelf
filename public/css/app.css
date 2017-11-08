@@ -307,14 +307,9 @@ body {
   margin-bottom: 5px;
 }
 
-.u-btn_large,
-.u-btn_signin {
+.u-btn_large {
   display: block;
   margin: 0 auto;
-  margin-bottom: 10px;
-}
-
-.u-btn_signin {
   margin-bottom: 10px;
 }
 

@@ -29,7 +29,7 @@
                             <label>パスワードを記憶する</label>
                         </li>
                     </ul>
-                    <button class="c-btn_large u-btn_signin" type="submit"><i class="fa fa-sign-in" aria-hidden="true"></i> サインイン</button>
+                    <button class="c-btn_large u-btn_large" type="submit"><i class="fa fa-sign-in" aria-hidden="true"></i> サインイン</button>
                     <a class="c-link" href="{{ route('password.request') }}">パスワードを忘れましたか？</a>
                 </div>
                 <div class="c-content">
