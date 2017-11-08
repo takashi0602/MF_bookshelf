@@ -18,8 +18,11 @@ class PublicbooksController extends Controller
     }
 
     public function detail(Book $books) {
-        $books->published = explode('-', $books->published);
-        $books->published = implode('/', $books->published);
+        if ($books->published !== null) {
+            $books->published = explode('-', $books->published);
+            $books->published = implode('/', $books->published);
+        }
+
         $userName = DB::table('users')
             ->select('name')
             ->where('users.id', $books->user_id)
