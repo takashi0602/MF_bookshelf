@@ -128,7 +128,6 @@ body {
 .c-contents {
   max-width: 1024px;
   width: 100%;
-  min-height: 1000px;
   border-radius: 4px;
   background-color: #fff;
 }
@@ -324,6 +323,14 @@ body {
 
 .u-content_left {
   float: left;
+}
+
+.u-contents_private {
+  min-height: 1000px;
+}
+
+.u-contents_public {
+  height: 850px;
 }
 
 .u-link {
