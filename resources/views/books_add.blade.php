@@ -16,7 +16,7 @@
                         </li>
                         <li class="c-list">
                             <label for="book-page" class="c-label">ページ数</label>
-                            <input type="number" name="book_page" id="book-page" class="c-number">
+                            <input type="number" name="book_page" id="book-page" class="c-number" min="1" max="9999">
                         </li>
                         <li class="c-list">
                             <label for="published" class="c-label">出版日</label>
@@ -24,11 +24,11 @@
                         </li>
                         <li class="c-list">
                             <label for="author" class="c-label">著者</label>
-                            <input type="text" name="author" id="author" class="c-textBox">
+                            <input type="text" name="author" id="author" class="c-textBox" maxlength="255">
                         </li>
                         <li class="c-list">
                             <label for="book-description" class="c-label">説明</label>
-                            <textarea name="book_description" id="book-description" class="c-textArea"></textarea>
+                            <textarea name="book_description" id="book-description" class="c-textArea" maxlength="4000"></textarea>
                         </li>
                         <li class="c-list">
                             <label for="book-img" class="c-label">画像</label>
