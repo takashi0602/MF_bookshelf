@@ -19,11 +19,11 @@
                         </li>
                         <li class="c-list">
                             <label class="c-label" for="book-name">書籍名 <span class="c-required">*</span></label>
-                            <input class="c-textBox" type="text" name="book_name" id="book-name" value="{{ $book->book_name }}">
+                            <input class="c-textBox" type="text" name="book_name" id="book-name" value="{{ $book->book_name }}" required autofocus>
                         </li>
                         <li class="c-list">
                             <label class="c-label" for="book-page">ページ数</label>
-                            <input class="c-number" type="number" name="book_page" id="book-page" value="{{ $book->book_page }}">
+                            <input class="c-number" type="number" name="book_page" id="book-page" value="{{ $book->book_page }}" min="1" max="9999">
                         </li>
                         <li class="c-list">
                             <label class="c-label" for="published">出版日</label>
@@ -31,11 +31,11 @@
                         </li>
                         <li class="c-list">
                             <label class="c-label" for="author">著者</label>
-                            <input class="c-textBox" type="text" name="author" id="author" value="{{ $book->author }}">
+                            <input class="c-textBox" type="text" name="author" id="author" value="{{ $book->author }}" maxlength="255">
                         </li>
                         <li class="c-list">
                             <label class="c-label" for="book-description">説明</label>
-                            <textarea name="book_description" id="book-description" class="c-textArea">{{ $book->book_description }}</textarea>
+                            <textarea name="book_description" id="book-description" class="c-textArea" maxlength="4000">{{ $book->book_description }}</textarea>
                         </li>
                         <li class="c-list">
                             <label class="c-label" for="flag">公開設定</label>
