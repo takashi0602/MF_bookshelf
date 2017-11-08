@@ -1,10 +1,25 @@
 @import 'foundation/_variables.scss';
 @import 'foundation/_reset.scss';
+@import 'foundation/_mixin.scss';
 
-@import 'layout/_header.scss';
 @import 'layout/_footer.scss';
+@import 'layout/_header.scss';
 
+@import 'object/component/_button.scss';
+@import 'object/component/_container.scss';
+@import 'object/component/_content.scss';
+@import 'object/component/_form.scss';
+@import 'object/component/_link.scss';
+@import 'object/component/_list.scss';
+@import 'object/component/_other.scss';
 @import 'object/component/_title.scss';
-@import 'object/component/_mypage.scss';
 
-@import 'object/utility/title';
+@import 'object/utility/_button.scss';
+@import 'object/utility/_content.scss';
+@import 'object/utility/_link.scss';
+@import 'object/utility/_list.scss';
+@import 'object/utility/_other.scss';
+
+
+
+@import 'object/component/_mypage.scss';

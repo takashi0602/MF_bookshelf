@@ -1,0 +1,12 @@
+@import '../../foundation/_mixin.scss';
+
+.c-link {
+  @include link;
+  display: block;
+  color: $cyan;
+}
+
+.c-link_innerBtn {
+  @include link;
+  color: $white;
+}

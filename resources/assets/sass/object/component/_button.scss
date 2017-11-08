@@ -1,0 +1,42 @@
+@import '../../foundation/_mixin.scss';
+
+.c-btn_small {
+  @include btn;
+}
+
+.c-btn_large {
+  @include btn;
+  display: block;
+  width: 150px;
+  font-size: 16px;
+}
+
+.c-btn_twitter {
+  @extend .c-btn_large;
+  width: 120px;
+  border: 0;
+  background-color: $twitter;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: $white;
+}
+
+.c-btn_facebook {
+  @extend .c-btn_large;
+  width: 120px;
+  background-color: $facebook;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: $white;
+  border: 0;
+}
+
+.c-btn_github {
+  @extend .c-btn_large;
+  width: 120px;
+  background-color: $github;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: $white;
+  border: 0;
+}

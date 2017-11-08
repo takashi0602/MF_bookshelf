@@ -2,6 +2,21 @@ body {
   margin: 0;
   padding: 0;
   color: #4e454a;
+  background-color: #fafdff;
+}
+
+.l-footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #0068b7;
+}
+
+.l-footerCopyright {
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
 }
 
 .l-header {
@@ -51,83 +66,6 @@ body {
 .l-headerMenu_link {
   text-decoration: none;
   color: #00a1e9;
-}
-
-.l-footer {
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  background-color: #0068b7;
-}
-
-.l-footerCopyright {
-  text-align: center;
-  line-height: 100px;
-  color: #fff;
-}
-
-body {
-  background-color: #fafdff;
-}
-
-.c-catchphrase {
-  height: 400px;
-  background-color: #0068b7;
-}
-
-.c-catchphrase_text {
-  margin: 0;
-  width: 100%;
-  line-height: 370px;
-  letter-spacing: 10px;
-  font-size: 80px;
-  text-align: center;
-  color: #fff;
-}
-
-.c-container {
-  max-width: 1024px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.c-contents {
-  max-width: 1024px;
-  width: 100%;
-  border-radius: 4px;
-  background-color: #fff;
-}
-
-.c-title {
-  padding-left: 5px;
-  text-align: left;
-  border-bottom: 2px solid #0068b7;
-}
-
-.c-lists {
-  display: inline-block;
-  list-style: none;
-  font-size: 12px;
-  text-align: center;
-  padding-left: 0;
-}
-
-.c-list_bookImgWrapper {
-  width: 100px;
-  height: 150px;
-  overflow: hidden;
-}
-
-.c-list_bookImg {
-  width: 100%;
-}
-
-.c-list_bookName {
-  width: 100px;
-  height: 55px;
-  overflow: hidden;
-  word-wrap: break-word;
 }
 
 .c-btn_small {
@@ -181,31 +119,23 @@ body {
   border: 0;
 }
 
-.c-paginate > ul {
-  list-style: none;
+.c-container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.c-paginate > ul > li {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  border: 1px solid #0068b7;
+.c-contents {
+  max-width: 1024px;
+  width: 100%;
   border-radius: 4px;
-  line-height: 40px;
-  text-align: center;
+  background-color: #fff;
 }
 
-.c-paginate > ul > li.active {
-  background-color: #0068b7;
-  color: #fff;
-}
-
-.c-paginate > ul > li > a {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  text-decoration: none;
-  color: #0075c2;
+.c-content_clear {
+  clear: both;
+  width: 100%;
+  height: 30px;
 }
 
 .c-textBox {
@@ -295,37 +225,82 @@ body {
   color: #fff;
 }
 
+.c-lists {
+  display: inline-block;
+  list-style: none;
+  font-size: 12px;
+  text-align: center;
+  padding-left: 0;
+}
+
+.c-list_bookImgWrapper {
+  width: 100px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.c-list_bookImg {
+  width: 100%;
+}
+
+.c-list_bookName {
+  width: 100px;
+  height: 55px;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.c-paginate > ul {
+  list-style: none;
+}
+
+.c-paginate > ul > li {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #0068b7;
+  border-radius: 4px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.c-paginate > ul > li.active {
+  background-color: #0068b7;
+  color: #fff;
+}
+
+.c-paginate > ul > li > a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  color: #0075c2;
+}
+
 .c-required {
   font-size: 20px;
   color: #ea5550;
 }
 
-.c-content_clear {
-  clear: both;
+.c-catchphrase {
+  height: 400px;
+  background-color: #0068b7;
+}
+
+.c-catchphrase_text {
+  margin: 0;
   width: 100%;
-  height: 30px;
-}
-
-.c-mypage_title {
-  color: #00a1e9;
-  border-bottom: 1px solid;
-}
-
-.c-mypage_profiles {
-  list-style: none;
-}
-
-.c-mypage_profiles .c-mypage_profile {
-  font-size: 24px;
-  margin: 5px 0 5px 0;
-}
-
-.u-paginate {
+  line-height: 370px;
+  letter-spacing: 10px;
+  font-size: 80px;
   text-align: center;
+  color: #fff;
 }
 
-.u-contents {
-  text-align: center;
+.c-title {
+  padding-left: 5px;
+  text-align: left;
+  border-bottom: 2px solid #0068b7;
 }
 
 .u-btn_small {
@@ -343,12 +318,16 @@ body {
   margin-bottom: 10px;
 }
 
-.u-list_bookName {
-  margin-bottom: 5px;
+.u-btn_sns {
+  margin-bottom: 10px;
 }
 
-.u-lists_wrapper {
-  margin-bottom: 30px;
+.u-contents {
+  text-align: center;
+}
+
+.u-content_left {
+  float: left;
 }
 
 .u-link {
@@ -357,11 +336,29 @@ body {
   text-align: right;
 }
 
-.u-content_left {
-  float: left;
+.u-list_bookName {
+  margin-bottom: 5px;
 }
 
-.u-btn_sns {
-  margin-bottom: 10px;
+.u-lists_wrapper {
+  margin-bottom: 30px;
+}
+
+.u-paginate {
+  text-align: center;
+}
+
+.c-mypage_title {
+  color: #00a1e9;
+  border-bottom: 1px solid;
+}
+
+.c-mypage_profiles {
+  list-style: none;
+}
+
+.c-mypage_profiles .c-mypage_profile {
+  font-size: 24px;
+  margin: 5px 0 5px 0;
 }
 

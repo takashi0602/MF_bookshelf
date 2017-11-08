@@ -1,0 +1,18 @@
+.u-btn_small {
+  margin-bottom: 5px;
+}
+
+.u-btn_large {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.u-btn_signin {
+  @extend .u-btn_large;
+  margin-bottom: 10px;
+}
+
+.u-btn_sns {
+  margin-bottom: 10px;
+}
