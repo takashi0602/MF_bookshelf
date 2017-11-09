@@ -7,7 +7,7 @@
         </div>
         <div class="c-container">
             @if (count($books) > 0)
-                <div class="c-contents u-contents">
+                <div class="c-contents">
                     <h1 class="c-title">新着の本</h1>
                     @foreach ($books as $book)
                         @if ($book->flag === 'public')
