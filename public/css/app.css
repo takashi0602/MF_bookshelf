@@ -281,6 +281,29 @@ body {
   color: #ea5550;
 }
 
+.c-table {
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.c-table_row:nth-child(even) {
+  background-color: #f7f6f5;
+}
+
+.c-table_head {
+  border: 1px solid #cbd0d3;
+  padding: 10px;
+}
+
+.c-table_data {
+  border: 1px solid #cbd0d3;
+  padding: 10px;
+}
+
+.c-table_center {
+  text-align: center;
+}
+
 .c-catchphrase {
   height: 400px;
   background-color: #0068b7;

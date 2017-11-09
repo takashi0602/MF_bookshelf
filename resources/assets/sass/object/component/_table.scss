@@ -1,0 +1,18 @@
+.c-table {
+  border-collapse: collapse;
+  text-align: left;
+  &_row:nth-child(even) {
+    background-color: $pearlWhite;
+  }
+  &_head {
+    border: 1px solid $skyGray;
+    padding:10px;
+  }
+  &_data {
+    border: 1px solid $skyGray;
+    padding:10px;
+  }
+  &_center {
+    text-align: center;
+  }
+}

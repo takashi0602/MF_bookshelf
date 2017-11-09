@@ -18,39 +18,49 @@
                                 @endif
                             </div>
                         </li>
-                        <li class="c-list">
-                            <label class="c-detailBook_label" for="item_name">書籍名</label>
-                            {{ $book->book_name }}
-                        </li>
-                        <li class="c-list">
-                            <label class="c-detailBook_label" for="item_name">ページ数</label>
-                            @if($book->book_page === null)  -
-                            @else   {{ $book->book_page }} ページ
-                            @endif
-                        </li>
-                        <li class="c-list">
-                            <label class="c-detailBook_label" for="published">出版日</label>
-                            @if($book->published === null)  -
-                            @else   {{ $book->published }}
-                            @endif
-                        </li>
-                        <li class="c-list">
-                            <label class="c-detailBook_label" for="author">著者</label>
-                            @if($book->author === null)  -
-                            @else   {{ $book->author }}
-                            @endif
-                        </li>
-                        <li class="c-list">
-                            <label class="c-detailBook_label" for="book_description">説明</label>
-                            @if($book->book_description === null)  -
-                            @else   {{ $book->book_description }}
-                            @endif
-                        </li>
-                        <li class="c-list">
-                            <label class="c-detailBook_label" for="book_description">登録ユーザー</label>
-                            {{ $userName }}
-                        </li>
                     </ul>
+                    <table class="c-table">
+                        <tr class="c-table_row">
+                            <th class="c-table_head">書籍名</th>
+                            <td class="c-table_data">{{ $book->book_name }}</td>
+                        </tr>
+                        <tr class="c-table_row">
+                            <th class="c-table_head">ページ数</th>
+                            @if($book->book_page === null)
+                                <td class="c-table_data c-table_center">-</td>
+                            @else
+                                <td class="c-table_data">{{ $book->book_page }} ページ</td>
+                            @endif
+                        </tr>
+                        <tr class="c-table_row">
+                            <th class="c-table_head">出版日</th>
+                            @if($book->published === null)
+                                <td class="c-table_data c-table_center">-</td>
+                            @else
+                                <td class="c-table_data">{{ $book->published }}</td>
+                            @endif
+                        </tr>
+                        <tr class="c-table_row">
+                            <th class="c-table_head">著者</th>
+                            @if($book->author === null)
+                                <td class="c-table_data c-table_center">-</td>
+                            @else
+                                <td class="c-table_data">{{ $book->author }}</td>
+                            @endif
+                        </tr>
+                        <tr class="c-table_row">
+                            <th class="c-table_head">説明</th>
+                            @if($book->book_description === null)
+                                <td class="c-table_data c-table_center">-</td>
+                            @else
+                                <td class="c-table_data">{{ $book->book_description }}</td>
+                            @endif
+                        </tr>
+                        <tr class="c-table_row">
+                            <th class="c-table_head">登録ユーザー</th>
+                            <td class="c-table_data">{{ $userName }}</td>
+                        </tr>
+                    </table>
                     <div class="c-bookLink">
                         @if(strstr($_SERVER['REQUEST_URI'], 'private') == true)
                             <a href="{{ url('/private') }}" class="c-link u-link">
