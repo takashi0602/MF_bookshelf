@@ -9,13 +9,15 @@
                     @include('common.errors')
                     <ul class="c-lists">
                         <li class="c-list">
-                            @if(preg_match("/^.\/img\/default_books\/book_/", $book->book_img))
-                                <img src="{{ substr($book->book_img, 1) }}" alt="" width="300">
-                            @elseif(preg_match("/^http:\/\//", $book->book_img))
-                                <img src="{{ $book->book_img }}" alt="" width="300">
-                            @else
-                                <img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="300">
-                            @endif
+                            <div class="c-list_bookImgWrapper">
+                                @if(preg_match("/^.\/img\/default_books\/book_/", $book->book_img))
+                                    <img src="{{ substr($book->book_img, 1) }}" alt="" class="c-list_bookImg">
+                                @elseif(preg_match("/^http:\/\//", $book->book_img))
+                                    <img src="{{ $book->book_img }}" alt="" class="c-list_bookImg">
+                                @else
+                                    <img src="data:image/png;base64,{{ $book->book_img }}" alt="" class="c-list_bookImg">
+                                @endif
+                            </div>
                         </li>
                         <li class="c-list">
                             <label class="c-label" for="book-name">書籍名 <span class="c-required">*</span></label>

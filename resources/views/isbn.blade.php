@@ -20,7 +20,7 @@
                             {{ csrf_field() }}
                             <ul class="c-lists">
                                 <li class="c-list">
-                                    <img src="{{ json_decode(session('response'))->thumbnail }}" class="c-createBook_file" alt="">
+                                    <img src="{{ json_decode(session('response'))->thumbnail }}" alt="">
                                     <input type="hidden" value="{{ json_decode(session('response'))->thumbnail }}" name="book_img" id="book-img">
                                 </li>
                                 <li class="c-list">

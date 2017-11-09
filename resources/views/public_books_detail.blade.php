@@ -8,13 +8,15 @@
                 <form action="{{ url('books/update') }}" method="POST">
                     <ul class="c-lists">
                         <li class="c-list">
-                            @if(preg_match("/^.\/img\/default_books\/book_/", $book->book_img))
-                                <img src="{{ substr($book->book_img, 1) }}" alt="" width="300">
-                            @elseif(preg_match("/^http:\/\//", $book->book_img))
-                                <img src="{{ $book->book_img }}" alt="" width="300">
-                            @else
-                                <img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="300">
-                            @endif
+                            <div class="c-list_bookImgWrapper">
+                                @if(preg_match("/^.\/img\/default_books\/book_/", $book->book_img))
+                                    <img src="{{ substr($book->book_img, 1) }}" alt="" class="c-list_bookImg">
+                                @elseif(preg_match("/^http:\/\//", $book->book_img))
+                                    <img src="{{ $book->book_img }}" alt="" class="c-list_bookImg">
+                                @else
+                                    <img src="data:image/png;base64,{{ $book->book_img }}" alt="" class="c-list_bookImg">
+                                @endif
+                            </div>
                         </li>
                         <li class="c-list">
                             <label class="c-detailBook_label" for="item_name">書籍名</label>
@@ -49,7 +51,7 @@
                             {{ $userName }}
                         </li>
                     </ul>
-                    <div class="c-bockLink">
+                    <div class="c-bookLink">
                         @if(strstr($_SERVER['REQUEST_URI'], 'private') == true)
                             <a href="{{ url('/private') }}" class="c-link u-link">
                                 <i class="fa fa-chevron-left" aria-hidden="true"></i> 戻る
