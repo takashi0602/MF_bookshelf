@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@include('layouts.header')
+@include('layouts.footer')
+
 @section('nav')
 <div class="p-signIn">
     <div class="c-container">

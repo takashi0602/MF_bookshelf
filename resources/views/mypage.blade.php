@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@include('layouts.header')
+@include('layouts.footer')
+
 @section('content')
     <div class="p-mypage">
         <div class="c-container">
