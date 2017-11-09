@@ -33,6 +33,7 @@ class BooksController extends Controller
         $validator = Validator::make($request->all(), [
             'book_name' => 'required | min: 1 | max: 255',
             'book_page' => 'digits_between: 0, 4',
+            'author' => 'min: 0 | max: 255',
             'book_description' => 'min: 0 | max: 4000',
             'book_img' => 'image'
         ]);
@@ -47,12 +48,13 @@ class BooksController extends Controller
         $books->user_id = Auth::user()->id;
         $books->book_name = $request->book_name;
         $books->book_page = $request->book_page;
+        $books->flag = $request->flag;
+        $books->author = $request->author;
         $books->book_description = $request->book_description;
         $books->book_img = $img;
-        $books->author = $request->author;
         $books->published = $request->published;
-        $books->flag = $request->flag;
         $books->save();
+
         return redirect('/private');
     }
 
@@ -71,6 +73,7 @@ class BooksController extends Controller
             'id' => 'required',
             'book_name' => 'required | min: 1 | max: 255',
             'book_page' => 'digits_between: 0, 4',
+            'author' => 'min: 0 | max: 255',
             'book_description' => 'min: 0 | max: 4000'
         ]);
 
@@ -83,11 +86,12 @@ class BooksController extends Controller
         $books = Book::where('user_id', Auth::user()->id)->find($request->id);
         $books->book_name = $request->book_name;
         $books->book_page = $request->book_page;
-        $books->book_description = $request->book_description;
-        $books->author = $request->author;
         $books->published = $request->published;
+        $books->author = $request->author;
+        $books->book_description = $request->book_description;
         $books->flag = $request->flag;
         $books->save();
+
         return redirect('/private');
     }
 
