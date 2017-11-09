@@ -54,7 +54,7 @@
                         </li>
                     </ul>
                     <div class="c-editBook_Btn">
-                        <button class="c-btn_large" type="submit">
+                        <button type="submit" class="c-btn_large u-btn_large">
                             <i class="fa fa-pencil" aria-hidden="true"></i> 本を更新
                         </button>
                         <input type="hidden" name="id" value="{{ $book->id }}">
@@ -65,7 +65,7 @@
                     <form action="{{ url('private/book/' . $book->id) }}" method="POST">
                         {{ csrf_field() }}
                         {{ method_field('DELETE') }}
-                        <button type="submit" class="c-btn_large">
+                        <button type="submit" class="c-btn_large u-btn_large">
                             <i class="fa fa-trash" aria-hidden="true"></i> 本を捨てる
                         </button>
                     </form>

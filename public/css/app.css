@@ -282,6 +282,7 @@ body {
 }
 
 .c-table {
+  margin-bottom: 10px;
   border-collapse: collapse;
   text-align: left;
 }
@@ -291,6 +292,7 @@ body {
 }
 
 .c-table_head {
+  width: 100px;
   border: 1px solid #cbd0d3;
   padding: 10px;
 }

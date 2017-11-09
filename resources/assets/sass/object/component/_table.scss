@@ -1,10 +1,12 @@
 .c-table {
+  margin-bottom: 10px;
   border-collapse: collapse;
   text-align: left;
   &_row:nth-child(even) {
     background-color: $pearlWhite;
   }
   &_head {
+    width: 100px;
     border: 1px solid $skyGray;
     padding:10px;
   }
