@@ -28,7 +28,7 @@ class PublicbooksController extends Controller
             ->where('users.id', $books->user_id)
             ->get();
 
-        return view('public_books_detail', [
+        return view('books_detail', [
             'book' => $books,
             'userName' => $userName[0]->name
         ]);
