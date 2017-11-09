@@ -26,7 +26,7 @@ class BooksController extends Controller
         if (!empty($request->book_img)) {
             $img = base64_encode(file_get_contents($request->book_img));
         } else {
-            $img = base64_encode(file_get_contents('./img/default_books/book_' . $default_books[$default_book] . '.png'));
+            $img = './img/default_books/book_'. $default_books[$default_book] . '.png';
         }
 
         // Validation

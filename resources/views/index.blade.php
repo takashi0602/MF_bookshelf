@@ -14,10 +14,12 @@
                             <ul class="c-lists">
                                 <li class="c-list">
                                     <div class="c-list_bookImgWrapper">
-                                        @if(preg_match("/^http:\/\//", $book->book_img))
-                                            <img src="{{ $book->book_img }}" alt="" class="c-list_bookImg">
+                                        @if(preg_match("/^.\/img\/default_books\/book_/", $book->book_img))
+                                            <img src="{{ substr($book->book_img, 1) }}" alt="" width="100">
+                                        @elseif(preg_match("/^http:\/\//", $book->book_img))
+                                            <img src="{{ $book->book_img }}" alt="" width="100">
                                         @else
-                                            <img src="data:image/png;base64,{{ $book->book_img }}" alt="" class="c-list_bookImg">
+                                            <img src="data:image/png;base64,{{ $book->book_img }}" alt="" width="100">
                                         @endif
                                     </div>
                                 </li>
