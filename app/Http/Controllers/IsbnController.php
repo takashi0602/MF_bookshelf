@@ -16,7 +16,7 @@ class IsbnController extends Controller
     public function search(Request $request) {
         // Validation
         $validator = Validator::make($request->all(), [
-            'isbn_code' => 'required | digits: 10'
+            'isbn_code' => 'required | regex: /^[0-9]{9}[0-9X]{1}$/'
         ]);
 
         // Validation Error
