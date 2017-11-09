@@ -62,7 +62,7 @@
                     </ul>
                 @endif
                 <div class="c-backLink">
-                    <a href="{{ url('/private/books/add') }}" class="c-link u-link">
+                    <a href="{{ url('/private') }}" class="c-link u-link">
                         <i class="fa fa-chevron-left" aria-hidden="true"></i> 戻る
                     </a>
                 </div>
