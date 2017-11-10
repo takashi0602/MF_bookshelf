@@ -6,7 +6,7 @@
 @section('content')
     <div class="p-edit">
         <div class="c-container">
-            <div class="c-contents">
+            <div class="c-contents u-contents">
                 <h1 class="c-title">本の編集</h1>
                 <form action="{{ url('private/books/update') }}" method="POST">
                     @include('common.errors')
