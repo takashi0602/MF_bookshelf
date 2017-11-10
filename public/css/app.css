@@ -350,7 +350,8 @@ body {
 .u-contents_isbn,
 .u-contents_mypage,
 .u-contents_signin,
-.u-contents_signup {
+.u-contents_signup,
+.u-contents_email {
   text-align: center;
 }
 
@@ -379,6 +380,10 @@ body {
 }
 
 .u-contents_signup {
+  min-height: 600px;
+}
+
+.u-contents_email {
   min-height: 600px;
 }
 
