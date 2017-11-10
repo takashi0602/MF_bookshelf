@@ -387,6 +387,10 @@ body {
   margin-bottom: 30px;
 }
 
+.u-list_bookImgWrapper {
+  margin: 0 auto;
+}
+
 .u-paginate {
   text-align: center;
 }

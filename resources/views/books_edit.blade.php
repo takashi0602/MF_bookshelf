@@ -12,7 +12,7 @@
                     @include('common.errors')
                     <ul class="c-lists">
                         <li class="c-list">
-                            <div class="c-list_bookImgWrapper">
+                            <div class="c-list_bookImgWrapper u-list_bookImgWrapper">
                                 @if(preg_match("/^.\/img\/default_books\/book_/", $book->book_img))
                                     <img src="{{ substr($book->book_img, 1) }}" alt="" class="c-list_bookImg">
                                 @elseif(preg_match("/^http:\/\//", $book->book_img))
