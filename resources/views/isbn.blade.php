@@ -10,13 +10,13 @@
                 <h1 class="c-title">ISBN検索</h1>
                 <form enctype="multipart/form-data" action="{{ url('private/books/isbn/search') }}" method="POST">
                     {{ csrf_field() }}
-                    @include('common.errors')
                     <ul class="c-lists">
                         <label for="book-name" class="c-label">ISBNコード（10桁）</label>
                         <input class="c-textBox" type="text" name="isbn_code" id="book-name" maxlength="10" required autofocus>
                         <input class="c-btn_large" type="submit" value="検索">
                     </ul>
                 </form>
+                @include('common.errors')
                 @if(!empty(session('response')))
                     @if(session('response'))
                         <form enctype="multipart/form-data" action="{{ url('/private/books/isbn/store') }}" method="POST">
