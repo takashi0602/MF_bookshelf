@@ -43,7 +43,7 @@
                         </ul>
                     @endforeach
                 @else
-                    <div>書籍はまだ追加されていません。</div>
+                    <div class="c-center">書籍はまだ登録されていません。</div>
                 @endif
             </div>
             <div class="c-paginate u-paginate">

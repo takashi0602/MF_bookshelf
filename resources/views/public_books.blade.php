@@ -6,10 +6,9 @@
 @section('content')
     <div class="p-publicBooks">
         <div class="c-container">
-            @include('common.errors')
-            @if (count($books) > 0)
-                <div class="c-contents u-contents_public">
-                    <h1 class="c-title">みんなの本棚</h1>
+            <div class="c-contents u-contents_public">
+                <h1 class="c-title">みんなの本棚</h1>
+                @if (count($books) > 0)
                     @foreach ($books as $book)
                         <ul class="c-lists">
                             <li class="c-list">
@@ -34,11 +33,11 @@
                             </li>
                         </ul>
                     @endforeach
-                </div>
-                <div class="c-paginate u-paginate">
-                    {{ $books->links() }}
-                </div>
-            @endif
+                @endif
+            </div>
+            <div class="c-paginate u-paginate">
+                {{ $books->links() }}
+            </div>
         </div>
     </div>
 @endsection
