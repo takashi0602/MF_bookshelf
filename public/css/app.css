@@ -282,10 +282,11 @@ body {
 }
 
 .c-table {
+  margin: 0 2.5%;
   margin-bottom: 10px;
   border-collapse: collapse;
   text-align: left;
-  min-width: 100%;
+  width: 95%;
 }
 
 .c-table_row:nth-child(even) {
