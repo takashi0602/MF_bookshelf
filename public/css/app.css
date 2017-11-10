@@ -284,6 +284,10 @@ body {
   text-align: center;
 }
 
+.c-mypage_status {
+  font-size: 24px;
+}
+
 .c-table {
   margin: 0 2.5%;
   margin-bottom: 10px;
