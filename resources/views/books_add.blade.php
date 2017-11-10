@@ -14,31 +14,31 @@
                     {{ csrf_field() }}
                     <ul class="c-lists">
                         <li class="c-list">
-                            <label for="book-name" class="c-label">書籍名 <span class="c-required">*</span></label>
+                            <label for="book-name" class="c-label u-label_add">書籍名 <span class="c-required">*</span></label>
                             <input type="text" name="book_name" id="book-name" class="c-textBox" maxlength="255" required autofocus>
                         </li>
                         <li class="c-list">
-                            <label for="book-page" class="c-label">ページ数</label>
+                            <label for="book-page" class="c-label u-label_add">ページ数</label>
                             <input type="number" name="book_page" id="book-page" class="c-number" min="1" max="9999">
                         </li>
                         <li class="c-list">
-                            <label for="published" class="c-label">出版日</label>
+                            <label for="published" class="c-label u-label_add">出版日</label>
                             <input type="date" name="published" id="published" class="c-date">
                         </li>
                         <li class="c-list">
-                            <label for="author" class="c-label">著者</label>
+                            <label for="author" class="c-label u-label_add">著者</label>
                             <input type="text" name="author" id="author" class="c-textBox" maxlength="255">
                         </li>
                         <li class="c-list">
-                            <label for="book-description" class="c-label">説明</label>
+                            <label for="book-description" class="c-label u-label_add">説明</label>
                             <textarea name="book_description" id="book-description" class="c-textArea" maxlength="4000"></textarea>
                         </li>
                         <li class="c-list">
-                            <label for="book-img" class="c-label">画像</label>
+                            <label for="book-img" class="c-label u-label_add">画像</label>
                             <input type="file" name="book_img" id="book-img" class="c-file">
                         </li>
                         <li class="c-list">
-                            <label for="flag" class="c-label">公開設定</label>
+                            <label for="flag" class="c-label u-label_add">公開設定</label>
                             <div class="c-radioWrapper">
                                 <input type="radio" name="flag" id="flag" value="public" class="c-radio" checked> 公開
                                 <input type="radio" name="flag" id="flag" value="private" class="c-radio"> 非公開

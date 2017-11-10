@@ -6,7 +6,7 @@
 @section('nav')
 <div class="p-signIn">
     <div class="c-container">
-        <div class="c-contents u-contents">
+        <div class="c-contents u-contents_signin">
             <h1 class="c-title">サインイン</h1>
             <form method="POST" action="{{ route('login') }}">
                 {{ csrf_field() }}
@@ -14,14 +14,14 @@
                     <h2>Bookshelfアカウントでサインイン</h2>
                     <ul class="c-lists">
                         <li class="form-group{{ $errors->has('email') ? ' has-error' : '' }} c-list">
-                            <label class="c-label" for="email">メールアドレス <span class="c-required">*</span></label>
+                            <label class="c-label u-label_signin" for="email">メールアドレス <span class="c-required">*</span></label>
                             <input class="c-email" id="email" type="email" name="email" value="{{ old('email') }}" required autofocus>
                             @if ($errors->has('email'))
                                 <strong>{{ $errors->first('email') }}</strong>
                             @endif
                         </li>
                         <li class="form-group{{ $errors->has('password') ? ' has-error' : '' }} c-list">
-                            <label class="c-label" for="password">パスワード <span class="c-required">*</span></label>
+                            <label class="c-label u-label_signin" for="password">パスワード <span class="c-required">*</span></label>
                             <input class="c-password" id="password" type="password" name="password" required>
                             @if ($errors->has('password'))
                                 <strong>{{ $errors->first('password') }}</strong>

@@ -27,27 +27,27 @@
                                     <input type="hidden" value="{{ json_decode(session('response'))->thumbnail }}" name="book_img" id="book-img">
                                 </li>
                                 <li class="c-list">
-                                    <label for="book-name" class="c-label">書籍名 <span class="c-required">*</span></label>
+                                    <label for="book-name" class="c-label u-label_isbn">書籍名 <span class="c-required">*</span></label>
                                     <input type="text" value="{{ json_decode(session('response'))->title }}" name="book_name" id="book-name" class="c-textBox" maxlength="255" required>
                                 </li>
                                 <li class="c-list">
-                                    <label for="book-page" class="c-label">ページ数</label>
+                                    <label for="book-page" class="c-label u-label_isbn">ページ数</label>
                                     <input type="number" value="{{ json_decode(session('response'))->pageCount }}" name="book_page" id="book-page" class="c-number" min="1" max="9999">
                                 </li>
                                 <li class="c-list">
-                                    <label for="published" class="c-label">出版日</label>
+                                    <label for="published" class="c-label u-label_isbn">出版日</label>
                                     <input type="date" value="{{ json_decode(session('response'))->publishedDate }}" name="published" id="published" class="c-date">
                                 </li>
                                 <li class="c-list">
-                                    <label for="author" class="c-label">著者</label>
+                                    <label for="author" class="c-label u-label_isbn">著者</label>
                                     <input type="text" value="{{ json_decode(session('response'))->authors }}" name="author" id="author" class="c-textBox" maxlength="255">
                                 </li>
                                 <li class="c-list">
-                                    <label for="book-description" class="c-label">説明</label>
+                                    <label for="book-description" class="c-label u-label_isbn">説明</label>
                                     <textarea name="book_description" id="book-description" class="c-textArea" maxlength="4000">{{ json_decode(session('response'))->description }}</textarea>
                                 </li>
                                 <li class="c-list">
-                                    <label for="flag" class="c-label">公開設定</label>
+                                    <label for="flag" class="c-label u-label_isbn">公開設定</label>
                                     <div class="c-radioWrapper">
                                         <input type="radio" name="flag" id="flag" value="public" class="c-radio" checked> 公開
                                         <input type="radio" name="flag" id="flag" value="private" class="c-radio"> 非公開

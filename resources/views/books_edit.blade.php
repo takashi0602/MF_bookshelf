@@ -23,27 +23,27 @@
                             </div>
                         </li>
                         <li class="c-list">
-                            <label class="c-label" for="book-name">書籍名 <span class="c-required">*</span></label>
+                            <label class="c-label u-label_edit" for="book-name">書籍名 <span class="c-required">*</span></label>
                             <input class="c-textBox" type="text" name="book_name" id="book-name" value="{{ $book->book_name }}" required autofocus>
                         </li>
                         <li class="c-list">
-                            <label class="c-label" for="book-page">ページ数</label>
+                            <label class="c-label u-label_edit" for="book-page">ページ数</label>
                             <input class="c-number" type="number" name="book_page" id="book-page" value="{{ $book->book_page }}" min="1" max="9999">
                         </li>
                         <li class="c-list">
-                            <label class="c-label" for="published">出版日</label>
+                            <label class="c-label u-label_edit" for="published">出版日</label>
                             <input class="c-date" type="date" name="published" id="published" value="{{ $book->published }}">
                         </li>
                         <li class="c-list">
-                            <label class="c-label" for="author">著者</label>
+                            <label class="c-label u-label_edit" for="author">著者</label>
                             <input class="c-textBox" type="text" name="author" id="author" value="{{ $book->author }}" maxlength="255">
                         </li>
                         <li class="c-list">
-                            <label class="c-label" for="book-description">説明</label>
+                            <label class="c-label u-label_edit" for="book-description">説明</label>
                             <textarea name="book_description" id="book-description" class="c-textArea" maxlength="4000">{{ $book->book_description }}</textarea>
                         </li>
                         <li class="c-list">
-                            <label class="c-label" for="flag">公開設定</label>
+                            <label class="c-label u-label_edit" for="flag">公開設定</label>
                             @if ($book->flag === 'public')
                                 <input class="c-radio" type="radio" name="flag" id="flag" value="public" checked> 公開
                                 <input class="c-radio" type="radio" name="flag" id="flag" value="private"> 非公開
