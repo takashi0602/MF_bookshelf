@@ -413,8 +413,8 @@ body {
   text-align: right;
 }
 
-.u-list_bookName {
-  margin-bottom: 5px;
+.u-lists {
+  display: block;
 }
 
 .u-lists_wrapper {
@@ -423,6 +423,10 @@ body {
 
 .u-list_bookImgWrapper {
   margin: 0 auto;
+}
+
+.u-list_bookName {
+  margin-bottom: 5px;
 }
 
 .u-paginate {

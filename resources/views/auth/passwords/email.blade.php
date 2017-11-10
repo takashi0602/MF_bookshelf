@@ -19,13 +19,15 @@
                     <li class="form-group{{ $errors->has('email') ? ' has-error' : '' }} c-list">
                         <label class="c-label" for="email">メールアドレス</label>
                         <input class="c-email" id="email" type="email" name="email" value="{{ old('email') }}" required autofocus>
-                        @if ($errors->has('email'))
-                            <strong>{{ $errors->first('email') }}</strong>
-                        @endif
                     </li>
                 </ul>
                 <button class="c-btn_large" type="submit">メールを送信</button>
             </form>
+            @if ($errors->has('email'))
+                <ul class="c-lists u-lists">
+                    <li class="c-list">{{ $errors->first('email') }}</li>
+                </ul>
+            @endif
         </div>
     </div>
 </div>

@@ -16,23 +16,14 @@
                         <li class="form-group{{ $errors->has('name') ? ' has-error' : '' }} c-list">
                             <label class="c-label u-label_signup" for="name">ユーザネーム <span class="c-required">*</span></label>
                             <input class="c-textBox" id="name" type="text" name="name" value="{{ old('name') }}" required autofocus>
-                            @if ($errors->has('name'))
-                                <strong>{{ $errors->first('name') }}</strong>
-                            @endif
                         </li>
                         <li class="form-group{{ $errors->has('email') ? ' has-error' : '' }} c-list">
                             <label class="c-label u-label_signup" for="email">メールアドレス <span class="c-required">*</span></label>
                             <input class="c-email" id="email" type="email" name="email" value="{{ old('email') }}" required>
-                            @if ($errors->has('email'))
-                                <strong>{{ $errors->first('email') }}</strong>
-                            @endif
                         </li>
                         <li class="form-group{{ $errors->has('password') ? ' has-error' : '' }} c-list">
                             <label class="c-label u-label_signup" for="password">パスワード <span class="c-required">*</span></label>
                             <input class="c-password" id="password" type="password" name="password" required>
-                            @if ($errors->has('password'))
-                                <strong>{{ $errors->first('password') }}</strong>
-                            @endif
                         </li>
                         <li class="c-list">
                             <label class="c-label u-label_signup" for="password-confirm">パスワード(再入力) <span class="c-required">*</span></label>
@@ -40,6 +31,21 @@
                         </li>
                     </ul>
                     <button class="c-btn_large u-btn_large" type="submit">サインアップ</button>
+                    @if ($errors->has('name'))
+                        <ul class="c-lists u-lists">
+                            <li class="c-list">{{ $errors->first('name') }}</li>
+                        </ul>
+                    @endif
+                    @if ($errors->has('email'))
+                        <ul class="c-lists u-lists">
+                            <li class="c-list">{{ $errors->first('email') }}</li>
+                        </ul>
+                    @endif
+                    @if ($errors->has('password'))
+                        <ul class="c-lists u-lists">
+                            <li class="c-list">{{ $errors->first('password') }}</li>
+                        </ul>
+                    @endif
                 </div>
             </form>
         </div>

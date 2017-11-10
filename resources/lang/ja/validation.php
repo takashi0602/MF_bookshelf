@@ -36,7 +36,7 @@ return [
     'digits_between'       => ':attributeには:min〜:max桁の数値を指定してください。',
     'dimensions'           => ':attributeの画像サイズが不正です。',
     'distinct'             => '指定された:attributeは既に存在しています。',
-    'email'                => ':attributeには正しい形式のメールアドレスを指定してください。',
+    'email'                => '正しい形式のメールアドレスを指定してください。',
     'exists'               => '指定された:attributeは存在しません。',
     'file'                 => ':attributeにはファイルを指定してください。',
     'filled'               => ':attributeには空でない値を指定してください。',
@@ -57,7 +57,7 @@ return [
     'min'                  => [
         'numeric' => ':attributeには:min以上の数値を指定してください。',
         'file'    => ':attributeには:min KB以上のファイルを指定してください。',
-        'string'  => ':attributeには:min文字以上の文字列を指定してください。',
+        'string'  => '６文字以上のパスワードを指定してください。',
         'array'   => ':attributeには:min個以上の要素を持つ配列を指定してください。',
     ],
     'not_in'               => ':attributeには:valuesのうちいずれとも異なる値を指定してください。',
