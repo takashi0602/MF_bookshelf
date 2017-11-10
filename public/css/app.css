@@ -347,7 +347,9 @@ body {
   margin-bottom: 10px;
 }
 
-.u-contents {
+.u-contents,
+.u-contents_isbn,
+.u-contents_mypage {
   text-align: center;
 }
 
@@ -360,6 +362,14 @@ body {
 }
 
 .u-contents_public {
+  min-height: 600px;
+}
+
+.u-contents_isbn {
+  min-height: 600px;
+}
+
+.u-contents_mypage {
   min-height: 600px;
 }
 

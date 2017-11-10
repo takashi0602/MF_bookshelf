@@ -6,7 +6,7 @@
 @section('content')
     <div class="p-isbn">
         <div class="c-container">
-            <div class="c-contents u-contents">
+            <div class="c-contents u-contents_isbn">
                 <h1 class="c-title">ISBN検索</h1>
                 <form enctype="multipart/form-data" action="{{ url('private/books/isbn/search') }}" method="POST">
                     {{ csrf_field() }}

@@ -13,3 +13,13 @@
 .u-contents_public {
   min-height: 600px;
 }
+
+.u-contents_isbn {
+  @extend .u-contents;
+  min-height: 600px;
+}
+
+.u-contents_mypage {
+  @extend .u-contents;
+  min-height: 600px;
+}
