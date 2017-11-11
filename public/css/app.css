@@ -371,6 +371,10 @@ body {
   min-height: 600px;
 }
 
+.u-contents_detail {
+  min-height: 650px;
+}
+
 .u-contents_isbn {
   min-height: 600px;
 }

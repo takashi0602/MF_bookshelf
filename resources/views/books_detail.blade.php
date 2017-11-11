@@ -6,7 +6,7 @@
 @section('content')
     <div class="p-detail">
         <div class="c-container">
-            <div class="c-contents">
+            <div class="c-contents u-contents_detail">
                 <h1 class="c-title">本の詳細</h1>
                 <form action="{{ url('books/update') }}" method="POST">
                     <ul class="c-lists">
