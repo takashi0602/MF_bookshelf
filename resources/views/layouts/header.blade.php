@@ -13,7 +13,7 @@
                     <li class="l-headerMenu_list"><a href="{{ url('/mypage') }}" class="l-headerMenu_link">{{ Auth::user()->name }}</a></li>
                     <li><a href="{{ route('logout') }}" class="l-headerMenu_link" onclick="event.preventDefault(); document.getElementById('headerMenu_form').submit();"><i class="fa fa-sign-out" aria-hidden="true"></i> サインアウト</a></li>
                     <form id="headerMenu_form" class="l-headerMenu_form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
-                    @endguest
+                @endguest
             </ul>
         </nav>
     </header>
