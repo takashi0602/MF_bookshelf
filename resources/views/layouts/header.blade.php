@@ -5,8 +5,8 @@
         <nav class="l-headerNav">
             <ul class="l-headerMenu">
                 @guest
-                <li class="l-headerMenu_list"><a href="{{ route('login') }}" class="l-headerMenu_link"><i class="fa fa-sign-in" aria-hidden="true"></i> サインイン</a></li>
-                <li class="l-headerMenu_list"><a href="{{ route('register') }}" class="l-headerMenu_link"><i class="fa fa-user-plus" aria-hidden="true"></i> サインアップ</a></li>
+                    <li class="l-headerMenu_list"><a href="{{ route('login') }}" class="l-headerMenu_link"><i class="fa fa-sign-in" aria-hidden="true"></i> サインイン</a></li>
+                    <li class="l-headerMenu_list"><a href="{{ route('register') }}" class="l-headerMenu_link"><i class="fa fa-user-plus" aria-hidden="true"></i> サインアップ</a></li>
                 @else
                     <li class="l-headerMenu_list"><a href="{{ url('/private') }}" class="l-headerMenu_link"><i class="fa fa-user" aria-hidden="true"></i> じぶんの本棚</a></li>
                     <li class="l-headerMenu_list"><a href="{{ url('/public') }}" class="l-headerMenu_link"><i class="fa fa-users" aria-hidden="true"></i> みんなの本棚</a></li>
