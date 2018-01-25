@@ -1,13 +1,13 @@
 Composerのインストール
 
 ```
-composer install
+$ composer install
 ```
 
 npmのインストール
 
 ```
-npm i
+$ npm i
 ```
 
 
@@ -15,13 +15,13 @@ npm i
 .envの作成
 
 ```
-cp .env.example .env
+$ cp .env.example .env
 ```
 
 APP_KEYの生成
 
 ```
-php artisan key:generate
+$ php artisan key:generate
 ```
 
 各APIキーの設定
@@ -33,11 +33,11 @@ php artisan key:generate
 データベースの作成
 
 ```
-cd database
+$ cd database
 
 touch database.sqlite
 
-cd ..
+$ cd ..
 ```
 
 
@@ -45,7 +45,7 @@ cd ..
 マイグレーションの実行
 
 ```
-php artisan migrate
+$ php artisan migrate
 ```
 
 
@@ -53,7 +53,7 @@ php artisan migrate
 ローカルサーバの起動
 
 ```
-php artisan serve
+$ php artisan serve
 ```
 
 
@@ -61,11 +61,11 @@ php artisan serve
 Sassのコンパイル
 
 ```
-npm run dev
+$ npm run dev
 ```
 
 Sassの自動コンパイル
 
 ```
-npm run watch
+$ npm run watch
 ```
