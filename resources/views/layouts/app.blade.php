@@ -10,10 +10,14 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     </head>
     <body>
-        @yield('header')
-        @yield('nav')
-        @yield('content')
-        @yield('footer')
-        <script src="{{ asset('js/app.js') }}"></script>
+        <div class="l-wrapper">
+            @yield('header')
+            @yield('nav')
+            <div class="l-main">
+                @yield('content')
+            </div>
+            @yield('footer')
+            <script src="{{ asset('js/app.js') }}"></script>
+        </div>
     </body>
 </html>
