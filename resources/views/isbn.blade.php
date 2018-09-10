@@ -8,7 +8,7 @@
         <div class="c-container">
             <div class="c-contents u-contents_isbn">
                 <h1 class="c-title">ISBN検索</h1>
-                <form enctype="multipart/form-data" action="{{ url('private/books/isbn/search') }}" method="POST">
+                <form enctype="multipart/form-data" action="{{ url('private/book/isbn/search') }}" method="POST">
                     {{ csrf_field() }}
                     <ul class="c-lists">
                         <label for="book-name" class="c-label">ISBNコード（10桁）</label>
@@ -19,7 +19,7 @@
                 @include('common.errors')
                 @if(!empty(session('response')))
                     @if(session('response'))
-                        <form enctype="multipart/form-data" action="{{ url('/private/books/isbn/store') }}" method="POST">
+                        <form enctype="multipart/form-data" action="{{ url('/private/book/isbn/store') }}" method="POST">
                             {{ csrf_field() }}
                             <ul class="c-lists">
                                 <li class="c-list">

@@ -21,7 +21,7 @@ class IsbnController extends Controller
 
         // Validation Error
         if ($validator->fails()) {
-            return redirect('/private/books/isbn')->withInput()->withErrors($validator);
+            return redirect('/private/book/isbn')->withInput()->withErrors($validator);
         }
 
         $url = 'https://www.googleapis.com/books/v1/volumes?q=isbn:';
@@ -73,10 +73,10 @@ class IsbnController extends Controller
                 }
             }
         } else {
-            return redirect('/private/books/isbn')->with('message', '該当データが見つかりませんでした。');
+            return redirect('/private/book/isbn')->with('message', '該当データが見つかりませんでした。');
         }
 
-        return redirect('/private/books/isbn')->with('response', json_encode($response));
+        return redirect('/private/book/isbn')->with('response', json_encode($response));
     }
 
     public function store(Request $request) {

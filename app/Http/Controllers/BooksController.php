@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Book;
+use DB;
 use Validator;
 use Auth;
 
