@@ -15,13 +15,7 @@
                 @foreach ($books as $book)
                     <div class="d-inline-block px-4">
                         <div class="d-flex align-items-center" style="width: 100px; height: 150px;">
-                            @if(preg_match("/^.\/img\/default_books\/book_/", $book->book_img))
-                                <img src="{{ substr($book->book_img, 1) }}" alt="" class="w-100">
-                            @elseif(preg_match("/^http:\/\//", $book->book_img))
-                                <img src="{{ $book->book_img }}" alt="" class="w-100">
-                            @else
-                                <img src="data:image/png;base64,{{ $book->book_img }}" alt="" class="w-100">
-                            @endif
+                            <img src="{{ $book->book_img }}" class="w-100">
                         </div>
                         <div class="text-center" style="width: 100px; height: 55px; word-wrap: break-word;">{{ $book->book_name }}</div>
                     </div>
