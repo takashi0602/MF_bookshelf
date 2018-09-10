@@ -3,50 +3,35 @@
 use App\Book;
 use Illuminate\Http\Request;
 
-// top page
+// トップページ
 Route::get('/', 'TopPageController');
 
-// my page
+// マイページ
 Route::get('/mypage', 'MyPageController@mypage');
 
-// public page
-Route::get('/public', 'PublicbooksController@index');
+// 公開ページ
+Route::prefix('public')->group(function () {
+    Route::get('/', 'PublicbooksController@index');
+    Route::post('/detail/{books}', 'PublicbooksController@detail');
+});
 
-// public page detail
-Route::post('/public/detail/{books}', 'PublicbooksController@detail');
+// 非公開ページ
+Route::prefix('private')->group(function () {
+    Route::get('/', 'BooksController@index');
+    Route::post('/detail/{books}', 'PublicbooksController@detail');
+    Route::get('/books/add', 'BooksController@add');
+    Route::post('/books/store', 'BooksController@store');
+    Route::get('/books/isbn', 'IsbnController@index');
+    Route::post('/books/isbn/search', 'IsbnController@search');
+    Route::post('/books/isbn/store', 'IsbnController@store');
+    Route::post('/books/edit/{books}', 'BooksController@edit');
+    Route::post('/books/update', 'BooksController@update');
+    Route::delete('/book/{book}', 'BooksController@destroy');
+});
 
-// private page detail
-Route::post('/private/detail/{books}', 'PublicbooksController@detail');
-
-// private page
-Route::get('/private', 'BooksController@index');
-
-// create page
-Route::get('/private/books/add', 'BooksController@add');
-
-// create
-Route::post('/private/books/store', 'BooksController@store');
-
-// isbn page
-Route::get('/private/books/isbn', 'IsbnController@index');
-
-// isbn search
-Route::post('/private/books/isbn/search', 'IsbnController@search');
-
-// isbn create
-Route::post('/private/books/isbn/store', 'IsbnController@store');
-
-// private edit page
-Route::post('/private/books/edit/{books}', 'BooksController@edit');
-
-// private page update
-Route::post('/private/books/update', 'BooksController@update');
-
-// private page destroy
-Route::delete('private/book/{book}', 'BooksController@destroy');
-
-// auth
-Route::get('auth/{provider}', 'Auth\AuthController@redirectToProvider');
-Route::get('auth/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
-
+// 認証
+Route::prefix('auth')->group(function () {
+    Route::get('/{provider}', 'Auth\AuthController@redirectToProvider');
+    Route::get('/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
+});
 Auth::routes();
