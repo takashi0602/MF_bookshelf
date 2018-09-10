@@ -8,7 +8,7 @@ class TopPageController extends Controller
 {
     public function __invoke()
     {
-        $books = Book::orderBy('created_at', 'desc')->take(21)->get();
+        $books = Book::where('public_flg', true)->orderBy('created_at', 'desc')->take(21)->get();
         return view('index', [
             'books' => $books
         ]);
