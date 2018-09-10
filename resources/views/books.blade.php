@@ -8,7 +8,7 @@
         <div class="c-container">
             <div class="c-contents u-contents_private">
                 <h1 class="c-title">じぶんの本棚</h1>
-                <a href="{{ url('/private/books/add') }}" class="c-link u-link">本を追加する</a>
+                <a href="{{ url('/private/book/add') }}" class="c-link u-link">本を追加する</a>
                 @if (count($books) > 0)
                     @foreach ($books as $book)
                         <ul class="c-lists">
