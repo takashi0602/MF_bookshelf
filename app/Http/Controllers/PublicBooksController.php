@@ -10,7 +10,7 @@ class PublicBooksController extends Controller
 {
     public function index()
     {
-        $books = Book::where('flag', 'public')->orderBy('created_at', 'desc')->paginate(21);
+        $books = Book::where('public_flg', true)->orderBy('created_at', 'desc')->paginate(21);
         return view('public_books', [
             'books' => $books
         ]);

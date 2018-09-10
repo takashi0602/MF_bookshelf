@@ -104,7 +104,7 @@ class IsbnController extends Controller
         $books->book_img = $request->book_img;
         $books->author = $request->author;
         $books->published = $request->published;
-        $books->flag = $request->flag;
+        $books->public_flg = $request->flag === 'public' ? true : false;
         $books->save();
 
         return redirect('/private');

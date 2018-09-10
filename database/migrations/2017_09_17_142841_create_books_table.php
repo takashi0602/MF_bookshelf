@@ -22,7 +22,7 @@ class CreateBooksTable extends Migration
             $table->text('book_img')->nullable();
             $table->string('author')->nullable();
             $table->dateTime('published')->nullable();
-            $table->string('flag');
+            $table->boolean('public_flg')->default(true)->comment('書籍を公開するかどうか');
             $table->timestamps();
         });
     }
