@@ -13,7 +13,7 @@
         <div class="l-wrapper">
             @yield('header')
             @yield('nav')
-            <div class="l-main">
+            <div class="main">
                 @yield('content')
             </div>
             @yield('footer')
