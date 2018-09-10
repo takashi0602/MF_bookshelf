@@ -9,11 +9,13 @@ use Auth;
 
 class IsbnController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         return view('isbn');
     }
 
-    public function search(Request $request) {
+    public function search(Request $request)
+    {
         // Validation
         $validator = Validator::make($request->all(), [
             'isbn_code' => 'required | regex: /^[0-9]{9}[0-9X]{1}$/'
@@ -79,7 +81,8 @@ class IsbnController extends Controller
         return redirect('/private/book/isbn')->with('response', json_encode($response));
     }
 
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         // Validation
         $validator = Validator::make($request->all(), [
             'book_name' => 'required | min: 1 | max: 255',

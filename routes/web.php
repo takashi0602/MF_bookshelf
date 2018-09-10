@@ -8,14 +8,14 @@ Route::get('/mypage', 'MyPageController');
 
 // 公開ページ
 Route::prefix('public')->group(function () {
-    Route::post('/detail/{books}', 'BooksController@detail');
-    Route::get('/', 'PublicBooksController');
+    Route::get('/', 'PublicBooksController@index');
+    Route::post('/detail/{books}', 'PublicBooksController@detail');
 });
 
 // 非公開ページ
 Route::prefix('private')->group(function () {
-    Route::post('/detail/{books}', 'BooksController@detail');
     Route::get('/', 'PrivateBooksController@index');
+    Route::post('/detail/{books}', 'PrivateBooksController@detail');
     Route::get('/book/add', 'PrivateBooksController@add');
     Route::post('/book/store', 'PrivateBooksController@store');
     Route::post('/book/edit/{books}', 'PrivateBooksController@edit');
