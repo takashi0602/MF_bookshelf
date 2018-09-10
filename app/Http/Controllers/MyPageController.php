@@ -7,7 +7,8 @@ use Auth;
 
 class MyPageController extends Controller
 {
-    public function mypage(){
+    public function __invoke()
+    {
         $books = Book::where('user_id', Auth::user()->id)->orderBy('created_at', 'desc')->get();
         return view('mypage', [
             'books' => $books

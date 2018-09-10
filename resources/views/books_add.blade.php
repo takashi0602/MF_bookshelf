@@ -10,7 +10,7 @@
                 <h1 class="c-title">本の追加</h1>
                 <a href="{{ url('/private/books/isbn') }}" class="c-link u-link">ISBN検索はこちら</a>
                 @include('common.errors')
-                <form enctype="multipart/form-data" action="{{ url('private/books/store') }}" method="POST">
+                <form enctype="multipart/form-data" action="{{ url('private/book/store') }}" method="POST">
                     {{ csrf_field() }}
                     <ul class="c-lists">
                         <li class="c-list">
