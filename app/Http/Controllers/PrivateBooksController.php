@@ -69,7 +69,7 @@ class PrivateBooksController extends Controller
         $books->user_id = Auth::user()->id;
         $books->book_name = $request->book_name;
         $books->book_page = $request->book_page;
-        $books->flag = $request->flag;
+        $books->public_flg = $request->flag === 'public' ? true : false;
         $books->author = $request->author;
         $books->book_description = $request->book_description;
         $books->book_img = $img;
@@ -110,7 +110,7 @@ class PrivateBooksController extends Controller
         $books->published = $request->published;
         $books->author = $request->author;
         $books->book_description = $request->book_description;
-        $books->flag = $request->flag;
+        $books->public_flg = $request->flag === 'public' ? true : false;
         $books->save();
 
         return redirect('/private');
