@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Book;
+use App\User;
 use Validator;
 use Auth;
 
@@ -25,14 +26,11 @@ class PrivateBooksController extends Controller
             $books->published = implode('/', $books->published);
         }
 
-        $userName = DB::table('users')
-            ->select('name')
-            ->where('users.id', $books->user_id)
-            ->get();
+        $userName = User::select('name')->where('users.id', $books->user_id)->first();
 
         return view('books_detail', [
             'book' => $books,
-            'userName' => $userName[0]->name
+            'userName' => $userName->name
         ]);
     }
 

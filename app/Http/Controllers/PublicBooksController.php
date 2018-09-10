@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Book;
+use App\User;
 use Auth;
-use Illuminate\Support\Facades\DB;
 
 class PublicBooksController extends Controller
 {
@@ -23,14 +23,11 @@ class PublicBooksController extends Controller
             $books->published = implode('/', $books->published);
         }
 
-        $userName = DB::table('users')
-            ->select('name')
-            ->where('users.id', $books->user_id)
-            ->get();
+        $userName = User::select('name')->where('users.id', $books->user_id)->first();
 
         return view('books_detail', [
             'book' => $books,
-            'userName' => $userName[0]->name
+            'userName' => $userName->name
         ]);
     }
 }
