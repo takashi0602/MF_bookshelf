@@ -12,13 +12,13 @@ Route::get('/mypage', 'MyPageController@mypage');
 // 公開ページ
 Route::prefix('public')->group(function () {
     Route::get('/', 'PublicbooksController@index');
-    Route::post('/detail/{books}', 'PublicbooksController@detail');
+    Route::post('/detail/{books}', 'PublicBooksController@detail');
 });
 
 // 非公開ページ
 Route::prefix('private')->group(function () {
     Route::get('/', 'BooksController@index');
-    Route::post('/detail/{books}', 'PublicbooksController@detail');
+    Route::post('/detail/{books}', 'PublicBooksController@detail');
     Route::get('/books/add', 'BooksController@add');
     Route::post('/books/store', 'BooksController@store');
     Route::get('/books/isbn', 'IsbnController@index');

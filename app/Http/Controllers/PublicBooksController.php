@@ -8,7 +8,7 @@ use App\User;
 use Auth;
 use Illuminate\Support\Facades\DB;
 
-class PublicbooksController extends Controller
+class PublicBooksController extends Controller
 {
     public function index() {
         $books = Book::where('flag', 'public')->orderBy('created_at', 'desc')->paginate(21);
