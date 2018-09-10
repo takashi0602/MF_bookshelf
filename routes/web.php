@@ -11,7 +11,7 @@ Route::get('/mypage', 'MyPageController@mypage');
 
 // 公開ページ
 Route::prefix('public')->group(function () {
-    Route::get('/', 'PublicbooksController@index');
+    Route::get('/', 'PublicBooksController@index');
     Route::post('/detail/{books}', 'PublicBooksController@detail');
 });
 
