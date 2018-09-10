@@ -41,13 +41,12 @@ class PrivateBooksController extends Controller
 
     public function store(Request $request)
     {
-        $default_books = [ 'black', 'blue', 'green', 'orange', 'purple', 'red', 'white', 'yellow' ];
-        $default_book = mt_rand(0, 7);
-
         if (!empty($request->book_img)) {
-            $img = base64_encode(file_get_contents($request->book_img));
+            $path = env('APP_URL') . '/storage/' . $request->file('book_img')->storeAs('img/books', uniqid() . '.png', 'public');
         } else {
-            $img = base64_encode(file_get_contents('./img/default_books/book_' . $default_books[$default_book] . '.png'));
+            $default_books = [ 'black', 'blue', 'green', 'orange', 'purple', 'red', 'white', 'yellow' ];
+            $num = mt_rand(0, 7);
+            $path = env('APP_URL') . '/storage/img/default_books/book_' . $default_books[$num] . '.png';
         }
 
         // Validation
@@ -72,7 +71,7 @@ class PrivateBooksController extends Controller
         $books->public_flg = $request->flag === 'public' ? true : false;
         $books->author = $request->author;
         $books->book_description = $request->book_description;
-        $books->book_img = $img;
+        $books->book_img = $path;
         $books->published = $request->published;
         $books->save();
 
