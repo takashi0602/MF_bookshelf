@@ -1,71 +1,21 @@
-Composerのインストール
+### セットアップ
 
-```
-$ composer install
-```
-
-npmのインストール
-
-```
-$ npm i
+```bash
+$ make setup
 ```
 
-
-
-.envの作成
-
-```
-$ cp .env.example .env
-```
-
-APP_KEYの生成
-
-```
-$ php artisan key:generate
-```
-
-各APIキーの設定
+### 各APIキーの設定
 
 .envの `FACEBOOK_ID`, `FACEBOOK_SECRET`, `TWITTER_ID`, `TWITTER_SECRET`, `GITHUB_ID`, `GITHUB_SECRET` に各自で取得した値を設定してください.
 
+### ローカルサーバの起動
 
-
-データベースの作成
-
-```
-$ cd database
-
-touch database.sqlite
-
-$ cd ..
-```
-
-
-
-マイグレーションの実行
-
-```
-$ php artisan migrate
-```
-
-
-
-ローカルサーバの起動
-
-```
+```bash
 $ php artisan serve
 ```
 
+### Sassのコンパイル
 
-
-Sassのコンパイル
-
-```
-$ npm run dev
-```
-
-Sassの自動コンパイル
-
-```
+```bash
 $ npm run watch
 ```
