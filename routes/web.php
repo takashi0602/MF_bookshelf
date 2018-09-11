@@ -17,14 +17,14 @@ Route::prefix('public')->group(function () {
 // じぶんの本棚
 Route::middleware('auth')->prefix('private')->group(function () {
     Route::get('/', 'BookshelfController@privateBooks');
-    Route::post('/detail/{books}', 'BookshelfController@detail');
+    Route::get('/detail/{books}', 'BookshelfController@detail');
 });
 
 // 書籍の追加/編集/削除等
 Route::middleware('auth')->prefix('book')->group(function () {
     Route::get('/add', 'BooksController@add');
     Route::post('/store', 'BooksController@store');
-    Route::post('/edit/{books}', 'BooksController@edit');
+    Route::get('/edit/{books}', 'BooksController@edit');
     Route::post('/update', 'BooksController@update');
     Route::delete('/{book}', 'BooksController@destroy');
     Route::get('/isbn', 'IsbnBooksController@index');

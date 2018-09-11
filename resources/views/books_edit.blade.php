@@ -8,7 +8,7 @@
         <div class="c-container">
             <div class="c-contents u-contents">
                 <h1 class="c-title">本の編集</h1>
-                <form action="{{ url('/book/update') }}" method="POST">
+                <form enctype="multipart/form-data" action="{{ url('/book/update') }}" method="POST">
                     @include('common.errors')
                     <ul class="c-lists">
                         <li class="c-list">
@@ -35,6 +35,10 @@
                         <li class="c-list">
                             <label class="c-label u-label_edit" for="book-description">説明</label>
                             <textarea name="book_description" id="book-description" class="c-textArea" maxlength="4000">{{ $book->book_description }}</textarea>
+                        </li>
+                        <li class="c-list">
+                            <label for="book-img" class="c-label u-label_edit">画像</label>
+                            <input type="file" name="book_img" id="book-img" class="c-file">
                         </li>
                         <li class="c-list">
                             <label class="c-label u-label_edit" for="flag">公開設定</label>

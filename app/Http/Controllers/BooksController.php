@@ -87,6 +87,11 @@ class BooksController extends Controller
      */
     public function update(Request $request)
     {
+        if (!empty($request->book_img)) {
+            $extension = $request->file('book_img')->getClientOriginalExtension();
+            $path = env('APP_URL') . '/storage/' . $request->file('book_img')->storeAs('img/books', uniqid() . '.' . $extension, 'public');
+        }
+
         // Validation
         $validator = Validator::make($request->all(), [
             'id' => 'required',
@@ -109,6 +114,7 @@ class BooksController extends Controller
         $books->author = $request->author;
         $books->book_description = $request->book_description;
         $books->public_flg = $request->flag === 'public' ? true : false;
+        if (isset($path)) $books->book_img = $path;
         $books->save();
 
         return redirect('/private');
