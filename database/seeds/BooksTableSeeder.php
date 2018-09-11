@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Models\Book;
 
 class BooksTableSeeder extends Seeder
 {
@@ -13,7 +14,7 @@ class BooksTableSeeder extends Seeder
     {
         $faker = Faker\Factory::create('ja_JP');
         for ($i = 0; $i < 10; $i++) {
-            App\Book::create([
+            Book::create([
                 'user_id' => $faker->numberBetween(1, 3),
                 'book_name' => $faker->word(),
                 'book_page' => $faker->numberBetween(0, 999999),
