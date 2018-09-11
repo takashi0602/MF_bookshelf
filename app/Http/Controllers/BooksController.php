@@ -31,7 +31,8 @@ class BooksController extends Controller
     public function store(Request $request)
     {
         if (!empty($request->book_img)) {
-            $path = env('APP_URL') . '/storage/' . $request->file('book_img')->storeAs('img/books', uniqid() . '.png', 'public');
+            $extension = $request->file('book_img')->getClientOriginalExtension();
+            $path = env('APP_URL') . '/storage/' . $request->file('book_img')->storeAs('img/books', uniqid() . '.' . $extension, 'public');
         } else {
             $default_books = [ 'black', 'blue', 'green', 'orange', 'purple', 'red', 'white', 'yellow' ];
             $num = mt_rand(0, 7);
