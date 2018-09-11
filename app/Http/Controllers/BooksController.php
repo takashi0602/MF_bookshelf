@@ -4,36 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Book;
-use App\User;
 use Validator;
 use Auth;
 
-class PrivateBooksController extends Controller
+class BooksController extends Controller
 {
-    public function index()
-    {
-        $books = Book::where('user_id', Auth::user()->id)->orderBy('created_at', 'desc')->paginate(21);
-
-        return view('books', [
-            'books' => $books,
-        ]);
-    }
-
-    public function detail(Book $books)
-    {
-        if ($books->published !== null) {
-            $books->published = explode('-', $books->published);
-            $books->published = implode('/', $books->published);
-        }
-
-        $userName = User::select('name')->where('users.id', $books->user_id)->first();
-
-        return view('books_detail', [
-            'book' => $books,
-            'userName' => $userName->name
-        ]);
-    }
-
     public function add()
     {
         return view('books_add');
@@ -60,7 +35,7 @@ class PrivateBooksController extends Controller
 
         // Validation Error
         if ($validator->fails()) {
-            return redirect('/private/book/add')->withInput()->withErrors($validator);
+            return redirect('/book/add')->withInput()->withErrors($validator);
         }
 
         // Eloquent Model
@@ -119,15 +94,5 @@ class PrivateBooksController extends Controller
     {
         $book->delete();
         return redirect('/private');
-    }
-
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
     }
 }

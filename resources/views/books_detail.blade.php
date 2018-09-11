@@ -8,7 +8,7 @@
         <div class="c-container">
             <div class="c-contents u-contents_detail">
                 <h1 class="c-title">本の詳細</h1>
-                <form action="{{ url('books/update') }}" method="POST">
+                <form action="{{ url('/book/update') }}" method="POST">
                     <ul class="c-lists">
                         <li class="c-list">
                             <div class="c-list_bookImgWrapper">

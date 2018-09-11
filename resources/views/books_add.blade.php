@@ -8,9 +8,9 @@
         <div class="c-container">
             <div class="c-contents u-contents">
                 <h1 class="c-title">本の追加</h1>
-                <a href="{{ url('/private/book/isbn') }}" class="c-link u-link">ISBN検索はこちら</a>
+                <a href="{{ url('/book/isbn') }}" class="c-link u-link">ISBN検索はこちら</a>
                 @include('common.errors')
-                <form enctype="multipart/form-data" action="{{ url('private/book/store') }}" method="POST">
+                <form enctype="multipart/form-data" action="{{ url('/book/store') }}" method="POST">
                     {{ csrf_field() }}
                     <ul class="c-lists">
                         <li class="c-list">

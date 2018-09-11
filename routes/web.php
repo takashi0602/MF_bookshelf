@@ -1,29 +1,35 @@
 <?php
 
 // トップページ
-Route::get('/', 'TopPageController');
+Route::get('/', 'BookshelfController@newBooks');
 
 // マイページ
-Route::get('/mypage', 'MyPageController');
-
-// 公開ページ
-Route::prefix('public')->group(function () {
-    Route::get('/', 'PublicBooksController@index');
-    Route::post('/detail/{books}', 'PublicBooksController@detail');
+Route::middleware('auth')->group(function () {
+    Route::get('/mypage', 'UsersController');
 });
 
-// 非公開ページ
-Route::prefix('private')->group(function () {
-    Route::get('/', 'PrivateBooksController@index');
-    Route::post('/detail/{books}', 'PrivateBooksController@detail');
-    Route::get('/book/add', 'PrivateBooksController@add');
-    Route::post('/book/store', 'PrivateBooksController@store');
-    Route::post('/book/edit/{books}', 'PrivateBooksController@edit');
-    Route::post('/book/update', 'PrivateBooksController@update');
-    Route::delete('/book/{book}', 'PrivateBooksController@destroy');
-    Route::get('/book/isbn', 'IsbnController@index');
-    Route::post('/book/isbn/search', 'IsbnController@search');
-    Route::post('/book/isbn/store', 'IsbnController@store');
+// みんなの本棚
+Route::prefix('public')->group(function () {
+    Route::get('/', 'BookshelfController@publicBooks');
+    Route::post('/detail/{books}', 'BookshelfController@detail');
+});
+
+// じぶんの本棚
+Route::middleware('auth')->prefix('private')->group(function () {
+    Route::get('/', 'BookshelfController@privateBooks');
+    Route::post('/detail/{books}', 'BookshelfController@detail');
+});
+
+// 書籍の追加/編集/削除等
+Route::middleware('auth')->prefix('book')->group(function () {
+    Route::get('/add', 'BooksController@add');
+    Route::post('/store', 'BooksController@store');
+    Route::post('/edit/{books}', 'BooksController@edit');
+    Route::post('/update', 'BooksController@update');
+    Route::delete('/{book}', 'BooksController@destroy');
+    Route::get('/isbn', 'IsbnBooksController@index');
+    Route::post('/isbn/search', 'IsbnBooksController@search');
+    Route::post('/isbn/store', 'IsbnBooksController@store');
 });
 
 // 認証

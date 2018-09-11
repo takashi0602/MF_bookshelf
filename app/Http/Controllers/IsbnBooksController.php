@@ -7,7 +7,7 @@ use App\Book;
 use Validator;
 use Auth;
 
-class IsbnController extends Controller
+class IsbnBooksController extends Controller
 {
     public function index()
     {
@@ -23,7 +23,7 @@ class IsbnController extends Controller
 
         // Validation Error
         if ($validator->fails()) {
-            return redirect('/private/book/isbn')->withInput()->withErrors($validator);
+            return redirect('/book/isbn')->withInput()->withErrors($validator);
         }
 
         $url = 'https://www.googleapis.com/books/v1/volumes?q=isbn:';
@@ -75,10 +75,10 @@ class IsbnController extends Controller
                 }
             }
         } else {
-            return redirect('/private/book/isbn')->with('message', '該当データが見つかりませんでした。');
+            return redirect('/book/isbn')->with('message', '該当データが見つかりませんでした。');
         }
 
-        return redirect('/private/book/isbn')->with('response', json_encode($response));
+        return redirect('/book/isbn')->with('response', json_encode($response));
     }
 
     public function store(Request $request)
@@ -92,7 +92,7 @@ class IsbnController extends Controller
 
         // Validation Error
         if ($validator->fails()) {
-            return redirect('/private/books/isbn')->withInput()->withErrors($validator);
+            return redirect('/books/isbn')->withInput()->withErrors($validator);
         }
 
         // Eloquent Model

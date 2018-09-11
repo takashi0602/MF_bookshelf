@@ -6,12 +6,31 @@ use App\Book;
 use App\User;
 use Auth;
 
-class PublicBooksController extends Controller
+class BookshelfController extends Controller
 {
-    public function index()
+    public function privateBooks()
+    {
+        $books = Book::where('user_id', Auth::user()->id)->orderBy('created_at', 'desc')->paginate(21);
+
+        return view('books', [
+            'books' => $books,
+        ]);
+    }
+
+    public function publicBooks()
     {
         $books = Book::where('public_flg', true)->orderBy('created_at', 'desc')->paginate(21);
+
         return view('public_books', [
+            'books' => $books
+        ]);
+    }
+
+    public function newBooks()
+    {
+        $books = Book::where('public_flg', true)->orderBy('created_at', 'desc')->paginate(21);
+
+        return view('index', [
             'books' => $books
         ]);
     }

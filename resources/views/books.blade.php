@@ -8,7 +8,7 @@
         <div class="c-container">
             <div class="c-contents u-contents_private">
                 <h1 class="c-title">じぶんの本棚</h1>
-                <a href="{{ url('/private/book/add') }}" class="c-link u-link">本を追加する</a>
+                <a href="{{ url('/book/add') }}" class="c-link u-link">本を追加する</a>
                 @if (count($books) > 0)
                     @foreach ($books as $book)
                         <ul class="c-lists">
@@ -27,7 +27,7 @@
                                 </form>
                             </li>
                             <li class="c-list">
-                                <form action="{{ url('private/book/edit/' . $book->id) }}" method="POST">
+                                <form action="{{ url('/book/edit/' . $book->id) }}" method="POST">
                                     {{ csrf_field() }}
                                     <button type="submit" class="c-btn_small">
                                         <i class="fa fa-pencil" aria-hidden="true"></i> 本の編集

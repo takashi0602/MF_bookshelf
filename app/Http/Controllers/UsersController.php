@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Book;
 use Auth;
 
-class MyPageController extends Controller
+class UsersController extends Controller
 {
     public function __invoke()
     {

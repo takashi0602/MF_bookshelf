@@ -8,18 +8,12 @@
         <div class="c-container">
             <div class="c-contents u-contents">
                 <h1 class="c-title">本の編集</h1>
-                <form action="{{ url('private/book/update') }}" method="POST">
+                <form action="{{ url('/book/update') }}" method="POST">
                     @include('common.errors')
                     <ul class="c-lists">
                         <li class="c-list">
                             <div class="c-list_bookImgWrapper u-list_bookImgWrapper">
-                                @if(preg_match("/^.\/img\/default_books\/book_/", $book->book_img))
-                                    <img src="{{ substr($book->book_img, 1) }}" alt="" class="c-list_bookImg">
-                                @elseif(preg_match("/^http:\/\//", $book->book_img))
-                                    <img src="{{ $book->book_img }}" alt="" class="c-list_bookImg">
-                                @else
-                                    <img src="data:image/png;base64,{{ $book->book_img }}" alt="" class="c-list_bookImg">
-                                @endif
+                                <img src="{{ $book->book_img }}" class="c-list_bookImg">
                             </div>
                         </li>
                         <li class="c-list">
@@ -44,7 +38,7 @@
                         </li>
                         <li class="c-list">
                             <label class="c-label u-label_edit" for="flag">公開設定</label>
-                            @if ($book->flag === 'public')
+                            @if ($book->public_flg)
                                 <input class="c-radio" type="radio" name="flag" id="flag" value="public" checked> 公開
                                 <input class="c-radio" type="radio" name="flag" id="flag" value="private"> 非公開
                             @else
@@ -62,7 +56,7 @@
                     </div>
                 </form>
                 <div class="c-editBook_Btn">
-                    <form action="{{ url('private/book/' . $book->id) }}" method="POST">
+                    <form action="{{ url('/book/' . $book->id) }}" method="POST">
                         {{ csrf_field() }}
                         {{ method_field('DELETE') }}
                         <button type="submit" class="c-btn_large u-btn_large">
