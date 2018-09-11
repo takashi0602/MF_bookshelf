@@ -2,7 +2,7 @@
     <header class="header">
         <nav class="navbar navbar-expand-lg navbar-light">
             <a href="{{ url('/') }}" class="navbar-brand d-flex align-items-center">
-                <img src="{{ asset('storage/img/logo/logo.png') }}" style="width: 100px;">
+                <img src="{{ asset('storage/img/logo.png') }}" style="width: 100px;">
                 <h3 class="d-inline-block text-primary m-0">{{ config('app.name', 'Laravel') }}</h3>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
