@@ -7,13 +7,27 @@ use App\Book;
 use Validator;
 use Auth;
 
+/**
+ * Class IsbnBooksController
+ * @package App\Http\Controllers
+ * ISBN検索/追加等に関するコントローラ
+ */
 class IsbnBooksController extends Controller
 {
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * ISBN検索画面
+     */
     public function index()
     {
         return view('isbn');
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     * ISBN検索処理
+     */
     public function search(Request $request)
     {
         // Validation
@@ -81,6 +95,11 @@ class IsbnBooksController extends Controller
         return redirect('/book/isbn')->with('response', json_encode($response));
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     * 書籍の追加処理
+     */
     public function store(Request $request)
     {
         // Validation

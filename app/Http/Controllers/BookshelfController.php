@@ -6,8 +6,17 @@ use App\Book;
 use App\User;
 use Auth;
 
+/**
+ * Class BookshelfController
+ * @package App\Http\Controllers
+ * 本棚に関するコントローラ
+ */
 class BookshelfController extends Controller
 {
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * じぶんの本棚
+     */
     public function privateBooks()
     {
         $books = Book::where('user_id', Auth::user()->id)->orderBy('created_at', 'desc')->paginate(21);
@@ -17,6 +26,10 @@ class BookshelfController extends Controller
         ]);
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * みんなの本棚
+     */
     public function publicBooks()
     {
         $books = Book::where('public_flg', true)->orderBy('created_at', 'desc')->paginate(21);
@@ -26,6 +39,10 @@ class BookshelfController extends Controller
         ]);
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * 新着の本
+     */
     public function newBooks()
     {
         $books = Book::where('public_flg', true)->orderBy('created_at', 'desc')->paginate(21);
@@ -35,6 +52,11 @@ class BookshelfController extends Controller
         ]);
     }
 
+    /**
+     * @param Book $books
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * 書籍の詳細
+     */
     public function detail(Book $books)
     {
         if ($books->published !== null) {

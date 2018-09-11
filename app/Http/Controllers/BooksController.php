@@ -7,13 +7,27 @@ use App\Book;
 use Validator;
 use Auth;
 
+/**
+ * Class BooksController
+ * @package App\Http\Controllers
+ * 書籍の追加/変更/削除等に関するコントローラ
+ */
 class BooksController extends Controller
 {
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * 書籍の追加画面
+     */
     public function add()
     {
         return view('books_add');
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     * 書籍の追加処理
+     */
     public function store(Request $request)
     {
         if (!empty($request->book_img)) {
@@ -53,6 +67,11 @@ class BooksController extends Controller
         return redirect('/private');
     }
 
+    /**
+     * @param $book_id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * 書籍の編集画面
+     */
     public function edit($book_id)
     {
         $books = Book::where('user_id', Auth::user()->id)->find($book_id);
@@ -61,6 +80,11 @@ class BooksController extends Controller
         ]);
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     * 書籍の編集処理
+     */
     public function update(Request $request)
     {
         // Validation
@@ -90,6 +114,11 @@ class BooksController extends Controller
         return redirect('/private');
     }
 
+    /**
+     * @param Book $book
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     * 書籍の削除処理
+     */
     public function destroy(Book $book)
     {
         $book->delete();
